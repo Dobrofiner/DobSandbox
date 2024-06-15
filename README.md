@@ -11,6 +11,8 @@
 * F3: Enable/Disable music
 * D: Enable/Disable delete mode
 * Click on blocks to select it
+* p - more visibility
+* 0 - disable more visibility
 
 **Credits**
 
