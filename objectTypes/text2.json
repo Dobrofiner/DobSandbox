@@ -1,0 +1,15 @@
+{
+	"name": "text2",
+	"plugin-id": "Text",
+	"sid": 653696588698989,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "NoSave",
+			"name": "НеСохранять",
+			"sid": 873824640107850
+		}
+	],
+	"effectTypes": []
+}

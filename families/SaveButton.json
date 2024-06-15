@@ -1,0 +1,15 @@
+{
+	"name": "SaveButton",
+	"plugin-id": "Sprite",
+	"sid": 927684411603978,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"save",
+		"save2",
+		"save3",
+		"save4",
+		"save5"
+	]
+}

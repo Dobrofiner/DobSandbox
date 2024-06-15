@@ -1,0 +1,16 @@
+{
+	"name": "menu",
+	"plugin-id": "Sprite",
+	"sid": 360502469974257,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"credits",
+		"logo",
+		"quet",
+		"playgane",
+		"strelka",
+		"strelka2"
+	]
+}

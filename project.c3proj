@@ -1,0 +1,503 @@
+{
+	"projectFormatVersion": 1,
+	"savedWithRelease": 38802,
+	"name": "DobSandbox",
+	"runtime": "c3",
+	"useWorker": "auto",
+	"bundleAddons": false,
+	"usedAddons": [
+		{
+			"type": "plugin",
+			"id": "AJAX",
+			"name": "AJAX",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Audio",
+			"name": "Аудио",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "BinaryData",
+			"name": "Бинарные Данные",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Browser",
+			"name": "Браузер",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Button",
+			"name": "Кнопка",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "FileSystem",
+			"name": "Файловая система",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Json",
+			"name": "JSON",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Keyboard",
+			"name": "Клавиатура",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "LocalStorage",
+			"name": "Локальное хранилище",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Mouse",
+			"name": "Мышь",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Multiplayer",
+			"name": "Мультиплеер",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Sprite",
+			"name": "Спрайт",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Text",
+			"name": "Текст",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Touch",
+			"name": "Тач",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "filechooser",
+			"name": "Выбор файла",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "iframe",
+			"name": "iframe",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "skymen_skinsCore",
+			"name": "[Skin Group]",
+			"author": "skymen",
+			"bundled": false,
+			"version": "1.8.0.0"
+		},
+		{
+			"type": "behavior",
+			"id": "EightDir",
+			"name": "8 Направлений",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "MoveTo",
+			"name": "Движение К",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "NoSave",
+			"name": "Не сохранять",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Physics",
+			"name": "Физика",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Pin",
+			"name": "Прикрепить",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "scrollto",
+			"name": "Следить за",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "solid",
+			"name": "Твердый",
+			"author": "Scirra",
+			"bundled": false
+		}
+	],
+	"uniqueId": "gz5hywaq3q6",
+	"objectTypes": {
+		"items": [
+			"Браузер",
+			"ФайловаяСистема",
+			"ЛокальноеХранилище",
+			"Keyboard",
+			"Мышь",
+			"Тач",
+			"playgane",
+			"block1spawn",
+			"men",
+			"Кнопка",
+			"dev",
+			"ВыборФайла",
+			"JSON",
+			"AJAX",
+			"продолжить",
+			"сохранениеменю",
+			"выходИзИгры",
+			"closemen",
+			"logo",
+			"save",
+			"save2",
+			"save3",
+			"save4",
+			"save5",
+			"load2",
+			"load3",
+			"load4",
+			"load5",
+			"load",
+			"import",
+			"export",
+			"Кнопка2",
+			"text2",
+			"workbench",
+			"stone",
+			"pechka",
+			"mwgavlock",
+			"in",
+			"chest",
+			"bed",
+			"youtop",
+			"youtop2",
+			"abobas",
+			"abobas_spawn",
+			"chest_spawn",
+			"bed__spawn",
+			"mwgavlock_spawn",
+			"stone_spawn",
+			"pechka_spawn",
+			"workbench_spawn",
+			"youtop_spawn",
+			"youtop2_spawn",
+			"SkinGroup2",
+			"selskin",
+			"player",
+			"БинарныеДанные",
+			"skin",
+			"test",
+			"Мультиплеер",
+			"iframe",
+			"влево",
+			"вправо",
+			"ыыерх3",
+			"вниз",
+			"world",
+			"muiinvin",
+			"quet",
+			"strelka",
+			"strelka2",
+			"credits",
+			"доски",
+			"доски_spawn",
+			"Текст",
+			"quet2",
+			"LandBuilder",
+			"HParameters",
+			"BlockBuilder",
+			"Display",
+			"Block2",
+			"Block",
+			"Bedrock",
+			"Package_Mark",
+			"Package_Mark_Manager",
+			"Package_Bio",
+			"Package_Type",
+			"Package_Bio_Manager",
+			"Спрайт",
+			"sadstena",
+			"map1",
+			"need_test",
+			"map_2",
+			"text_choose_map",
+			"Аудио"
+		],
+		"subfolders": []
+	},
+	"autosaveData": null,
+	"containers": [],
+	"families": {
+		"items": [
+			"SaveButton",
+			"loadbuttons",
+			"menui",
+			"blocks_1",
+			"spawn_blocks",
+			"moveui",
+			"menu",
+			"Blocks",
+			"Packagees_Type",
+			"Packages_Bio",
+			"Packages_Mark"
+		],
+		"subfolders": []
+	},
+	"layouts": {
+		"items": [
+			"menu",
+			"мир",
+			"credits",
+			"empty",
+			"chooose_map"
+		],
+		"subfolders": []
+	},
+	"eventSheets": {
+		"items": [
+			"Список событий 1",
+			"MEN",
+			"credits",
+			"empty",
+			"choose_map"
+		],
+		"subfolders": []
+	},
+	"rootFileFolders": {
+		"script": {
+			"items": [
+				{
+					"name": "firebase.js",
+					"type": "application/javascript",
+					"sid": 292230568677639,
+					"script-info": {
+						"purpose": "main"
+					}
+				}
+			],
+			"subfolders": []
+		},
+		"sound": {
+			"items": [],
+			"subfolders": []
+		},
+		"music": {
+			"items": [
+				{
+					"name": "dobsandboxmenu.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 724882480252659,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Adventure Begins-1.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 559661754828990,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Floating Isles-1.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 452686679860668,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
+			"subfolders": []
+		},
+		"video": {
+			"items": [],
+			"subfolders": []
+		},
+		"font": {
+			"items": [
+				{
+					"name": "PublicPixel.ttf",
+					"type": "application/font-sfnt",
+					"sid": 434168951012517,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
+			"subfolders": []
+		},
+		"icon": {
+			"items": [
+				{
+					"name": "Иконка-64.png",
+					"type": "image/png",
+					"sid": 458595387074924,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "Иконка-128.png",
+					"type": "image/png",
+					"sid": 848762040182176,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "Иконка-256.png",
+					"type": "image/png",
+					"sid": 395407000700499,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "Иконка-загрузки.png",
+					"type": "image/png",
+					"sid": 255439777544679,
+					"icon-info": {
+						"purpose": "loading-logo"
+					}
+				}
+			],
+			"subfolders": []
+		},
+		"general": {
+			"items": [
+				{
+					"name": "LICENSE.txt",
+					"type": "text/plain",
+					"sid": 156342060097675,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
+			"subfolders": []
+		}
+	},
+	"timelines": {
+		"items": [
+			"Шкала 1"
+		],
+		"subfolders": [
+			{
+				"items": [],
+				"subfolders": []
+			}
+		]
+	},
+	"flowcharts": {
+		"items": [],
+		"subfolders": []
+	},
+	"properties": {
+		"description": "",
+		"version": "0.1b",
+		"author": "",
+		"authorEmail": "smit.1t@yandex.ru",
+		"authorWebsite": "https://dobrofiner.netlify.app",
+		"appId": "com.dobrofiner.dobsandbox",
+		"pixelRounding": true,
+		"zAxisScale": "normalized",
+		"fov": 0.7853981633974483,
+		"useLoaderLayout": false,
+		"fullscreenMode": "letterbox-scale",
+		"fullscreenQuality": "low",
+		"viewportFit": "auto",
+		"backgroundColor": [
+			0,
+			0,
+			0,
+			0
+		],
+		"splashColor": [
+			1,
+			1,
+			1,
+			0
+		],
+		"useThemeColor": false,
+		"themeColor": [
+			1,
+			1,
+			1,
+			0
+		],
+		"orientations": "landscape",
+		"webgpu": "auto",
+		"gpuPreference": "high-performance",
+		"scriptsType": "module",
+		"framerateMode": "vsync",
+		"compositingMode": "standard",
+		"sampling": "nearest",
+		"downscaling": "medium",
+		"renderingMode": "auto",
+		"anisotropicFiltering": "auto",
+		"zNear": 1,
+		"zFar": 10000,
+		"maxSpriteSheetSize": 2048,
+		"loaderStyle": "progress-logo",
+		"preloadSounds": true,
+		"cordovaiOSScheme": "app",
+		"cordovaAndroidScheme": "https",
+		"autoReloadScriptsOnPreview": false,
+		"exportFileStructure": "folders",
+		"uidAllocationMode": "increment"
+	},
+	"viewportWidth": 640,
+	"viewportHeight": 480,
+	"firstLayout": "menu"
+}

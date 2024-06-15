@@ -1,0 +1,14 @@
+{
+	"name": "moveui",
+	"plugin-id": "Sprite",
+	"sid": 647923989795281,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"влево",
+		"вправо",
+		"вниз",
+		"ыыерх3"
+	]
+}

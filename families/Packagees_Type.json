@@ -1,0 +1,47 @@
+{
+	"name": "Packagees_Type",
+	"plugin-id": "Sprite",
+	"sid": 797687620224962,
+	"instanceVariables": [
+		{
+			"name": "NAME",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 644297623299496
+		},
+		{
+			"name": "TopBlock",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 504732256543777
+		},
+		{
+			"name": "Block",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 283846886789684
+		},
+		{
+			"name": "ChanceToFind_1",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 312642250368158
+		},
+		{
+			"name": "ChanceToFind_2",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 237612350412769
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"Package_Type"
+	]
+}

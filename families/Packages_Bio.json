@@ -1,0 +1,33 @@
+{
+	"name": "Packages_Bio",
+	"plugin-id": "Sprite",
+	"sid": 709164503145020,
+	"instanceVariables": [
+		{
+			"name": "NAME",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 949083517350767
+		},
+		{
+			"name": "ChanceToFind",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 992094824120028
+		},
+		{
+			"name": "ChangeTo",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 942651877595440
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"Package_Bio"
+	]
+}

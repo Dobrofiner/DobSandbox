@@ -1,0 +1,30 @@
+{
+	"name": "credits",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Тач",
+					"sid": 674748783118168,
+					"parameters": {
+						"object": "quet2"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 547921840426706,
+					"parameters": {
+						"layout": "menu"
+					}
+				}
+			],
+			"sid": 944192214162345
+		}
+	],
+	"sid": 185332616332205
+}

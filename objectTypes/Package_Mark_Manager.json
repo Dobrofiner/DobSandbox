@@ -1,0 +1,65 @@
+{
+	"name": "Package_Mark_Manager",
+	"plugin-id": "Sprite",
+	"sid": 539624406003429,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "Package",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 868922503623543
+		},
+		{
+			"name": "Number",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 826818720296301
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 32,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 609128,
+						"collisionPoly": {
+							"points": [
+								0,
+								1,
+								0,
+								0,
+								1,
+								0,
+								1,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 142288927579216,
+				"name": "Default",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

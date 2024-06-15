@@ -1,0 +1,40 @@
+{
+	"name": "Packages_Mark",
+	"plugin-id": "Sprite",
+	"sid": 282495940684306,
+	"instanceVariables": [
+		{
+			"name": "Name",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 509653622095559
+		},
+		{
+			"name": "X_",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 816992782207830
+		},
+		{
+			"name": "Y_",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 216135652370392
+		},
+		{
+			"name": "Type",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 370680382402284
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"Package_Mark"
+	]
+}

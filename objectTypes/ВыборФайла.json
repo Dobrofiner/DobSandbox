@@ -1,0 +1,14 @@
+{
+	"name": "ВыборФайла",
+	"plugin-id": "filechooser",
+	"sid": 221074341267540,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "NoSave",
+			"name": "НеСохранять",
+			"sid": 314191408988754
+		}
+	]
+}

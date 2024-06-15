@@ -1,0 +1,10 @@
+{
+	"name": "ФайловаяСистема",
+	"plugin-id": "FileSystem",
+	"sid": 378587587344771,
+	"singleglobal-inst": {
+		"type": "ФайловаяСистема",
+		"properties": {},
+		"uid": 3
+	}
+}

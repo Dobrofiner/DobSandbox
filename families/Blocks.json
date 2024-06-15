@@ -1,0 +1,22 @@
+{
+	"name": "Blocks",
+	"plugin-id": "Sprite",
+	"sid": 203850569427342,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 463371791998457
+		},
+		{
+			"behaviorId": "Physics",
+			"name": "Физика",
+			"sid": 412788287296110
+		}
+	],
+	"effectTypes": [],
+	"members": [
+		"Block"
+	]
+}

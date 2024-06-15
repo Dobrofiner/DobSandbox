@@ -1,0 +1,23 @@
+{
+	"name": "spawn_blocks",
+	"plugin-id": "Sprite",
+	"sid": 413525278214418,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"block1spawn",
+		"bed__spawn",
+		"abobas_spawn",
+		"mwgavlock_spawn",
+		"pechka_spawn",
+		"workbench_spawn",
+		"stone_spawn",
+		"youtop_spawn",
+		"youtop2_spawn",
+		"in",
+		"chest_spawn",
+		"world",
+		"доски_spawn"
+	]
+}

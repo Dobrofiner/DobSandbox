@@ -1,0 +1,54 @@
+{
+	"name": "choose_map",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Тач",
+					"sid": 624178460820168,
+					"parameters": {
+						"object": "map1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 103538289691794,
+					"parameters": {
+						"layout": "мир"
+					}
+				}
+			],
+			"sid": 686071178457508
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Тач",
+					"sid": 776763663769080,
+					"parameters": {
+						"object": "map_2"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 865433673451532,
+					"parameters": {
+						"layout": "empty"
+					}
+				}
+			],
+			"sid": 725474807146129
+		}
+	],
+	"sid": 840354913923549
+}

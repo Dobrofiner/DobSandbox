@@ -1,0 +1,10 @@
+{
+	"name": "empty",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "Список событий 1"
+		}
+	],
+	"sid": 394574068421067
+}

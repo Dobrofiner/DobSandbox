@@ -1,0 +1,56 @@
+{
+	"name": "выходИзИгры",
+	"plugin-id": "Sprite",
+	"sid": 973860353253243,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "NoSave",
+			"name": "НеСохранять",
+			"sid": 139954506991161
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 500,
+						"height": 212,
+						"originX": 0.252,
+						"originY": 0.4056603773584906,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 3964190,
+						"collisionPoly": {
+							"points": [
+								0.002,
+								0,
+								0.502,
+								0,
+								0.502,
+								0.9952830188679245,
+								0.002,
+								0.9952830188679245
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 709684273948210,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

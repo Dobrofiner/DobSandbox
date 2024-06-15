@@ -1,0 +1,3762 @@
+{
+	"name": "Список событий 1",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "gridWidth",
+			"type": "number",
+			"initialValue": "32",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 675638156992326
+		},
+		{
+			"eventType": "variable",
+			"name": "gridHeight",
+			"type": "number",
+			"initialValue": "32",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 402994056435190
+		},
+		{
+			"eventType": "variable",
+			"name": "deleteMode",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 990328219105085
+		},
+		{
+			"eventType": "variable",
+			"name": "menuOpen",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 841005196483298
+		},
+		{
+			"eventType": "variable",
+			"name": "SaveState",
+			"type": "string",
+			"initialValue": "",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 708429984614790
+		},
+		{
+			"eventType": "variable",
+			"name": "onSaveCompletedN",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 510486508215551
+		},
+		{
+			"eventType": "variable",
+			"name": "debugMode",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 363984216081480
+		},
+		{
+			"eventType": "variable",
+			"name": "blockSelected",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 902370730965716
+		},
+		{
+			"eventType": "variable",
+			"name": "noMove",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 134494038619324
+		},
+		{
+			"eventType": "variable",
+			"name": "music_play",
+			"type": "boolean",
+			"initialValue": "true",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 499350028610160
+		},
+		{
+			"eventType": "variable",
+			"name": "current_music",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 535361888194427
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "save & load from file",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Тач",
+							"sid": 465060006408026,
+							"parameters": {
+								"object": "export"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 817741737704175,
+							"parameters": {
+								"variable": "menuOpen",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "save",
+							"objectClass": "System",
+							"sid": 526464919133417,
+							"parameters": {
+								"slot": "\"mytemp1w\""
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 883125349409101,
+							"parameters": {
+								"variable": "onSaveCompletedN",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 123715641354249
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-clicked",
+							"objectClass": "Кнопка2",
+							"sid": 138040392150099
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 756490931791373,
+							"parameters": {
+								"variable": "menuOpen",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "click",
+							"objectClass": "ВыборФайла",
+							"sid": 966730153187685
+						},
+						{
+							"id": "request-url",
+							"objectClass": "AJAX",
+							"sid": 744761256085221,
+							"parameters": {
+								"tag": "\"loadFile\"",
+								"url": "(ВыборФайла.FileURLAt(0))"
+							}
+						}
+					],
+					"sid": 912832983790292
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-completed",
+							"objectClass": "AJAX",
+							"sid": 126061859647593,
+							"parameters": {
+								"tag": "\"loadfile\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "parse",
+							"objectClass": "JSON",
+							"sid": 278427439825412,
+							"parameters": {
+								"data": "AJAX.LastData"
+							}
+						},
+						{
+							"id": "load-from-json",
+							"objectClass": "System",
+							"sid": 947004283564036,
+							"parameters": {
+								"json": "AJAX.LastData"
+							}
+						}
+					],
+					"sid": 377091080764204
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-save-complete",
+							"objectClass": "System",
+							"sid": 241250198686082
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 783996214048368,
+							"parameters": {
+								"variable": "onSaveCompletedN",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 764977293015150,
+							"parameters": {
+								"variable": "SaveState",
+								"value": "SaveStateJson"
+							}
+						},
+						{
+							"id": "set-value",
+							"objectClass": "JSON",
+							"sid": 603986307394082,
+							"parameters": {
+								"path": "SaveState",
+								"value": "JSON.GetAsCompactString(SaveState)"
+							}
+						},
+						{
+							"id": "invoke-download-of-string",
+							"objectClass": "Браузер",
+							"sid": 709462521725381,
+							"parameters": {
+								"string": "SaveState",
+								"mime-type": "\"application/json\"",
+								"filename": "\"savegame.dsb\""
+							}
+						}
+					],
+					"sid": 836265504449822
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-save-complete",
+							"objectClass": "System",
+							"sid": 217735980560898
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 717607122172014,
+							"parameters": {
+								"variable": "onSaveCompletedN",
+								"comparison": 0,
+								"value": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "text2",
+							"sid": 810343350555167,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "text2",
+							"sid": 829312821365162,
+							"parameters": {
+								"text": "\"Game Saved!\""
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 117818663918323,
+							"parameters": {
+								"seconds": "2.0"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "text2",
+							"sid": 988202245521945,
+							"parameters": {
+								"text": "\"\""
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "text2",
+							"sid": 142519412896577,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 989323212538249
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-load-complete",
+							"objectClass": "System",
+							"sid": 748081649240099
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "text2",
+							"sid": 341386902788697,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "text2",
+							"sid": 522295167435095,
+							"parameters": {
+								"text": "\"Game Loaded\""
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 477199906754140,
+							"parameters": {
+								"seconds": "2.0"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "text2",
+							"sid": 218367890332808,
+							"parameters": {
+								"text": "\"\""
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "text2",
+							"sid": 966907914492921,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 341246993406407
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Тач",
+							"sid": 406857538013630,
+							"parameters": {
+								"object": "save"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 110084666575660,
+							"parameters": {
+								"variable": "menuOpen",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "save",
+							"objectClass": "System",
+							"sid": 861992942860415,
+							"parameters": {
+								"slot": "\"dobsave1\""
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 876307713528756,
+							"parameters": {
+								"variable": "onSaveCompletedN",
+								"value": "2"
+							}
+						}
+					],
+					"sid": 777599529504409
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Тач",
+							"sid": 969591008740335,
+							"parameters": {
+								"object": "save2"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 571114791972663,
+							"parameters": {
+								"variable": "menuOpen",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "save",
+							"objectClass": "System",
+							"sid": 300610981445060,
+							"parameters": {
+								"slot": "\"dobsave2\""
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 878769171351503,
+							"parameters": {
+								"variable": "onSaveCompletedN",
+								"value": "2"
+							}
+						}
+					],
+					"sid": 592102503214851
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Тач",
+							"sid": 272527986542311,
+							"parameters": {
+								"object": "save3"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 470766653142702,
+							"parameters": {
+								"variable": "menuOpen",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "save",
+							"objectClass": "System",
+							"sid": 994770950966901,
+							"parameters": {
+								"slot": "\"dobsave3\""
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 413956448260910,
+							"parameters": {
+								"variable": "onSaveCompletedN",
+								"value": "2"
+							}
+						}
+					],
+					"sid": 525187978113716
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Тач",
+							"sid": 584821225777086,
+							"parameters": {
+								"object": "save4"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 445166571053495,
+							"parameters": {
+								"variable": "menuOpen",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "save",
+							"objectClass": "System",
+							"sid": 915383517792516,
+							"parameters": {
+								"slot": "\"dobsave4\""
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 439620348734769,
+							"parameters": {
+								"variable": "onSaveCompletedN",
+								"value": "2"
+							}
+						}
+					],
+					"sid": 348784776681716
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Тач",
+							"sid": 515932146682837,
+							"parameters": {
+								"object": "save5"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 931680878745569,
+							"parameters": {
+								"variable": "menuOpen",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "save",
+							"objectClass": "System",
+							"sid": 641353691520021,
+							"parameters": {
+								"slot": "\"dobsave5\""
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 212186363101966,
+							"parameters": {
+								"variable": "onSaveCompletedN",
+								"value": "2"
+							}
+						}
+					],
+					"sid": 774672397328624
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Тач",
+							"sid": 603454037441840,
+							"parameters": {
+								"object": "load"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 487282438094558,
+							"parameters": {
+								"variable": "menuOpen",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "load",
+							"objectClass": "System",
+							"sid": 834125029383116,
+							"parameters": {
+								"slot": "\"dobsave1\""
+							}
+						}
+					],
+					"sid": 546674462509290
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Тач",
+							"sid": 562060733230118,
+							"parameters": {
+								"object": "load2"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 199131619553648,
+							"parameters": {
+								"variable": "menuOpen",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "load",
+							"objectClass": "System",
+							"sid": 849787441828224,
+							"parameters": {
+								"slot": "\"dobsave2\""
+							}
+						}
+					],
+					"sid": 201696444245523
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Тач",
+							"sid": 783655334625850,
+							"parameters": {
+								"object": "load3"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 539443436249213,
+							"parameters": {
+								"variable": "menuOpen",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "load",
+							"objectClass": "System",
+							"sid": 335933294627151,
+							"parameters": {
+								"slot": "\"dobsave3\""
+							}
+						}
+					],
+					"sid": 317689558135436
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Тач",
+							"sid": 679411293966372,
+							"parameters": {
+								"object": "load4"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 564591929421229,
+							"parameters": {
+								"variable": "menuOpen",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "load",
+							"objectClass": "System",
+							"sid": 432176319079400,
+							"parameters": {
+								"slot": "\"dobsave4\""
+							}
+						}
+					],
+					"sid": 462792183412977
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Тач",
+							"sid": 744546438214175,
+							"parameters": {
+								"object": "load5"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 802865966548369,
+							"parameters": {
+								"variable": "menuOpen",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "load",
+							"objectClass": "System",
+							"sid": 711626218046460,
+							"parameters": {
+								"slot": "\"dobsave5\""
+							}
+						}
+					],
+					"sid": 266594771791256
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "menu",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-key-pressed",
+									"objectClass": "Keyboard",
+									"sid": 329337198904982,
+									"parameters": {
+										"key": 27
+									}
+								}
+							],
+							"actions": [],
+							"sid": 332673785866731,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 903006969081731,
+											"parameters": {
+												"variable": "menuOpen",
+												"comparison": 0,
+												"value": "0"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-layer-visible",
+											"objectClass": "System",
+											"sid": 260812527714658,
+											"parameters": {
+												"layer": "2",
+												"visibility": "visible"
+											}
+										},
+										{
+											"id": "set-time-scale",
+											"objectClass": "System",
+											"sid": 117481734144825,
+											"parameters": {
+												"time-scale": "0"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 280339323823676,
+											"parameters": {
+												"variable": "menuOpen",
+												"value": "1"
+											}
+										}
+									],
+									"sid": 197132475064527
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 177802363921219
+										}
+									],
+									"actions": [
+										{
+											"id": "set-layer-visible",
+											"objectClass": "System",
+											"sid": 475508015309854,
+											"parameters": {
+												"layer": "2",
+												"visibility": "invisible"
+											}
+										},
+										{
+											"id": "set-time-scale",
+											"objectClass": "System",
+											"sid": 506619285979463,
+											"parameters": {
+												"time-scale": "1.0"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 559066271125661,
+											"parameters": {
+												"variable": "menuOpen",
+												"value": "0"
+											}
+										}
+									],
+									"sid": 796232364720468
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-tap-object",
+									"objectClass": "Тач",
+									"sid": 844011449863619,
+									"parameters": {
+										"object": "выходИзИгры"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 278312721494792,
+									"parameters": {
+										"variable": "menuOpen",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 239015402666830,
+									"parameters": {
+										"variable": "menuOpen",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 123599624474814,
+									"parameters": {
+										"variable": "blockSelected",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 260445817697358,
+									"parameters": {
+										"variable": "debugMode",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 135667572507135,
+									"parameters": {
+										"variable": "deleteMode",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 754809366767954,
+									"parameters": {
+										"variable": "onSaveCompletedN",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 444228308090439,
+									"parameters": {
+										"variable": "SaveState",
+										"value": "\"\""
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 588087515281413,
+									"parameters": {
+										"variable": "gridHeight",
+										"value": "32"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 713058054341704,
+									"parameters": {
+										"variable": "gridWidth",
+										"value": "32"
+									}
+								},
+								{
+									"id": "set-time-scale",
+									"objectClass": "System",
+									"sid": 996706959225839,
+									"parameters": {
+										"time-scale": "1.0"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 562450262243013,
+									"parameters": {
+										"variable": "music_play",
+										"value": "false"
+									}
+								},
+								{
+									"id": "stop-all",
+									"objectClass": "Аудио",
+									"sid": 712172567377864
+								},
+								{
+									"id": "set-enabled",
+									"objectClass": "player",
+									"sid": 614084218062419,
+									"behaviorType": "8Направлений",
+									"parameters": {
+										"state": "disabled"
+									}
+								},
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 995941380646927,
+									"parameters": {
+										"layout": "menu"
+									}
+								}
+							],
+							"sid": 586947137638648
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-tap-object",
+									"objectClass": "Тач",
+									"sid": 826997076829795,
+									"parameters": {
+										"object": "продолжить"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 140768990887762,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 762796024426028,
+											"parameters": {
+												"variable": "menuOpen",
+												"comparison": 0,
+												"value": "1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-layer-visible",
+											"objectClass": "System",
+											"sid": 934725055904810,
+											"parameters": {
+												"layer": "2",
+												"visibility": "invisible"
+											}
+										},
+										{
+											"id": "set-time-scale",
+											"objectClass": "System",
+											"sid": 346206410498230,
+											"parameters": {
+												"time-scale": "1.0"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 688697657129342,
+											"parameters": {
+												"variable": "menuOpen",
+												"value": "0"
+											}
+										},
+										{
+											"id": "set-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 191925884046800,
+											"parameters": {
+												"variable": "music_play",
+												"value": "false"
+											}
+										},
+										{
+											"id": "stop-all",
+											"objectClass": "Аудио",
+											"sid": 408438618425252
+										}
+									],
+									"sid": 547958642949699
+								}
+							]
+						}
+					],
+					"sid": 708848721074207
+				}
+			],
+			"sid": 139403818797828
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "on start",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 433323871265786
+						}
+					],
+					"actions": [
+						{
+							"id": "set-enabled",
+							"objectClass": "player",
+							"sid": 451780880981976,
+							"behaviorType": "8Направлений",
+							"parameters": {
+								"state": "enabled"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 782079213065966,
+							"parameters": {
+								"layer": "2",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "text2",
+							"sid": 321408594322884,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-stop-on-solids",
+							"objectClass": "player",
+							"sid": 976777783520349,
+							"behaviorType": "ДвижениеК",
+							"parameters": {
+								"enabled": true
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Аудио",
+							"sid": 762225166956263,
+							"parameters": {
+								"audio-file": "Adventure Begins-1",
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"0\""
+							}
+						}
+					],
+					"sid": 286691336170616
+				}
+			],
+			"sid": 321519590928286
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "building",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Тач",
+							"sid": 515475598033507,
+							"parameters": {
+								"object": "block1spawn"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 461019465368015,
+							"parameters": {
+								"variable": "blockSelected",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 985469436251708
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-in-touch",
+							"objectClass": "Тач",
+							"sid": 860979105491707
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Тач",
+							"sid": 379042119088540,
+							"parameters": {
+								"object": "spawn_blocks"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Тач",
+							"sid": 462910369801192,
+							"parameters": {
+								"object": "blocks_1"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Тач",
+							"sid": 655076199221721,
+							"parameters": {
+								"object": "moveui"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Тач",
+							"sid": 608907871765339,
+							"parameters": {
+								"object": "player"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 183409202697917,
+							"parameters": {
+								"first-value": "blockSelected",
+								"comparison": 0,
+								"second-value": "1"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 362833661336104,
+							"parameters": {
+								"variable": "menuOpen",
+								"comparison": 0,
+								"value": "0"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 235475395684666,
+							"parameters": {
+								"variable": "deleteMode",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 521741248998007,
+							"parameters": {
+								"object-to-create": "Block2",
+								"layer": "0",
+								"x": "round(Тач.X / gridWidth) * gridWidth",
+								"y": "round(Тач.Y / gridHeight) * gridHeight",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						}
+					],
+					"sid": 510288930121707
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Тач",
+							"sid": 409660519254276,
+							"parameters": {
+								"object": "abobas_spawn"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 265828750497594,
+							"parameters": {
+								"variable": "blockSelected",
+								"value": "2"
+							}
+						}
+					],
+					"sid": 395916547038882
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-in-touch",
+							"objectClass": "Тач",
+							"sid": 566184490077680
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Тач",
+							"sid": 248880569368281,
+							"parameters": {
+								"object": "spawn_blocks"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Тач",
+							"sid": 187850335718259,
+							"parameters": {
+								"object": "player"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Тач",
+							"sid": 934983892653903,
+							"parameters": {
+								"object": "moveui"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Тач",
+							"sid": 192644758198955,
+							"parameters": {
+								"object": "blocks_1"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 904260318313458,
+							"parameters": {
+								"first-value": "blockSelected",
+								"comparison": 0,
+								"second-value": "2"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 861749509214340,
+							"parameters": {
+								"variable": "menuOpen",
+								"comparison": 0,
+								"value": "0"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 635065545741696,
+							"parameters": {
+								"variable": "deleteMode",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 187243955526820,
+							"parameters": {
+								"object-to-create": "abobas",
+								"layer": "0",
+								"x": "round(Тач.X / gridWidth) * gridWidth",
+								"y": "round(Тач.Y / gridHeight) * gridHeight",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						}
+					],
+					"sid": 602903944208707
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Тач",
+							"sid": 531247748500942,
+							"parameters": {
+								"object": "bed__spawn"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 948541499554345,
+							"parameters": {
+								"variable": "blockSelected",
+								"value": "3"
+							}
+						}
+					],
+					"sid": 829647863243643
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-in-touch",
+							"objectClass": "Тач",
+							"sid": 945168478475024
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Тач",
+							"sid": 616724125416832,
+							"parameters": {
+								"object": "spawn_blocks"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Тач",
+							"sid": 137842913019974,
+							"parameters": {
+								"object": "player"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Тач",
+							"sid": 678166545776357,
+							"parameters": {
+								"object": "moveui"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Тач",
+							"sid": 444781659267710,
+							"parameters": {
+								"object": "blocks_1"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 158961015161786,
+							"parameters": {
+								"first-value": "blockSelected",
+								"comparison": 0,
+								"second-value": "3"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 885769456568117,
+							"parameters": {
+								"variable": "menuOpen",
+								"comparison": 0,
+								"value": "0"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 754749969016808,
+							"parameters": {
+								"variable": "deleteMode",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 945714382951545,
+							"parameters": {
+								"object-to-create": "bed",
+								"layer": "0",
+								"x": "round(Тач.X / gridWidth) * gridWidth",
+								"y": "round(Тач.Y / gridHeight) * gridHeight",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						}
+					],
+					"sid": 969047050331144
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Тач",
+							"sid": 800527283665079,
+							"parameters": {
+								"object": "chest_spawn"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 473733057121772,
+							"parameters": {
+								"variable": "blockSelected",
+								"value": "4"
+							}
+						}
+					],
+					"sid": 726861739251881
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-in-touch",
+							"objectClass": "Тач",
+							"sid": 525585534154932
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Тач",
+							"sid": 968505485437989,
+							"parameters": {
+								"object": "spawn_blocks"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Тач",
+							"sid": 454456413496090,
+							"parameters": {
+								"object": "player"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Тач",
+							"sid": 408879948363214,
+							"parameters": {
+								"object": "moveui"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Тач",
+							"sid": 542531598066355,
+							"parameters": {
+								"object": "blocks_1"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 718194928796360,
+							"parameters": {
+								"first-value": "blockSelected",
+								"comparison": 0,
+								"second-value": "4"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 928490663127456,
+							"parameters": {
+								"variable": "menuOpen",
+								"comparison": 0,
+								"value": "0"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 514441268375161,
+							"parameters": {
+								"variable": "deleteMode",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 192854036492415,
+							"parameters": {
+								"object-to-create": "chest",
+								"layer": "0",
+								"x": "round(Тач.X / gridWidth) * gridWidth",
+								"y": "round(Тач.Y / gridHeight) * gridHeight",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						}
+					],
+					"sid": 419144257819832
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Тач",
+							"sid": 388260535918475,
+							"parameters": {
+								"object": "pechka_spawn"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 755414308886476,
+							"parameters": {
+								"variable": "blockSelected",
+								"value": "5"
+							}
+						}
+					],
+					"sid": 521896494258034
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-in-touch",
+							"objectClass": "Тач",
+							"sid": 149912029174678
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Тач",
+							"sid": 440317644098112,
+							"parameters": {
+								"object": "spawn_blocks"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Тач",
+							"sid": 389851883757913,
+							"parameters": {
+								"object": "player"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Тач",
+							"sid": 189503396030472,
+							"parameters": {
+								"object": "moveui"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Тач",
+							"sid": 869965146579465,
+							"parameters": {
+								"object": "blocks_1"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 154852090263577,
+							"parameters": {
+								"first-value": "blockSelected",
+								"comparison": 0,
+								"second-value": "5"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 182331528750448,
+							"parameters": {
+								"variable": "menuOpen",
+								"comparison": 0,
+								"value": "0"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 160267195374227,
+							"parameters": {
+								"variable": "deleteMode",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 772769801394751,
+							"parameters": {
+								"object-to-create": "pechka",
+								"layer": "0",
+								"x": "round(Тач.X / gridWidth) * gridWidth",
+								"y": "round(Тач.Y / gridHeight) * gridHeight",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						}
+					],
+					"sid": 963900725661970
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Тач",
+							"sid": 973260928333640,
+							"parameters": {
+								"object": "stone_spawn"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 356118640894809,
+							"parameters": {
+								"variable": "blockSelected",
+								"value": "6"
+							}
+						}
+					],
+					"sid": 715380792829015
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-in-touch",
+							"objectClass": "Тач",
+							"sid": 533714085925393
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Тач",
+							"sid": 329094613385082,
+							"parameters": {
+								"object": "spawn_blocks"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Тач",
+							"sid": 682037732270418,
+							"parameters": {
+								"object": "player"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Тач",
+							"sid": 759197998955586,
+							"parameters": {
+								"object": "moveui"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Тач",
+							"sid": 710081668081275,
+							"parameters": {
+								"object": "blocks_1"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 125482047051229,
+							"parameters": {
+								"first-value": "blockSelected",
+								"comparison": 0,
+								"second-value": "6"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 355525494140724,
+							"parameters": {
+								"variable": "menuOpen",
+								"comparison": 0,
+								"value": "0"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 443728365495406,
+							"parameters": {
+								"variable": "deleteMode",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 798670478407634,
+							"parameters": {
+								"object-to-create": "stone",
+								"layer": "0",
+								"x": "round(Тач.X / gridWidth) * gridWidth",
+								"y": "round(Тач.Y / gridHeight) * gridHeight",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						}
+					],
+					"sid": 481088184260215
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Тач",
+							"sid": 608632684338119,
+							"parameters": {
+								"object": "workbench_spawn"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 817993218452351,
+							"parameters": {
+								"variable": "blockSelected",
+								"value": "7"
+							}
+						}
+					],
+					"sid": 479476573773057
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-in-touch",
+							"objectClass": "Тач",
+							"sid": 480977594033852
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Тач",
+							"sid": 157157098189530,
+							"parameters": {
+								"object": "spawn_blocks"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Тач",
+							"sid": 162251955549791,
+							"parameters": {
+								"object": "player"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Тач",
+							"sid": 677219185274420,
+							"parameters": {
+								"object": "moveui"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Тач",
+							"sid": 777329403495637,
+							"parameters": {
+								"object": "blocks_1"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 529915851244647,
+							"parameters": {
+								"first-value": "blockSelected",
+								"comparison": 0,
+								"second-value": "7"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 169625092032592,
+							"parameters": {
+								"variable": "menuOpen",
+								"comparison": 0,
+								"value": "0"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 539418690368299,
+							"parameters": {
+								"variable": "deleteMode",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 669563598360878,
+							"parameters": {
+								"object-to-create": "workbench",
+								"layer": "0",
+								"x": "round(Тач.X / gridWidth) * gridWidth",
+								"y": "round(Тач.Y / gridHeight) * gridHeight",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						}
+					],
+					"sid": 793520162453627
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Тач",
+							"sid": 493045047646303,
+							"parameters": {
+								"object": "youtop2_spawn"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 974304360632925,
+							"parameters": {
+								"variable": "blockSelected",
+								"value": "8"
+							}
+						}
+					],
+					"sid": 374177237912916
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-in-touch",
+							"objectClass": "Тач",
+							"sid": 537051225695282
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Тач",
+							"sid": 389858962045424,
+							"parameters": {
+								"object": "spawn_blocks"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Тач",
+							"sid": 624995446307723,
+							"parameters": {
+								"object": "player"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Тач",
+							"sid": 346175548914212,
+							"parameters": {
+								"object": "moveui"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Тач",
+							"sid": 214676914186935,
+							"parameters": {
+								"object": "blocks_1"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 842813774820264,
+							"parameters": {
+								"first-value": "blockSelected",
+								"comparison": 0,
+								"second-value": "8"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 462617034556271,
+							"parameters": {
+								"variable": "menuOpen",
+								"comparison": 0,
+								"value": "0"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 432616005564045,
+							"parameters": {
+								"variable": "deleteMode",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 289387426007515,
+							"parameters": {
+								"object-to-create": "youtop2",
+								"layer": "0",
+								"x": "round(Тач.X / gridWidth) * gridWidth",
+								"y": "round(Тач.Y / gridHeight) * gridHeight",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						}
+					],
+					"sid": 549520430455652
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Тач",
+							"sid": 346933318941877,
+							"parameters": {
+								"object": "youtop_spawn"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 742818772494262,
+							"parameters": {
+								"variable": "blockSelected",
+								"value": "9"
+							}
+						}
+					],
+					"sid": 184878713923301
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-in-touch",
+							"objectClass": "Тач",
+							"sid": 312362855863076
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Тач",
+							"sid": 859592476974301,
+							"parameters": {
+								"object": "spawn_blocks"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Тач",
+							"sid": 146450874901836,
+							"parameters": {
+								"object": "spawn_blocks"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Тач",
+							"sid": 900664421620491,
+							"parameters": {
+								"object": "moveui"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Тач",
+							"sid": 302633895954065,
+							"parameters": {
+								"object": "blocks_1"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 725643144636264,
+							"parameters": {
+								"first-value": "blockSelected",
+								"comparison": 0,
+								"second-value": "9"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 922320201994395,
+							"parameters": {
+								"variable": "menuOpen",
+								"comparison": 0,
+								"value": "0"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 771038446999185,
+							"parameters": {
+								"variable": "deleteMode",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 797169165359706,
+							"parameters": {
+								"object-to-create": "youtop",
+								"layer": "0",
+								"x": "round(Тач.X / gridWidth) * gridWidth",
+								"y": "round(Тач.Y / gridHeight) * gridHeight",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						}
+					],
+					"sid": 427609636476549
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Тач",
+							"sid": 107881722954713,
+							"parameters": {
+								"object": "mwgavlock_spawn"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 811014918200632,
+							"parameters": {
+								"variable": "blockSelected",
+								"value": "10"
+							}
+						}
+					],
+					"sid": 428705075198033
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-in-touch",
+							"objectClass": "Тач",
+							"sid": 850634772262603
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Тач",
+							"sid": 361105158536728,
+							"parameters": {
+								"object": "spawn_blocks"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Тач",
+							"sid": 974288704982398,
+							"parameters": {
+								"object": "spawn_blocks"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Тач",
+							"sid": 351808426496325,
+							"parameters": {
+								"object": "moveui"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Тач",
+							"sid": 892020158802739,
+							"parameters": {
+								"object": "blocks_1"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 370647016396254,
+							"parameters": {
+								"first-value": "blockSelected",
+								"comparison": 0,
+								"second-value": "10"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 381573450983781,
+							"parameters": {
+								"variable": "menuOpen",
+								"comparison": 0,
+								"value": "0"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 396602436775391,
+							"parameters": {
+								"variable": "deleteMode",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 698494579527425,
+							"parameters": {
+								"object-to-create": "mwgavlock",
+								"layer": "0",
+								"x": "round(Тач.X / gridWidth) * gridWidth",
+								"y": "round(Тач.Y / gridHeight) * gridHeight",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						}
+					],
+					"sid": 258960747307329
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Тач",
+							"sid": 409216257404416,
+							"parameters": {
+								"object": "доски_spawn"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 891139292668615,
+							"parameters": {
+								"variable": "blockSelected",
+								"value": "11"
+							}
+						}
+					],
+					"sid": 729600612160663
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-in-touch",
+							"objectClass": "Тач",
+							"sid": 686854491962704
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Тач",
+							"sid": 555182731969199,
+							"parameters": {
+								"object": "spawn_blocks"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Тач",
+							"sid": 115552150656017,
+							"parameters": {
+								"object": "player"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Тач",
+							"sid": 144027591480540,
+							"parameters": {
+								"object": "moveui"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Тач",
+							"sid": 209340413662781,
+							"parameters": {
+								"object": "blocks_1"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 790811375003897,
+							"parameters": {
+								"first-value": "blockSelected",
+								"comparison": 0,
+								"second-value": "11"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 394965932376696,
+							"parameters": {
+								"variable": "menuOpen",
+								"comparison": 0,
+								"value": "0"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 846415942791443,
+							"parameters": {
+								"variable": "deleteMode",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 937349353272871,
+							"parameters": {
+								"object-to-create": "доски",
+								"layer": "0",
+								"x": "round(Тач.X / gridWidth) * gridWidth",
+								"y": "round(Тач.Y / gridHeight) * gridHeight",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						}
+					],
+					"sid": 172427511155885
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-touching-object",
+							"objectClass": "Тач",
+							"sid": 714061407289789,
+							"parameters": {
+								"object": "blocks_1"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 155604299500902,
+							"parameters": {
+								"variable": "deleteMode",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "blocks_1",
+							"sid": 355548590601056
+						}
+					],
+					"sid": 552103997046250
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-touching-object",
+							"objectClass": "Тач",
+							"sid": 360709109877605,
+							"parameters": {
+								"object": "Blocks"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 470792790425123,
+							"parameters": {
+								"variable": "deleteMode",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "Blocks",
+							"sid": 872982826413141
+						}
+					],
+					"sid": 943856082973262
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 755628221381132,
+							"parameters": {
+								"key": 68
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 635383716966866,
+							"parameters": {
+								"variable": "deleteMode",
+								"value": "(deleteMode = 0) ? 1 : 0 "
+							}
+						}
+					],
+					"sid": 804140001250800
+				}
+			],
+			"sid": 413198372103578
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "debug",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 994845631304670,
+							"parameters": {
+								"key": 112
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 753114504443601,
+							"parameters": {
+								"variable": "debugMode",
+								"value": "(debugMode = 0) ? 1 : 0 "
+							}
+						}
+					],
+					"sid": 499180000126950
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 180519667679122
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 291772073442718,
+							"parameters": {
+								"variable": "debugMode",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "dev",
+							"sid": 188786585872269,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "dev",
+							"sid": 285036479799076,
+							"parameters": {
+								"text": "\"Block Selected: \" & blockSelected & newline & \r\n   \"Delete Mode: \" & (deleteMode = 1 ? \"Enabled\" : \"Disabled\") & newline & \r\n   \"Menu Open: \" & (menuOpen = 1 ? \"Yes\" : \"No\") & newline & \r\n   \"Save Completed: \" & (onSaveCompletedN = 1 ? \"File\" : (onSaveCompletedN = 2 ? \"Local\" : \"No\")) & newline & \"Player x:\" & player.x &  newline & \"Player y:\" & player.Y & newline & \"No Move:\" & noMove\r\n"
+							}
+						}
+					],
+					"sid": 407821037502152
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 288630325120719,
+							"parameters": {
+								"variable": "debugMode",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "dev",
+							"sid": 272262348012310,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 211036718597879
+				}
+			],
+			"sid": 163011222543187
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 528190448934579,
+					"parameters": {
+						"key": 80
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-layer-scale",
+					"objectClass": "System",
+					"sid": 443673252703257,
+					"parameters": {
+						"layer": "0",
+						"scale": "0.4"
+					}
+				}
+			],
+			"sid": 719811279931093
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 779749553306971,
+					"parameters": {
+						"key": 48
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-layer-scale",
+					"objectClass": "System",
+					"sid": 814600020292252,
+					"parameters": {
+						"layer": "0",
+						"scale": "1.0"
+					}
+				}
+			],
+			"sid": 380838609590098
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "world_generation",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [],
+			"sid": 906188122280629
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 969087788244547
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position",
+					"objectClass": "LandBuilder",
+					"sid": 423864244899979,
+					"parameters": {
+						"x": "Player.X+800",
+						"y": "Player.Y"
+					}
+				},
+				{
+					"id": "pin-to-object",
+					"objectClass": "LandBuilder",
+					"sid": 694296200222170,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "player",
+						"mode": "position-angle"
+					}
+				}
+			],
+			"sid": 396489304762598
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "Package_Mark",
+					"sid": 476047182866033,
+					"parameters": {
+						"instance-variable": "Name",
+						"comparison": 0,
+						"value": "Package_Mark_Manager.Package"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 745053832481390,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Package_Mark_Manager",
+							"sid": 913808689793827,
+							"parameters": {
+								"instance-variable": "Number",
+								"comparison": 3,
+								"value": "0"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Packages_Mark",
+							"sid": 244309735824595,
+							"parameters": {
+								"instance-variable": "Name",
+								"comparison": 0,
+								"value": "Package_Mark_Manager.Package"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "HParameters",
+							"sid": 654852739992602,
+							"parameters": {
+								"instance-variable": "Job",
+								"comparison": 0,
+								"value": "\"top\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Package_Mark_Manager",
+							"sid": 868184669090027,
+							"parameters": {
+								"instance-variable": "Number",
+								"value": "int(random(10,15))"
+							}
+						}
+					],
+					"sid": 232930313233946,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-y",
+									"objectClass": "BlockBuilder",
+									"sid": 799660001838980,
+									"parameters": {
+										"comparison": 5,
+										"y-co-ordinate": "HParameters.Y"
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Packages_Mark",
+									"sid": 883644261550828,
+									"parameters": {
+										"instance-variable": "Type",
+										"comparison": 0,
+										"value": "\"down\""
+									},
+									"isInverted": true
+								},
+								{
+									"id": "pick-random-instance",
+									"objectClass": "System",
+									"sid": 720106183450840,
+									"parameters": {
+										"object": "Packages_Mark"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Package_Mark_Manager",
+									"sid": 956983647009032,
+									"parameters": {
+										"instance-variable": "Package",
+										"value": "Packages_Mark.Name"
+									}
+								}
+							],
+							"sid": 577989339161408
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-y",
+									"objectClass": "BlockBuilder",
+									"sid": 541713018043461,
+									"parameters": {
+										"comparison": 3,
+										"y-co-ordinate": "HParameters.Y"
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Packages_Mark",
+									"sid": 369628858888899,
+									"parameters": {
+										"instance-variable": "Type",
+										"comparison": 0,
+										"value": "\"up\""
+									},
+									"isInverted": true
+								},
+								{
+									"id": "pick-random-instance",
+									"objectClass": "System",
+									"sid": 109447975018879,
+									"parameters": {
+										"object": "Packages_Mark"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Package_Mark_Manager",
+									"sid": 515744245808788,
+									"parameters": {
+										"instance-variable": "Package",
+										"value": "Packages_Mark.Name"
+									}
+								}
+							],
+							"sid": 794826929154768
+						}
+					]
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-x",
+					"objectClass": "LandBuilder",
+					"sid": 229020440087485,
+					"parameters": {
+						"comparison": 4,
+						"x-co-ordinate": "BlockBuilder.X"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 329372293704544,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Package_Mark",
+							"sid": 718587939075818,
+							"parameters": {
+								"instance-variable": "Name",
+								"comparison": 0,
+								"value": "Package_Mark_Manager.Package"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Package_Bio",
+							"sid": 968243126812864,
+							"parameters": {
+								"instance-variable": "NAME",
+								"comparison": 0,
+								"value": "Package_Bio_Manager.Package"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Package_Type",
+							"sid": 430166995325637,
+							"parameters": {
+								"instance-variable": "NAME",
+								"comparison": 0,
+								"value": "Package_Bio_Manager.Package"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 106547347277887,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "repeat",
+									"objectClass": "System",
+									"sid": 380331736474437,
+									"parameters": {
+										"count": "Package_Mark.X_"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "spawn-another-object",
+									"objectClass": "BlockBuilder",
+									"sid": 655263434970288,
+									"parameters": {
+										"object": "Block",
+										"layer": "0",
+										"image-point": "0",
+										"create-hierarchy": false
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "Block",
+									"sid": 481166446453200,
+									"parameters": {
+										"x": "BlockBuilder.X+40*loopindex",
+										"y": "BlockBuilder.Y"
+									}
+								},
+								{
+									"id": "subtract-from-instvar",
+									"objectClass": "Package_Mark_Manager",
+									"sid": 438517104722287,
+									"parameters": {
+										"instance-variable": "Number",
+										"value": "1"
+									}
+								},
+								{
+									"id": "subtract-from-instvar",
+									"objectClass": "Package_Bio_Manager",
+									"sid": 265774302242453,
+									"parameters": {
+										"instance-variable": "Number",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 834009246241501,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Package_Type",
+											"sid": 158021655132593,
+											"parameters": {
+												"instance-variable": "ChanceToFind_1",
+												"comparison": 3,
+												"value": "Package_Bio.ChanceToFind"
+											}
+										},
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Package_Type",
+											"sid": 702421106443056,
+											"parameters": {
+												"instance-variable": "ChanceToFind_2",
+												"comparison": 5,
+												"value": "Package_Bio.ChanceToFind"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "Block",
+											"sid": 312526259942535,
+											"parameters": {
+												"animation": "Package_Type.TopBlock",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 545651571658053
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-animation-playing",
+											"objectClass": "Block",
+											"sid": 419547738280544,
+											"parameters": {
+												"animation": "\"dirt\""
+											}
+										},
+										{
+											"id": "is-animation-playing",
+											"objectClass": "Block",
+											"sid": 309779756104542,
+											"parameters": {
+												"animation": "\"grass\""
+											}
+										}
+									],
+									"actions": [],
+									"sid": 714893110432779,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 568735892603184,
+													"parameters": {
+														"first-value": "choose(0,1)",
+														"comparison": 0,
+														"second-value": "0"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "create-object",
+													"objectClass": "System",
+													"sid": 365574334243997,
+													"parameters": {
+														"object-to-create": "Blocks",
+														"layer": "0",
+														"x": "Block.X",
+														"y": "Block.Y-40",
+														"create-hierarchy": false,
+														"template-name": "\"\""
+													}
+												},
+												{
+													"id": "set-animation",
+													"objectClass": "Blocks",
+													"sid": 334150860778901,
+													"parameters": {
+														"animation": "choose(\"redflower\",\"yellowflower\",\"plant\")",
+														"from": "beginning"
+													}
+												}
+											],
+											"sid": 446674129022845
+										}
+									],
+									"isOrBlock": true
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-animation-playing",
+											"objectClass": "Block",
+											"sid": 829441460393290,
+											"parameters": {
+												"animation": "\"sand\""
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 869917754143151,
+											"parameters": {
+												"first-value": "choose(0,1)",
+												"comparison": 0,
+												"second-value": "0"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "create-object",
+											"objectClass": "System",
+											"sid": 844767604883621,
+											"parameters": {
+												"object-to-create": "Blocks",
+												"layer": "0",
+												"x": "Block.X",
+												"y": "Block.Y-40",
+												"create-hierarchy": false,
+												"template-name": "\"\""
+											}
+										},
+										{
+											"id": "set-animation",
+											"objectClass": "Blocks",
+											"sid": 945735533813942,
+											"parameters": {
+												"animation": "\"deadtree\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 488166716618550
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "HParameters",
+											"sid": 535670750510476,
+											"parameters": {
+												"instance-variable": "Job",
+												"comparison": 0,
+												"value": "\"bottom\""
+											}
+										},
+										{
+											"id": "repeat",
+											"objectClass": "System",
+											"sid": 947920454382916,
+											"parameters": {
+												"count": "(HParameters.Y-BlockBuilder.Y)/40"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "spawn-another-object",
+											"objectClass": "Block",
+											"sid": 996390532783366,
+											"parameters": {
+												"object": "Blocks",
+												"layer": "0",
+												"image-point": "0",
+												"create-hierarchy": false
+											}
+										},
+										{
+											"id": "set-position",
+											"objectClass": "Blocks",
+											"sid": 566428383820596,
+											"parameters": {
+												"x": "Block.X",
+												"y": "Block.Y+(loopindex+1)*40"
+											}
+										}
+									],
+									"sid": 936197993894831,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [],
+											"actions": [
+												{
+													"id": "set-instvar-value",
+													"objectClass": "Package_Bio",
+													"sid": 346037244872685,
+													"parameters": {
+														"instance-variable": "ChanceToFind",
+														"value": "int(random(100))"
+													}
+												}
+											],
+											"sid": 211257118450111,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-instance-variable",
+															"objectClass": "Package_Type",
+															"sid": 342276008836594,
+															"parameters": {
+																"instance-variable": "ChanceToFind_1",
+																"comparison": 3,
+																"value": "Package_Bio.ChanceToFind"
+															}
+														},
+														{
+															"id": "compare-instance-variable",
+															"objectClass": "Package_Type",
+															"sid": 812520770982401,
+															"parameters": {
+																"instance-variable": "ChanceToFind_2",
+																"comparison": 5,
+																"value": "Package_Bio.ChanceToFind"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-animation",
+															"objectClass": "Blocks",
+															"sid": 916802678173432,
+															"parameters": {
+																"animation": "Package_Type.Block",
+																"from": "beginning"
+															}
+														}
+													],
+													"sid": 540076306785331
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-x",
+									"objectClass": "BlockBuilder",
+									"sid": 723625591661921,
+									"parameters": {
+										"x": "Self.X+40*Package_Mark.X_"
+									}
+								},
+								{
+									"id": "set-y",
+									"objectClass": "BlockBuilder",
+									"sid": 973562800619754,
+									"parameters": {
+										"y": "Self.Y+40*Package_Mark.Y_"
+									}
+								}
+							],
+							"sid": 250933967402745
+						}
+					]
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "Package_Bio_Manager",
+					"sid": 404122994936244,
+					"parameters": {
+						"instance-variable": "Number",
+						"comparison": 3,
+						"value": "0"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "Package_Bio",
+					"sid": 252003492224949,
+					"parameters": {
+						"instance-variable": "NAME",
+						"comparison": 0,
+						"value": "Package_Bio_Manager.Package"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "Package_Type",
+					"sid": 878939499638288,
+					"parameters": {
+						"instance-variable": "NAME",
+						"comparison": 0,
+						"value": "Package_Bio_Manager.Package"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Package_Bio_Manager",
+					"sid": 698699172498731,
+					"parameters": {
+						"instance-variable": "Number",
+						"value": "int(random(10,15))"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Package_Bio_Manager",
+					"sid": 152660647481459,
+					"parameters": {
+						"instance-variable": "Package",
+						"value": "tokenat(Package_Bio.ChangeTo,int(random(tokencount(Package_Bio.ChangeTo,\",\"))),\",\")"
+					}
+				}
+			],
+			"sid": 222211548422044
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 336656582649185,
+					"parameters": {
+						"key": 38
+					}
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 282852711633153,
+					"parameters": {
+						"first-value": "menuOpen",
+						"comparison": 0,
+						"second-value": "0"
+					}
+				},
+				{
+					"id": "is-overlapping-at-offset",
+					"objectClass": "player",
+					"sid": 517475508875602,
+					"parameters": {
+						"object": "Blocks",
+						"offset-x": "0",
+						"offset-y": "-10"
+					},
+					"isInverted": true
+				},
+				{
+					"id": "is-overlapping-at-offset",
+					"objectClass": "player",
+					"sid": 802952575741091,
+					"parameters": {
+						"object": "blocks_1",
+						"offset-x": "0",
+						"offset-y": "-10"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position",
+					"objectClass": "player",
+					"sid": 295877364868880,
+					"parameters": {
+						"x": "player.X ",
+						"y": "player.Y - 10"
+					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "player",
+					"sid": 919093266194847,
+					"parameters": {
+						"x": "player.X ",
+						"y": "player.Y - 10"
+					}
+				}
+			],
+			"sid": 848123509076677
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 985837250061307,
+					"parameters": {
+						"key": 40
+					}
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 455062865003703,
+					"parameters": {
+						"first-value": "menuOpen",
+						"comparison": 0,
+						"second-value": "0"
+					}
+				},
+				{
+					"id": "is-overlapping-at-offset",
+					"objectClass": "player",
+					"sid": 672118998932194,
+					"parameters": {
+						"object": "Blocks",
+						"offset-x": "0",
+						"offset-y": "10"
+					},
+					"isInverted": true
+				},
+				{
+					"id": "is-overlapping-at-offset",
+					"objectClass": "player",
+					"sid": 107394384243862,
+					"parameters": {
+						"object": "blocks_1",
+						"offset-x": "0",
+						"offset-y": "10"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position",
+					"objectClass": "player",
+					"sid": 980592695221815,
+					"parameters": {
+						"x": "player.X ",
+						"y": "player.Y + 10"
+					}
+				}
+			],
+			"sid": 100100558606811
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 935019998346831,
+					"parameters": {
+						"key": 37
+					}
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 735401835058229,
+					"parameters": {
+						"first-value": "menuOpen",
+						"comparison": 0,
+						"second-value": "0"
+					}
+				},
+				{
+					"id": "is-overlapping-at-offset",
+					"objectClass": "player",
+					"sid": 723624666398660,
+					"parameters": {
+						"object": "Blocks",
+						"offset-x": "-10",
+						"offset-y": "0"
+					},
+					"isInverted": true
+				},
+				{
+					"id": "is-overlapping-at-offset",
+					"objectClass": "player",
+					"sid": 433856656593417,
+					"parameters": {
+						"object": "blocks_1",
+						"offset-x": "-10",
+						"offset-y": "0"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position",
+					"objectClass": "player",
+					"sid": 516715014440197,
+					"parameters": {
+						"x": "player.X - 10",
+						"y": "player.Y"
+					}
+				}
+			],
+			"sid": 678954520958629
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 278072220343701,
+					"parameters": {
+						"key": 39
+					}
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 631034732094470,
+					"parameters": {
+						"first-value": "menuOpen",
+						"comparison": 0,
+						"second-value": "0"
+					}
+				},
+				{
+					"id": "is-overlapping-at-offset",
+					"objectClass": "player",
+					"sid": 552200822684904,
+					"parameters": {
+						"object": "Blocks",
+						"offset-x": "10",
+						"offset-y": "0"
+					},
+					"isInverted": true
+				},
+				{
+					"id": "is-overlapping-at-offset",
+					"objectClass": "player",
+					"sid": 762195855619028,
+					"parameters": {
+						"object": "blocks_1",
+						"offset-x": "10",
+						"offset-y": "0"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position",
+					"objectClass": "player",
+					"sid": 330828651652320,
+					"parameters": {
+						"x": "player.X + 10",
+						"y": "player.Y"
+					}
+				}
+			],
+			"sid": 369003469002365
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 681038410022942,
+					"parameters": {
+						"key": 114
+					}
+				}
+			],
+			"actions": [],
+			"sid": 427995898467862,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 764698089398494,
+							"parameters": {
+								"variable": "music_play"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 365772274130847,
+							"parameters": {
+								"variable": "music_play",
+								"value": "false"
+							}
+						},
+						{
+							"id": "stop-all",
+							"objectClass": "Аудио",
+							"sid": 511455261115473
+						}
+					],
+					"sid": 172999941366983
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 807623507975434
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 382351390179976,
+							"parameters": {
+								"variable": "music_play",
+								"value": "true"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Аудио",
+							"sid": 648537231949371,
+							"parameters": {
+								"audio-file": "Adventure Begins-1",
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"0\""
+							}
+						}
+					],
+					"sid": 815749491185612
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-ended",
+					"objectClass": "Аудио",
+					"sid": 636221378246722,
+					"parameters": {
+						"tag": "\"\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 822930386676752,
+					"parameters": {
+						"variable": "current_music",
+						"value": "(current_music = 0) ? 1 : 0 "
+					}
+				}
+			],
+			"sid": 524319512476880,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 757841919521154,
+							"parameters": {
+								"variable": "current_music",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Аудио",
+							"sid": 873254356346893,
+							"parameters": {
+								"audio-file": "Floating Isles-1",
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"0\""
+							}
+						}
+					],
+					"sid": 519321257475823
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 647877823741116
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Аудио",
+							"sid": 569064618151761,
+							"parameters": {
+								"audio-file": "Adventure Begins-1",
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"0\""
+							}
+						}
+					],
+					"sid": 621595111992903
+				}
+			]
+		}
+	],
+	"sid": 512678941480335
+}

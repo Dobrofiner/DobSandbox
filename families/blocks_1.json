@@ -1,0 +1,32 @@
+{
+	"name": "blocks_1",
+	"plugin-id": "Sprite",
+	"sid": 459417660349812,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Твердый",
+			"sid": 543040609700655
+		},
+		{
+			"behaviorId": "Physics",
+			"name": "Физика",
+			"sid": 675617269147429
+		}
+	],
+	"effectTypes": [],
+	"members": [
+		"chest",
+		"mwgavlock",
+		"pechka",
+		"abobas",
+		"bed",
+		"workbench",
+		"stone",
+		"youtop2",
+		"youtop",
+		"доски",
+		"Block2"
+	]
+}

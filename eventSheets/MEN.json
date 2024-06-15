@@ -1,0 +1,226 @@
+{
+	"name": "MEN",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "music_enbled",
+			"type": "boolean",
+			"initialValue": "true",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 131664135080247
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Тач",
+					"sid": 225986582696526,
+					"parameters": {
+						"object": "playgane"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "stop-all",
+					"objectClass": "Аудио",
+					"sid": 949129731246445
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 692726531585862,
+					"parameters": {
+						"layout": "chooose_map"
+					}
+				}
+			],
+			"sid": 707735321039020
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Тач",
+					"sid": 706862481604475,
+					"parameters": {
+						"object": "credits"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "stop-all",
+					"objectClass": "Аудио",
+					"sid": 631153220455915
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 369684261997215,
+					"parameters": {
+						"layout": "credits"
+					}
+				}
+			],
+			"sid": 536771008007449
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-touching-object",
+					"objectClass": "Тач",
+					"sid": 796089474630468,
+					"parameters": {
+						"object": "quet"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-layer-transparent",
+					"objectClass": "System",
+					"sid": 329032869791882,
+					"parameters": {
+						"layer": "0",
+						"mode": "transparent"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "menu",
+					"sid": 462147529187977,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 860139865044315,
+					"parameters": {
+						"seconds": "0.5"
+					}
+				},
+				{
+					"id": "close",
+					"objectClass": "Браузер",
+					"sid": 440336523584564
+				}
+			],
+			"sid": 177766501109110
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 974969169933405
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Аудио",
+					"sid": 824160283793545,
+					"parameters": {
+						"audio-file": "dobsandboxmenu",
+						"loop": "looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 838682844613782
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 139792704495401,
+					"parameters": {
+						"key": 114
+					}
+				}
+			],
+			"actions": [],
+			"sid": 755812043687392,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 771103333013774,
+							"parameters": {
+								"variable": "music_enbled"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 934300877545523,
+							"parameters": {
+								"variable": "music_enbled",
+								"value": "false"
+							}
+						},
+						{
+							"id": "stop-all",
+							"objectClass": "Аудио",
+							"sid": 544103574820936
+						}
+					],
+					"sid": 647777041856692
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 559236841708492
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 505100028861265,
+							"parameters": {
+								"variable": "music_enbled",
+								"value": "true"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Аудио",
+							"sid": 777699508633284,
+							"parameters": {
+								"audio-file": "dobsandboxmenu",
+								"loop": "looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						}
+					],
+					"sid": 984909017143336
+				}
+			]
+		}
+	],
+	"sid": 400093937679217
+}

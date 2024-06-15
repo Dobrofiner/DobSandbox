@@ -1,0 +1,12 @@
+{
+	"name": "Тач",
+	"plugin-id": "Touch",
+	"sid": 475146302250897,
+	"singleglobal-inst": {
+		"type": "Тач",
+		"properties": {
+			"use-mouse-input": true
+		},
+		"uid": 7
+	}
+}

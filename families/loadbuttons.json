@@ -1,0 +1,18 @@
+{
+	"name": "loadbuttons",
+	"plugin-id": "Sprite",
+	"sid": 840881019256834,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"load",
+		"load2",
+		"load3",
+		"load4",
+		"load5",
+		"closemen",
+		"export",
+		"import"
+	]
+}
