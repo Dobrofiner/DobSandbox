@@ -1,21 +1,22 @@
-# DobSandbox
-The Source Code of DobSandbox Game
-# Controls
-<br>Arrows  - to move
-<br>Escape - pause game
-<br>F1 - debug menu 
-<br>F3 - to enable or disable music 
-<br>D - enable or disable delete mode 
-<br>Click on blocks to select it 
-# Credits:
-Game Coded by Dobrofiner
+**DobSandbox**
+================
 
-          Textures and Sprites by Dobrofiner and Bboy Haggy-Waggy and VadModeOfficial
+**The Source Code of DobSandbox Game**
 
-Font used - Public Pixel Font
+**Controls**
 
-      Music by VadModeOfficial
+* Arrows: Move
+* Escape: Pause game
+* F1: Debug menu
+* F3: Enable/Disable music
+* D: Enable/Disable delete mode
+* Click on blocks to select it
 
-License - MIT
-<br>
-Note:You Need full version of Construct 3 to edit this game
+**Credits**
+
+* Game Coded by [Dobrofiner](https://github.com/Dobrofiner)
+* Textures and Sprites by [Dobrofiner] and Bboy Haggy-Waggy
+* Font used: Public Pixel Font
+* Music by [VadModeOfficial](https://github.com/VadModeOfficial)
+* License: MIT
+* Note: You need the full version of Construct 3 to edit this game.
