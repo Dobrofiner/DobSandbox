@@ -17,4 +17,5 @@ Font used - Public Pixel Font
       Music by VadModeOfficial
 
 License - MIT
+<br>
 Note:You Need full version of Construct 3 to edit this game
