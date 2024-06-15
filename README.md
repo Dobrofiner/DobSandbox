@@ -19,4 +19,4 @@
 * Font used: Public Pixel Font
 * Music by [VadMode](https://github.com/VadMode)
 * License: MIT
-* Note: You need the full version of Construct 3 to edit this game.
+* Note: If you edit this,please use full version of construct 3
