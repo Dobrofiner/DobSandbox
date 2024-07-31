@@ -1,0 +1,64 @@
+{
+	"name": "Joystick",
+	"plugin-id": "Sprite",
+	"sid": 203080681477334,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "DragnDrop",
+			"name": "DragDrop",
+			"sid": 239827263587828
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 137,
+						"height": 137,
+						"originX": 0.50365,
+						"originY": 0.50365,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 3362397,
+						"collisionPoly": {
+							"points": [
+								0.167883,
+								0.167883,
+								0.49635,
+								0.0291971,
+								0.832117,
+								0.167883,
+								0.970803,
+								0.49635,
+								0.832117,
+								0.832117,
+								0.49635,
+								0.970803,
+								0.167883,
+								0.832117,
+								0.0291971,
+								0.49635
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 501271540810392,
+				"name": "Default",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

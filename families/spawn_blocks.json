@@ -2,7 +2,15 @@
 	"name": "spawn_blocks",
 	"plugin-id": "Sprite",
 	"sid": 413525278214418,
-	"instanceVariables": [],
+	"instanceVariables": [
+		{
+			"name": "ObjectName",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 505686701736048
+		}
+	],
 	"behaviorTypes": [],
 	"effectTypes": [],
 	"members": [
@@ -18,6 +26,16 @@
 		"in",
 		"chest_spawn",
 		"world",
-		"доски_spawn"
+		"доски_spawn",
+		"haljik2_spawn",
+		"hlajik_spawn",
+		"Back",
+		"music",
+		"Joystick",
+		"delmode",
+		"debmode",
+		"lessvisiblety",
+		"morevisiblety",
+		"screenshate"
 	]
 }

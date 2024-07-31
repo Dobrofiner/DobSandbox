@@ -112,6 +112,16 @@
 			"sid": 535361888194427
 		},
 		{
+			"eventType": "variable",
+			"name": "speed",
+			"type": "number",
+			"initialValue": "5",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 975207515959216
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "save & load from file",
@@ -123,7 +133,7 @@
 					"conditions": [
 						{
 							"id": "on-tap-object",
-							"objectClass": "Тач",
+							"objectClass": "Touch",
 							"sid": 465060006408026,
 							"parameters": {
 								"object": "export"
@@ -402,7 +412,7 @@
 					"conditions": [
 						{
 							"id": "on-tap-object",
-							"objectClass": "Тач",
+							"objectClass": "Touch",
 							"sid": 406857538013630,
 							"parameters": {
 								"object": "save"
@@ -445,7 +455,7 @@
 					"conditions": [
 						{
 							"id": "on-tap-object",
-							"objectClass": "Тач",
+							"objectClass": "Touch",
 							"sid": 969591008740335,
 							"parameters": {
 								"object": "save2"
@@ -488,7 +498,7 @@
 					"conditions": [
 						{
 							"id": "on-tap-object",
-							"objectClass": "Тач",
+							"objectClass": "Touch",
 							"sid": 272527986542311,
 							"parameters": {
 								"object": "save3"
@@ -531,7 +541,7 @@
 					"conditions": [
 						{
 							"id": "on-tap-object",
-							"objectClass": "Тач",
+							"objectClass": "Touch",
 							"sid": 584821225777086,
 							"parameters": {
 								"object": "save4"
@@ -574,7 +584,7 @@
 					"conditions": [
 						{
 							"id": "on-tap-object",
-							"objectClass": "Тач",
+							"objectClass": "Touch",
 							"sid": 515932146682837,
 							"parameters": {
 								"object": "save5"
@@ -617,7 +627,7 @@
 					"conditions": [
 						{
 							"id": "on-tap-object",
-							"objectClass": "Тач",
+							"objectClass": "Touch",
 							"sid": 603454037441840,
 							"parameters": {
 								"object": "load"
@@ -651,7 +661,7 @@
 					"conditions": [
 						{
 							"id": "on-tap-object",
-							"objectClass": "Тач",
+							"objectClass": "Touch",
 							"sid": 562060733230118,
 							"parameters": {
 								"object": "load2"
@@ -685,7 +695,7 @@
 					"conditions": [
 						{
 							"id": "on-tap-object",
-							"objectClass": "Тач",
+							"objectClass": "Touch",
 							"sid": 783655334625850,
 							"parameters": {
 								"object": "load3"
@@ -719,7 +729,7 @@
 					"conditions": [
 						{
 							"id": "on-tap-object",
-							"objectClass": "Тач",
+							"objectClass": "Touch",
 							"sid": 679411293966372,
 							"parameters": {
 								"object": "load4"
@@ -753,7 +763,7 @@
 					"conditions": [
 						{
 							"id": "on-tap-object",
-							"objectClass": "Тач",
+							"objectClass": "Touch",
 							"sid": 744546438214175,
 							"parameters": {
 								"object": "load5"
@@ -798,6 +808,14 @@
 									"sid": 329337198904982,
 									"parameters": {
 										"key": 27
+									}
+								},
+								{
+									"id": "on-tap-object",
+									"objectClass": "Touch",
+									"sid": 473405739594248,
+									"parameters": {
+										"object": "pause"
 									}
 								}
 							],
@@ -887,14 +905,15 @@
 									],
 									"sid": 796232364720468
 								}
-							]
+							],
+							"isOrBlock": true
 						},
 						{
 							"eventType": "block",
 							"conditions": [
 								{
 									"id": "on-tap-object",
-									"objectClass": "Тач",
+									"objectClass": "Touch",
 									"sid": 844011449863619,
 									"parameters": {
 										"object": "выходИзИгры"
@@ -1031,7 +1050,7 @@
 							"conditions": [
 								{
 									"id": "on-tap-object",
-									"objectClass": "Тач",
+									"objectClass": "Touch",
 									"sid": 826997076829795,
 									"parameters": {
 										"object": "продолжить"
@@ -1189,7 +1208,7 @@
 					"conditions": [
 						{
 							"id": "on-tap-object",
-							"objectClass": "Тач",
+							"objectClass": "Touch",
 							"sid": 515475598033507,
 							"parameters": {
 								"object": "block1spawn"
@@ -1214,12 +1233,12 @@
 					"conditions": [
 						{
 							"id": "is-in-touch",
-							"objectClass": "Тач",
+							"objectClass": "Touch",
 							"sid": 860979105491707
 						},
 						{
 							"id": "is-touching-object",
-							"objectClass": "Тач",
+							"objectClass": "Touch",
 							"sid": 379042119088540,
 							"parameters": {
 								"object": "spawn_blocks"
@@ -1228,7 +1247,7 @@
 						},
 						{
 							"id": "is-touching-object",
-							"objectClass": "Тач",
+							"objectClass": "Touch",
 							"sid": 462910369801192,
 							"parameters": {
 								"object": "blocks_1"
@@ -1237,19 +1256,19 @@
 						},
 						{
 							"id": "is-touching-object",
-							"objectClass": "Тач",
-							"sid": 655076199221721,
+							"objectClass": "Touch",
+							"sid": 608907871765339,
 							"parameters": {
-								"object": "moveui"
+								"object": "player"
 							},
 							"isInverted": true
 						},
 						{
 							"id": "is-touching-object",
-							"objectClass": "Тач",
-							"sid": 608907871765339,
+							"objectClass": "Touch",
+							"sid": 859724044713617,
 							"parameters": {
-								"object": "player"
+								"object": "Blocks"
 							},
 							"isInverted": true
 						},
@@ -1292,8 +1311,8 @@
 							"parameters": {
 								"object-to-create": "Block2",
 								"layer": "0",
-								"x": "round(Тач.X / gridWidth) * gridWidth",
-								"y": "round(Тач.Y / gridHeight) * gridHeight",
+								"x": "round(Touch.X / gridWidth) * gridWidth",
+								"y": "round(Touch.Y / gridHeight) * gridHeight",
 								"create-hierarchy": false,
 								"template-name": "\"\""
 							}
@@ -1306,7 +1325,7 @@
 					"conditions": [
 						{
 							"id": "on-tap-object",
-							"objectClass": "Тач",
+							"objectClass": "Touch",
 							"sid": 409660519254276,
 							"parameters": {
 								"object": "abobas_spawn"
@@ -1331,12 +1350,12 @@
 					"conditions": [
 						{
 							"id": "is-in-touch",
-							"objectClass": "Тач",
+							"objectClass": "Touch",
 							"sid": 566184490077680
 						},
 						{
 							"id": "is-touching-object",
-							"objectClass": "Тач",
+							"objectClass": "Touch",
 							"sid": 248880569368281,
 							"parameters": {
 								"object": "spawn_blocks"
@@ -1345,7 +1364,7 @@
 						},
 						{
 							"id": "is-touching-object",
-							"objectClass": "Тач",
+							"objectClass": "Touch",
 							"sid": 187850335718259,
 							"parameters": {
 								"object": "player"
@@ -1354,19 +1373,19 @@
 						},
 						{
 							"id": "is-touching-object",
-							"objectClass": "Тач",
-							"sid": 934983892653903,
+							"objectClass": "Touch",
+							"sid": 192644758198955,
 							"parameters": {
-								"object": "moveui"
+								"object": "blocks_1"
 							},
 							"isInverted": true
 						},
 						{
 							"id": "is-touching-object",
-							"objectClass": "Тач",
-							"sid": 192644758198955,
+							"objectClass": "Touch",
+							"sid": 136351549226586,
 							"parameters": {
-								"object": "blocks_1"
+								"object": "Blocks"
 							},
 							"isInverted": true
 						},
@@ -1409,8 +1428,8 @@
 							"parameters": {
 								"object-to-create": "abobas",
 								"layer": "0",
-								"x": "round(Тач.X / gridWidth) * gridWidth",
-								"y": "round(Тач.Y / gridHeight) * gridHeight",
+								"x": "round(Touch.X / gridWidth) * gridWidth",
+								"y": "round(Touch.Y / gridHeight) * gridHeight",
 								"create-hierarchy": false,
 								"template-name": "\"\""
 							}
@@ -1423,7 +1442,7 @@
 					"conditions": [
 						{
 							"id": "on-tap-object",
-							"objectClass": "Тач",
+							"objectClass": "Touch",
 							"sid": 531247748500942,
 							"parameters": {
 								"object": "bed__spawn"
@@ -1448,12 +1467,12 @@
 					"conditions": [
 						{
 							"id": "is-in-touch",
-							"objectClass": "Тач",
+							"objectClass": "Touch",
 							"sid": 945168478475024
 						},
 						{
 							"id": "is-touching-object",
-							"objectClass": "Тач",
+							"objectClass": "Touch",
 							"sid": 616724125416832,
 							"parameters": {
 								"object": "spawn_blocks"
@@ -1462,7 +1481,7 @@
 						},
 						{
 							"id": "is-touching-object",
-							"objectClass": "Тач",
+							"objectClass": "Touch",
 							"sid": 137842913019974,
 							"parameters": {
 								"object": "player"
@@ -1471,19 +1490,19 @@
 						},
 						{
 							"id": "is-touching-object",
-							"objectClass": "Тач",
-							"sid": 678166545776357,
+							"objectClass": "Touch",
+							"sid": 444781659267710,
 							"parameters": {
-								"object": "moveui"
+								"object": "blocks_1"
 							},
 							"isInverted": true
 						},
 						{
 							"id": "is-touching-object",
-							"objectClass": "Тач",
-							"sid": 444781659267710,
+							"objectClass": "Touch",
+							"sid": 962734538456886,
 							"parameters": {
-								"object": "blocks_1"
+								"object": "Blocks"
 							},
 							"isInverted": true
 						},
@@ -1526,8 +1545,8 @@
 							"parameters": {
 								"object-to-create": "bed",
 								"layer": "0",
-								"x": "round(Тач.X / gridWidth) * gridWidth",
-								"y": "round(Тач.Y / gridHeight) * gridHeight",
+								"x": "round(Touch.X / gridWidth) * gridWidth",
+								"y": "round(Touch.Y / gridHeight) * gridHeight",
 								"create-hierarchy": false,
 								"template-name": "\"\""
 							}
@@ -1540,7 +1559,7 @@
 					"conditions": [
 						{
 							"id": "on-tap-object",
-							"objectClass": "Тач",
+							"objectClass": "Touch",
 							"sid": 800527283665079,
 							"parameters": {
 								"object": "chest_spawn"
@@ -1565,12 +1584,12 @@
 					"conditions": [
 						{
 							"id": "is-in-touch",
-							"objectClass": "Тач",
+							"objectClass": "Touch",
 							"sid": 525585534154932
 						},
 						{
 							"id": "is-touching-object",
-							"objectClass": "Тач",
+							"objectClass": "Touch",
 							"sid": 968505485437989,
 							"parameters": {
 								"object": "spawn_blocks"
@@ -1579,7 +1598,7 @@
 						},
 						{
 							"id": "is-touching-object",
-							"objectClass": "Тач",
+							"objectClass": "Touch",
 							"sid": 454456413496090,
 							"parameters": {
 								"object": "player"
@@ -1588,19 +1607,19 @@
 						},
 						{
 							"id": "is-touching-object",
-							"objectClass": "Тач",
-							"sid": 408879948363214,
+							"objectClass": "Touch",
+							"sid": 542531598066355,
 							"parameters": {
-								"object": "moveui"
+								"object": "blocks_1"
 							},
 							"isInverted": true
 						},
 						{
 							"id": "is-touching-object",
-							"objectClass": "Тач",
-							"sid": 542531598066355,
+							"objectClass": "Touch",
+							"sid": 485003838458287,
 							"parameters": {
-								"object": "blocks_1"
+								"object": "Blocks"
 							},
 							"isInverted": true
 						},
@@ -1643,8 +1662,8 @@
 							"parameters": {
 								"object-to-create": "chest",
 								"layer": "0",
-								"x": "round(Тач.X / gridWidth) * gridWidth",
-								"y": "round(Тач.Y / gridHeight) * gridHeight",
+								"x": "round(Touch.X / gridWidth) * gridWidth",
+								"y": "round(Touch.Y / gridHeight) * gridHeight",
 								"create-hierarchy": false,
 								"template-name": "\"\""
 							}
@@ -1657,7 +1676,7 @@
 					"conditions": [
 						{
 							"id": "on-tap-object",
-							"objectClass": "Тач",
+							"objectClass": "Touch",
 							"sid": 388260535918475,
 							"parameters": {
 								"object": "pechka_spawn"
@@ -1682,12 +1701,12 @@
 					"conditions": [
 						{
 							"id": "is-in-touch",
-							"objectClass": "Тач",
+							"objectClass": "Touch",
 							"sid": 149912029174678
 						},
 						{
 							"id": "is-touching-object",
-							"objectClass": "Тач",
+							"objectClass": "Touch",
 							"sid": 440317644098112,
 							"parameters": {
 								"object": "spawn_blocks"
@@ -1696,7 +1715,7 @@
 						},
 						{
 							"id": "is-touching-object",
-							"objectClass": "Тач",
+							"objectClass": "Touch",
 							"sid": 389851883757913,
 							"parameters": {
 								"object": "player"
@@ -1705,19 +1724,19 @@
 						},
 						{
 							"id": "is-touching-object",
-							"objectClass": "Тач",
-							"sid": 189503396030472,
+							"objectClass": "Touch",
+							"sid": 869965146579465,
 							"parameters": {
-								"object": "moveui"
+								"object": "blocks_1"
 							},
 							"isInverted": true
 						},
 						{
 							"id": "is-touching-object",
-							"objectClass": "Тач",
-							"sid": 869965146579465,
+							"objectClass": "Touch",
+							"sid": 352285614422169,
 							"parameters": {
-								"object": "blocks_1"
+								"object": "Blocks"
 							},
 							"isInverted": true
 						},
@@ -1760,8 +1779,8 @@
 							"parameters": {
 								"object-to-create": "pechka",
 								"layer": "0",
-								"x": "round(Тач.X / gridWidth) * gridWidth",
-								"y": "round(Тач.Y / gridHeight) * gridHeight",
+								"x": "round(Touch.X / gridWidth) * gridWidth",
+								"y": "round(Touch.Y / gridHeight) * gridHeight",
 								"create-hierarchy": false,
 								"template-name": "\"\""
 							}
@@ -1774,7 +1793,7 @@
 					"conditions": [
 						{
 							"id": "on-tap-object",
-							"objectClass": "Тач",
+							"objectClass": "Touch",
 							"sid": 973260928333640,
 							"parameters": {
 								"object": "stone_spawn"
@@ -1799,12 +1818,12 @@
 					"conditions": [
 						{
 							"id": "is-in-touch",
-							"objectClass": "Тач",
+							"objectClass": "Touch",
 							"sid": 533714085925393
 						},
 						{
 							"id": "is-touching-object",
-							"objectClass": "Тач",
+							"objectClass": "Touch",
 							"sid": 329094613385082,
 							"parameters": {
 								"object": "spawn_blocks"
@@ -1813,7 +1832,7 @@
 						},
 						{
 							"id": "is-touching-object",
-							"objectClass": "Тач",
+							"objectClass": "Touch",
 							"sid": 682037732270418,
 							"parameters": {
 								"object": "player"
@@ -1822,19 +1841,19 @@
 						},
 						{
 							"id": "is-touching-object",
-							"objectClass": "Тач",
-							"sid": 759197998955586,
+							"objectClass": "Touch",
+							"sid": 710081668081275,
 							"parameters": {
-								"object": "moveui"
+								"object": "blocks_1"
 							},
 							"isInverted": true
 						},
 						{
 							"id": "is-touching-object",
-							"objectClass": "Тач",
-							"sid": 710081668081275,
+							"objectClass": "Touch",
+							"sid": 781982898097106,
 							"parameters": {
-								"object": "blocks_1"
+								"object": "Blocks"
 							},
 							"isInverted": true
 						},
@@ -1877,8 +1896,8 @@
 							"parameters": {
 								"object-to-create": "stone",
 								"layer": "0",
-								"x": "round(Тач.X / gridWidth) * gridWidth",
-								"y": "round(Тач.Y / gridHeight) * gridHeight",
+								"x": "round(Touch.X / gridWidth) * gridWidth",
+								"y": "round(Touch.Y / gridHeight) * gridHeight",
 								"create-hierarchy": false,
 								"template-name": "\"\""
 							}
@@ -1891,7 +1910,7 @@
 					"conditions": [
 						{
 							"id": "on-tap-object",
-							"objectClass": "Тач",
+							"objectClass": "Touch",
 							"sid": 608632684338119,
 							"parameters": {
 								"object": "workbench_spawn"
@@ -1916,12 +1935,12 @@
 					"conditions": [
 						{
 							"id": "is-in-touch",
-							"objectClass": "Тач",
+							"objectClass": "Touch",
 							"sid": 480977594033852
 						},
 						{
 							"id": "is-touching-object",
-							"objectClass": "Тач",
+							"objectClass": "Touch",
 							"sid": 157157098189530,
 							"parameters": {
 								"object": "spawn_blocks"
@@ -1930,7 +1949,7 @@
 						},
 						{
 							"id": "is-touching-object",
-							"objectClass": "Тач",
+							"objectClass": "Touch",
 							"sid": 162251955549791,
 							"parameters": {
 								"object": "player"
@@ -1939,19 +1958,19 @@
 						},
 						{
 							"id": "is-touching-object",
-							"objectClass": "Тач",
-							"sid": 677219185274420,
+							"objectClass": "Touch",
+							"sid": 777329403495637,
 							"parameters": {
-								"object": "moveui"
+								"object": "blocks_1"
 							},
 							"isInverted": true
 						},
 						{
 							"id": "is-touching-object",
-							"objectClass": "Тач",
-							"sid": 777329403495637,
+							"objectClass": "Touch",
+							"sid": 427482216982148,
 							"parameters": {
-								"object": "blocks_1"
+								"object": "Blocks"
 							},
 							"isInverted": true
 						},
@@ -1994,8 +2013,8 @@
 							"parameters": {
 								"object-to-create": "workbench",
 								"layer": "0",
-								"x": "round(Тач.X / gridWidth) * gridWidth",
-								"y": "round(Тач.Y / gridHeight) * gridHeight",
+								"x": "round(Touch.X / gridWidth) * gridWidth",
+								"y": "round(Touch.Y / gridHeight) * gridHeight",
 								"create-hierarchy": false,
 								"template-name": "\"\""
 							}
@@ -2008,7 +2027,7 @@
 					"conditions": [
 						{
 							"id": "on-tap-object",
-							"objectClass": "Тач",
+							"objectClass": "Touch",
 							"sid": 493045047646303,
 							"parameters": {
 								"object": "youtop2_spawn"
@@ -2033,12 +2052,12 @@
 					"conditions": [
 						{
 							"id": "is-in-touch",
-							"objectClass": "Тач",
+							"objectClass": "Touch",
 							"sid": 537051225695282
 						},
 						{
 							"id": "is-touching-object",
-							"objectClass": "Тач",
+							"objectClass": "Touch",
 							"sid": 389858962045424,
 							"parameters": {
 								"object": "spawn_blocks"
@@ -2047,7 +2066,7 @@
 						},
 						{
 							"id": "is-touching-object",
-							"objectClass": "Тач",
+							"objectClass": "Touch",
 							"sid": 624995446307723,
 							"parameters": {
 								"object": "player"
@@ -2056,19 +2075,19 @@
 						},
 						{
 							"id": "is-touching-object",
-							"objectClass": "Тач",
-							"sid": 346175548914212,
+							"objectClass": "Touch",
+							"sid": 214676914186935,
 							"parameters": {
-								"object": "moveui"
+								"object": "blocks_1"
 							},
 							"isInverted": true
 						},
 						{
 							"id": "is-touching-object",
-							"objectClass": "Тач",
-							"sid": 214676914186935,
+							"objectClass": "Touch",
+							"sid": 980530510800463,
 							"parameters": {
-								"object": "blocks_1"
+								"object": "Blocks"
 							},
 							"isInverted": true
 						},
@@ -2111,8 +2130,8 @@
 							"parameters": {
 								"object-to-create": "youtop2",
 								"layer": "0",
-								"x": "round(Тач.X / gridWidth) * gridWidth",
-								"y": "round(Тач.Y / gridHeight) * gridHeight",
+								"x": "round(Touch.X / gridWidth) * gridWidth",
+								"y": "round(Touch.Y / gridHeight) * gridHeight",
 								"create-hierarchy": false,
 								"template-name": "\"\""
 							}
@@ -2125,7 +2144,7 @@
 					"conditions": [
 						{
 							"id": "on-tap-object",
-							"objectClass": "Тач",
+							"objectClass": "Touch",
 							"sid": 346933318941877,
 							"parameters": {
 								"object": "youtop_spawn"
@@ -2150,12 +2169,12 @@
 					"conditions": [
 						{
 							"id": "is-in-touch",
-							"objectClass": "Тач",
+							"objectClass": "Touch",
 							"sid": 312362855863076
 						},
 						{
 							"id": "is-touching-object",
-							"objectClass": "Тач",
+							"objectClass": "Touch",
 							"sid": 859592476974301,
 							"parameters": {
 								"object": "spawn_blocks"
@@ -2164,7 +2183,7 @@
 						},
 						{
 							"id": "is-touching-object",
-							"objectClass": "Тач",
+							"objectClass": "Touch",
 							"sid": 146450874901836,
 							"parameters": {
 								"object": "spawn_blocks"
@@ -2173,19 +2192,19 @@
 						},
 						{
 							"id": "is-touching-object",
-							"objectClass": "Тач",
-							"sid": 900664421620491,
+							"objectClass": "Touch",
+							"sid": 302633895954065,
 							"parameters": {
-								"object": "moveui"
+								"object": "blocks_1"
 							},
 							"isInverted": true
 						},
 						{
 							"id": "is-touching-object",
-							"objectClass": "Тач",
-							"sid": 302633895954065,
+							"objectClass": "Touch",
+							"sid": 311090911232616,
 							"parameters": {
-								"object": "blocks_1"
+								"object": "Blocks"
 							},
 							"isInverted": true
 						},
@@ -2228,8 +2247,8 @@
 							"parameters": {
 								"object-to-create": "youtop",
 								"layer": "0",
-								"x": "round(Тач.X / gridWidth) * gridWidth",
-								"y": "round(Тач.Y / gridHeight) * gridHeight",
+								"x": "round(Touch.X / gridWidth) * gridWidth",
+								"y": "round(Touch.Y / gridHeight) * gridHeight",
 								"create-hierarchy": false,
 								"template-name": "\"\""
 							}
@@ -2242,7 +2261,7 @@
 					"conditions": [
 						{
 							"id": "on-tap-object",
-							"objectClass": "Тач",
+							"objectClass": "Touch",
 							"sid": 107881722954713,
 							"parameters": {
 								"object": "mwgavlock_spawn"
@@ -2267,12 +2286,12 @@
 					"conditions": [
 						{
 							"id": "is-in-touch",
-							"objectClass": "Тач",
+							"objectClass": "Touch",
 							"sid": 850634772262603
 						},
 						{
 							"id": "is-touching-object",
-							"objectClass": "Тач",
+							"objectClass": "Touch",
 							"sid": 361105158536728,
 							"parameters": {
 								"object": "spawn_blocks"
@@ -2281,7 +2300,7 @@
 						},
 						{
 							"id": "is-touching-object",
-							"objectClass": "Тач",
+							"objectClass": "Touch",
 							"sid": 974288704982398,
 							"parameters": {
 								"object": "spawn_blocks"
@@ -2290,19 +2309,19 @@
 						},
 						{
 							"id": "is-touching-object",
-							"objectClass": "Тач",
-							"sid": 351808426496325,
+							"objectClass": "Touch",
+							"sid": 892020158802739,
 							"parameters": {
-								"object": "moveui"
+								"object": "blocks_1"
 							},
 							"isInverted": true
 						},
 						{
 							"id": "is-touching-object",
-							"objectClass": "Тач",
-							"sid": 892020158802739,
+							"objectClass": "Touch",
+							"sid": 726679112462207,
 							"parameters": {
-								"object": "blocks_1"
+								"object": "Blocks"
 							},
 							"isInverted": true
 						},
@@ -2345,8 +2364,8 @@
 							"parameters": {
 								"object-to-create": "mwgavlock",
 								"layer": "0",
-								"x": "round(Тач.X / gridWidth) * gridWidth",
-								"y": "round(Тач.Y / gridHeight) * gridHeight",
+								"x": "round(Touch.X / gridWidth) * gridWidth",
+								"y": "round(Touch.Y / gridHeight) * gridHeight",
 								"create-hierarchy": false,
 								"template-name": "\"\""
 							}
@@ -2359,7 +2378,7 @@
 					"conditions": [
 						{
 							"id": "on-tap-object",
-							"objectClass": "Тач",
+							"objectClass": "Touch",
 							"sid": 409216257404416,
 							"parameters": {
 								"object": "доски_spawn"
@@ -2384,12 +2403,12 @@
 					"conditions": [
 						{
 							"id": "is-in-touch",
-							"objectClass": "Тач",
+							"objectClass": "Touch",
 							"sid": 686854491962704
 						},
 						{
 							"id": "is-touching-object",
-							"objectClass": "Тач",
+							"objectClass": "Touch",
 							"sid": 555182731969199,
 							"parameters": {
 								"object": "spawn_blocks"
@@ -2398,7 +2417,7 @@
 						},
 						{
 							"id": "is-touching-object",
-							"objectClass": "Тач",
+							"objectClass": "Touch",
 							"sid": 115552150656017,
 							"parameters": {
 								"object": "player"
@@ -2407,19 +2426,19 @@
 						},
 						{
 							"id": "is-touching-object",
-							"objectClass": "Тач",
-							"sid": 144027591480540,
+							"objectClass": "Touch",
+							"sid": 209340413662781,
 							"parameters": {
-								"object": "moveui"
+								"object": "blocks_1"
 							},
 							"isInverted": true
 						},
 						{
 							"id": "is-touching-object",
-							"objectClass": "Тач",
-							"sid": 209340413662781,
+							"objectClass": "Touch",
+							"sid": 138081729514390,
 							"parameters": {
-								"object": "blocks_1"
+								"object": "Blocks"
 							},
 							"isInverted": true
 						},
@@ -2462,8 +2481,8 @@
 							"parameters": {
 								"object-to-create": "доски",
 								"layer": "0",
-								"x": "round(Тач.X / gridWidth) * gridWidth",
-								"y": "round(Тач.Y / gridHeight) * gridHeight",
+								"x": "round(Touch.X / gridWidth) * gridWidth",
+								"y": "round(Touch.Y / gridHeight) * gridHeight",
 								"create-hierarchy": false,
 								"template-name": "\"\""
 							}
@@ -2475,8 +2494,242 @@
 					"eventType": "block",
 					"conditions": [
 						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 108116934424004,
+							"parameters": {
+								"object": "hlajik_spawn"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 903923870378047,
+							"parameters": {
+								"variable": "blockSelected",
+								"value": "12"
+							}
+						}
+					],
+					"sid": 946021170811743
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-in-touch",
+							"objectClass": "Touch",
+							"sid": 142945429120628
+						},
+						{
 							"id": "is-touching-object",
-							"objectClass": "Тач",
+							"objectClass": "Touch",
+							"sid": 432288328877799,
+							"parameters": {
+								"object": "spawn_blocks"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Touch",
+							"sid": 677938533587696,
+							"parameters": {
+								"object": "player"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Touch",
+							"sid": 306149210377375,
+							"parameters": {
+								"object": "blocks_1"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Touch",
+							"sid": 936374550430397,
+							"parameters": {
+								"object": "Blocks"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 619316373645990,
+							"parameters": {
+								"first-value": "blockSelected",
+								"comparison": 0,
+								"second-value": "12"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 438977614216979,
+							"parameters": {
+								"variable": "menuOpen",
+								"comparison": 0,
+								"value": "0"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 197928236936502,
+							"parameters": {
+								"variable": "deleteMode",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 885013106230619,
+							"parameters": {
+								"object-to-create": "hlajik",
+								"layer": "0",
+								"x": "round(Touch.X / gridWidth) * gridWidth",
+								"y": "round(Touch.Y / gridHeight) * gridHeight",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						}
+					],
+					"sid": 459478216407267
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 391542342482186,
+							"parameters": {
+								"object": "haljik2_spawn"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 947942766153301,
+							"parameters": {
+								"variable": "blockSelected",
+								"value": "13"
+							}
+						}
+					],
+					"sid": 102551743310997
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-in-touch",
+							"objectClass": "Touch",
+							"sid": 217637199305577
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Touch",
+							"sid": 350502982408204,
+							"parameters": {
+								"object": "spawn_blocks"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Touch",
+							"sid": 872984344973104,
+							"parameters": {
+								"object": "player"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Touch",
+							"sid": 168402701890656,
+							"parameters": {
+								"object": "blocks_1"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Touch",
+							"sid": 371444346480281,
+							"parameters": {
+								"object": "Blocks"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 968896437270600,
+							"parameters": {
+								"first-value": "blockSelected",
+								"comparison": 0,
+								"second-value": "13"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 156640475420063,
+							"parameters": {
+								"variable": "menuOpen",
+								"comparison": 0,
+								"value": "0"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 587103173971588,
+							"parameters": {
+								"variable": "deleteMode",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 803954422835853,
+							"parameters": {
+								"object-to-create": "haljik2",
+								"layer": "0",
+								"x": "round(Touch.X / gridWidth) * gridWidth",
+								"y": "round(Touch.Y / gridHeight) * gridHeight",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						}
+					],
+					"sid": 252032268929079
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-touching-object",
+							"objectClass": "Touch",
 							"sid": 714061407289789,
 							"parameters": {
 								"object": "blocks_1"
@@ -2507,7 +2760,7 @@
 					"conditions": [
 						{
 							"id": "is-touching-object",
-							"objectClass": "Тач",
+							"objectClass": "Touch",
 							"sid": 360709109877605,
 							"parameters": {
 								"object": "Blocks"
@@ -2543,6 +2796,14 @@
 							"parameters": {
 								"key": 68
 							}
+						},
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 505871046591906,
+							"parameters": {
+								"object": "delmode"
+							}
 						}
 					],
 					"actions": [
@@ -2556,7 +2817,8 @@
 							}
 						}
 					],
-					"sid": 804140001250800
+					"sid": 804140001250800,
+					"isOrBlock": true
 				}
 			],
 			"sid": 413198372103578
@@ -2578,6 +2840,14 @@
 							"parameters": {
 								"key": 112
 							}
+						},
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 343721324809904,
+							"parameters": {
+								"object": "debmode"
+							}
 						}
 					],
 					"actions": [
@@ -2591,7 +2861,8 @@
 							}
 						}
 					],
-					"sid": 499180000126950
+					"sid": 499180000126950,
+					"isOrBlock": true
 				},
 				{
 					"eventType": "block",
@@ -2624,9 +2895,9 @@
 						{
 							"id": "set-text",
 							"objectClass": "dev",
-							"sid": 285036479799076,
+							"sid": 261836193217914,
 							"parameters": {
-								"text": "\"Block Selected: \" & blockSelected & newline & \r\n   \"Delete Mode: \" & (deleteMode = 1 ? \"Enabled\" : \"Disabled\") & newline & \r\n   \"Menu Open: \" & (menuOpen = 1 ? \"Yes\" : \"No\") & newline & \r\n   \"Save Completed: \" & (onSaveCompletedN = 1 ? \"File\" : (onSaveCompletedN = 2 ? \"Local\" : \"No\")) & newline & \"Player x:\" & player.x &  newline & \"Player y:\" & player.Y & newline & \"No Move:\" & noMove\r\n"
+								"text": "\"Block Selected: \" & blockSelected & newline & \r\n   \"Delete Mode: \" & (deleteMode = 1 ? \"Enabled\" : \"Disabled\") & newline & \r\n   \"Menu Open: \" & (menuOpen = 1 ? \"Yes\" : \"No\") & newline & \r\n   \"Save Completed: \" & (onSaveCompletedN = 1 ? \"File\" : (onSaveCompletedN = 2 ? \"Local\" : \"No\")) & newline & \"Player x:\" & floor(player.x / 32) &  newline & \"Player y:\" & floor(player.Y / 32) & newline & \"FPS:\" & fps\r\n"
 							}
 						}
 					],
@@ -2671,6 +2942,14 @@
 					"parameters": {
 						"key": 80
 					}
+				},
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 951165983328511,
+					"parameters": {
+						"object": "morevisiblety"
+					}
 				}
 			],
 			"actions": [
@@ -2684,7 +2963,8 @@
 					}
 				}
 			],
-			"sid": 719811279931093
+			"sid": 719811279931093,
+			"isOrBlock": true
 		},
 		{
 			"eventType": "block",
@@ -2695,6 +2975,14 @@
 					"sid": 779749553306971,
 					"parameters": {
 						"key": 48
+					}
+				},
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 582474617535344,
+					"parameters": {
+						"object": "lessvisiblety"
 					}
 				}
 			],
@@ -2709,7 +2997,8 @@
 					}
 				}
 			],
-			"sid": 380838609590098
+			"sid": 380838609590098,
+			"isOrBlock": true
 		},
 		{
 			"eventType": "group",
@@ -2985,7 +3274,8 @@
 										"object": "Block",
 										"layer": "0",
 										"image-point": "0",
-										"create-hierarchy": false
+										"create-hierarchy": false,
+										"template-name": "\"\""
 									}
 								},
 								{
@@ -3200,7 +3490,8 @@
 												"object": "Blocks",
 												"layer": "0",
 												"image-point": "0",
-												"create-hierarchy": false
+												"create-hierarchy": false,
+												"template-name": "\"\""
 											}
 										},
 										{
@@ -3405,19 +3696,10 @@
 				{
 					"id": "set-position",
 					"objectClass": "player",
-					"sid": 295877364868880,
+					"sid": 502328926626487,
 					"parameters": {
 						"x": "player.X ",
-						"y": "player.Y - 10"
-					}
-				},
-				{
-					"id": "set-position",
-					"objectClass": "player",
-					"sid": 919093266194847,
-					"parameters": {
-						"x": "player.X ",
-						"y": "player.Y - 10"
+						"y": "player.Y - speed"
 					}
 				}
 			],
@@ -3471,10 +3753,10 @@
 				{
 					"id": "set-position",
 					"objectClass": "player",
-					"sid": 980592695221815,
+					"sid": 657548785866182,
 					"parameters": {
 						"x": "player.X ",
-						"y": "player.Y + 10"
+						"y": "player.Y + speed"
 					}
 				}
 			],
@@ -3528,9 +3810,9 @@
 				{
 					"id": "set-position",
 					"objectClass": "player",
-					"sid": 516715014440197,
+					"sid": 562618270439191,
 					"parameters": {
-						"x": "player.X - 10",
+						"x": "player.X - speed",
 						"y": "player.Y"
 					}
 				}
@@ -3585,9 +3867,9 @@
 				{
 					"id": "set-position",
 					"objectClass": "player",
-					"sid": 330828651652320,
+					"sid": 524703571748181,
 					"parameters": {
-						"x": "player.X + 10",
+						"x": "player.X + speed",
 						"y": "player.Y"
 					}
 				}
@@ -3603,6 +3885,14 @@
 					"sid": 681038410022942,
 					"parameters": {
 						"key": 114
+					}
+				},
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 528749001731397,
+					"parameters": {
+						"object": "music"
 					}
 				}
 			],
@@ -3673,7 +3963,8 @@
 					],
 					"sid": 815749491185612
 				}
-			]
+			],
+			"isOrBlock": true
 		},
 		{
 			"eventType": "block",
@@ -3756,6 +4047,254 @@
 					"sid": 621595111992903
 				}
 			]
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "mobile_move",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "variable",
+					"name": "Move",
+					"type": "number",
+					"initialValue": "15",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 108621359193546
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-touching-object",
+							"objectClass": "Touch",
+							"sid": 752258946453910,
+							"parameters": {
+								"object": "Joystick"
+							}
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Joystick",
+							"sid": 114895168254116,
+							"parameters": {
+								"object": "Back"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 257959891049299,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-x",
+									"objectClass": "Joystick",
+									"sid": 830759702823721,
+									"parameters": {
+										"comparison": 4,
+										"x-co-ordinate": "Back.X"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "move-at-angle",
+									"objectClass": "player",
+									"sid": 450238166916296,
+									"parameters": {
+										"angle": "0",
+										"distance": "abs(Back.X-Joystick.X)/Move"
+									}
+								}
+							],
+							"sid": 233983141455301
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-x",
+									"objectClass": "Joystick",
+									"sid": 974666519684462,
+									"parameters": {
+										"comparison": 2,
+										"x-co-ordinate": "Back.X"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "move-at-angle",
+									"objectClass": "player",
+									"sid": 652971053056005,
+									"parameters": {
+										"angle": "180",
+										"distance": "abs(Back.X-Joystick.X)/Move"
+									}
+								},
+								{
+									"id": "set-mirrored",
+									"objectClass": "player",
+									"sid": 260677438387893,
+									"parameters": {
+										"state": "mirrored"
+									}
+								}
+							],
+							"sid": 782398974920360
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-y",
+									"objectClass": "Joystick",
+									"sid": 185861158874281,
+									"parameters": {
+										"comparison": 2,
+										"y-co-ordinate": "Back.Y"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "move-at-angle",
+									"objectClass": "player",
+									"sid": 642416857976450,
+									"parameters": {
+										"angle": "270",
+										"distance": "abs(Back.Y-Joystick.Y)/Move"
+									}
+								},
+								{
+									"id": "set-mirrored",
+									"objectClass": "player",
+									"sid": 695286090542177,
+									"parameters": {
+										"state": "not-mirrored"
+									}
+								}
+							],
+							"sid": 119217724308984
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-y",
+									"objectClass": "Joystick",
+									"sid": 188066595359768,
+									"parameters": {
+										"comparison": 4,
+										"y-co-ordinate": "Back.Y"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "move-at-angle",
+									"objectClass": "player",
+									"sid": 402325014093794,
+									"parameters": {
+										"angle": "90",
+										"distance": "abs(Back.Y-Joystick.Y)/Move"
+									}
+								}
+							],
+							"sid": 942384240491260
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 968912457530384
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position-to-another-object",
+							"objectClass": "Joystick",
+							"sid": 335468770994675,
+							"parameters": {
+								"object": "Back",
+								"image-point-optional": "0"
+							}
+						}
+					],
+					"sid": 514341916396053
+				}
+			],
+			"sid": 925666322579870
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 330933526115006,
+					"parameters": {
+						"key": 113
+					}
+				},
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 223783968096440,
+					"parameters": {
+						"object": "screenshate"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "snapshot-canvas",
+					"objectClass": "System",
+					"sid": 479683441927861,
+					"parameters": {
+						"format": "png",
+						"jpeg-quality": "75",
+						"x": "0",
+						"y": "0",
+						"width": "0",
+						"height": "0"
+					}
+				}
+			],
+			"sid": 240029403114285,
+			"isOrBlock": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-canvas-snapshot",
+					"objectClass": "System",
+					"sid": 879299440653789
+				}
+			],
+			"actions": [
+				{
+					"id": "invoke-download",
+					"objectClass": "Браузер",
+					"sid": 635024552390791,
+					"parameters": {
+						"url": "CanvasSnapshot",
+						"filename": "projectname & Дата.Now"
+					}
+				}
+			],
+			"sid": 861226337264863,
+			"isOrBlock": true
 		}
 	],
 	"sid": 512678941480335

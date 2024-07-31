@@ -1,7 +1,7 @@
 {
-	"name": "вправо",
+	"name": "haljik2",
 	"plugin-id": "Sprite",
-	"sid": 608755525556785,
+	"sid": 931668303790295,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
@@ -11,32 +11,20 @@
 			{
 				"frames": [
 					{
-						"width": 354,
-						"height": 125,
-						"originX": 0.6779661016949152,
+						"width": 16,
+						"height": 16,
+						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 2828273,
-						"collisionPoly": {
-							"points": [
-								1,
-								1,
-								0,
-								1,
-								0,
-								0,
-								1,
-								0
-							]
-						},
+						"imageSpriteId": 5910103,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 377120217828124,
+				"sid": 917661982281519,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

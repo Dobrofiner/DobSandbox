@@ -6,7 +6,7 @@
 			"conditions": [
 				{
 					"id": "on-tap-object",
-					"objectClass": "Тач",
+					"objectClass": "Touch",
 					"sid": 624178460820168,
 					"parameters": {
 						"object": "map1"
@@ -30,7 +30,7 @@
 			"conditions": [
 				{
 					"id": "on-tap-object",
-					"objectClass": "Тач",
+					"objectClass": "Touch",
 					"sid": 776763663769080,
 					"parameters": {
 						"object": "map_2"

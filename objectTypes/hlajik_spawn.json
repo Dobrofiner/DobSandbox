@@ -1,7 +1,7 @@
 {
-	"name": "need_test",
+	"name": "hlajik_spawn",
 	"plugin-id": "Sprite",
-	"sid": 432638603347514,
+	"sid": 168863750657528,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
@@ -11,21 +11,21 @@
 			{
 				"frames": [
 					{
-						"width": 640,
-						"height": 480,
+						"width": 16,
+						"height": 16,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 783999,
+						"imageSpriteId": 7039501,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 711958675077577,
-				"name": "Animation 1",
+				"sid": 164992163971817,
+				"name": "Default",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,

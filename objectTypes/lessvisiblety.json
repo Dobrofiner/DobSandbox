@@ -1,7 +1,7 @@
 {
-	"name": "влево",
+	"name": "lessvisiblety",
 	"plugin-id": "Sprite",
-	"sid": 598332160778182,
+	"sid": 845040439840121,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
@@ -11,20 +11,32 @@
 			{
 				"frames": [
 					{
-						"width": 354,
-						"height": 125,
-						"originX": 0.3220338983050848,
-						"originY": 0.5,
+						"width": 96,
+						"height": 33,
+						"originX": 0.5,
+						"originY": 0.48484848484848486,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 8588158,
+						"imageSpriteId": 3379460,
+						"collisionPoly": {
+							"points": [
+								0,
+								0,
+								0.9895833333333334,
+								0,
+								0.9895833333333334,
+								0.9696969696969697,
+								0,
+								0.9696969696969697
+							]
+						},
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 939365574379064,
+				"sid": 519606006920508,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

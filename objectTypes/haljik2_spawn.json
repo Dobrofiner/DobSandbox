@@ -1,7 +1,7 @@
 {
-	"name": "вниз",
+	"name": "haljik2_spawn",
 	"plugin-id": "Sprite",
-	"sid": 914910132824450,
+	"sid": 888100867147524,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
@@ -11,32 +11,20 @@
 			{
 				"frames": [
 					{
-						"width": 125,
-						"height": 354,
+						"width": 16,
+						"height": 16,
 						"originX": 0.5,
-						"originY": 0.6779661016949152,
+						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 6390231,
-						"collisionPoly": {
-							"points": [
-								0,
-								1,
-								0,
-								0,
-								1,
-								0,
-								1,
-								1
-							]
-						},
+						"imageSpriteId": 4699672,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 812378040927034,
+				"sid": 456154015512121,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

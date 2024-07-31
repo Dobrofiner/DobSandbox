@@ -1,7 +1,7 @@
 {
-	"name": "Display",
+	"name": "music",
 	"plugin-id": "Sprite",
-	"sid": 918577982158534,
+	"sid": 517534945685006,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
@@ -11,21 +11,21 @@
 			{
 				"frames": [
 					{
-						"width": 32,
-						"height": 32,
-						"originX": 0,
-						"originY": 0,
+						"width": 37,
+						"height": 33,
+						"originX": 0.5135135135135135,
+						"originY": 0.5151515151515151,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 4955818,
+						"imageSpriteId": 6570009,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 594495171267664,
-				"name": "Default",
+				"sid": 811936340432303,
+				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,

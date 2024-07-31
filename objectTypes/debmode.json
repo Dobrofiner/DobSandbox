@@ -1,7 +1,7 @@
 {
-	"name": "muiinvin",
+	"name": "debmode",
 	"plugin-id": "Sprite",
-	"sid": 481318270506570,
+	"sid": 640882162680542,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
@@ -11,20 +11,20 @@
 			{
 				"frames": [
 					{
-						"width": 250,
-						"height": 250,
-						"originX": 0.5,
-						"originY": 0.5,
+						"width": 30,
+						"height": 30,
+						"originX": 0.5509803921568628,
+						"originY": 0.5333333333333333,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 302716,
+						"imageSpriteId": 2285460,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 393984568479116,
+				"sid": 988464470670419,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

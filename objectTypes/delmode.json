@@ -1,7 +1,7 @@
 {
-	"name": "skin",
+	"name": "delmode",
 	"plugin-id": "Sprite",
-	"sid": 258145171438077,
+	"sid": 524003738756179,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
@@ -11,20 +11,32 @@
 			{
 				"frames": [
 					{
-						"width": 250,
-						"height": 250,
-						"originX": 0.5,
+						"width": 39,
+						"height": 38,
+						"originX": 0.5128205128205128,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 5006256,
+						"imageSpriteId": 7187885,
+						"collisionPoly": {
+							"points": [
+								0,
+								0,
+								1,
+								0,
+								1,
+								0.9736842105263158,
+								0,
+								0.9736842105263158
+							]
+						},
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 227055963882832,
+				"sid": 358131226059248,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

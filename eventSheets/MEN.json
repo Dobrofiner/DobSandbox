@@ -16,7 +16,7 @@
 			"conditions": [
 				{
 					"id": "on-tap-object",
-					"objectClass": "Тач",
+					"objectClass": "Touch",
 					"sid": 225986582696526,
 					"parameters": {
 						"object": "playgane"
@@ -45,7 +45,7 @@
 			"conditions": [
 				{
 					"id": "on-tap-object",
-					"objectClass": "Тач",
+					"objectClass": "Touch",
 					"sid": 706862481604475,
 					"parameters": {
 						"object": "credits"
@@ -74,7 +74,7 @@
 			"conditions": [
 				{
 					"id": "is-touching-object",
-					"objectClass": "Тач",
+					"objectClass": "Touch",
 					"sid": 796089474630468,
 					"parameters": {
 						"object": "quet"

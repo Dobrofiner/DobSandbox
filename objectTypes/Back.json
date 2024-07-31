@@ -1,34 +1,48 @@
 {
-	"name": "ыыерх3",
+	"name": "Back",
 	"plugin-id": "Sprite",
-	"sid": 506755005376407,
+	"sid": 295343865215325,
 	"isGlobal": false,
 	"instanceVariables": [],
-	"behaviorTypes": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Persist",
+			"name": "Persist",
+			"sid": 886513277875601
+		}
+	],
 	"effectTypes": [],
 	"animations": {
 		"items": [
 			{
 				"frames": [
 					{
-						"width": 125,
-						"height": 354,
+						"width": 250,
+						"height": 250,
 						"originX": 0.5,
-						"originY": 0.3220338983050848,
+						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 3740617,
+						"imageSpriteId": 4389140,
 						"collisionPoly": {
 							"points": [
-								1,
-								0,
-								1,
-								1,
-								0,
-								1,
-								0,
-								0
+								0.152,
+								0.152,
+								0.5,
+								0.004,
+								0.848,
+								0.152,
+								0.98,
+								0.5,
+								0.832,
+								0.832,
+								0.5,
+								0.964,
+								0.168,
+								0.832,
+								0.02,
+								0.5
 							]
 						},
 						"useCollisionPoly": true,
@@ -36,8 +50,8 @@
 						"tag": ""
 					}
 				],
-				"sid": 896200458927408,
-				"name": "Animation 1",
+				"sid": 253271030268840,
+				"name": "Default",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,

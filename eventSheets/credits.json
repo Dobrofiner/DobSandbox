@@ -6,7 +6,7 @@
 			"conditions": [
 				{
 					"id": "on-tap-object",
-					"objectClass": "Тач",
+					"objectClass": "Touch",
 					"sid": 674748783118168,
 					"parameters": {
 						"object": "quet2"

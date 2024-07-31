@@ -252,22 +252,6 @@
 			"properties": {},
 			"uid": 15,
 			"instanceVariables": {}
-		},
-		{
-			"type": "SkinGroup2",
-			"properties": {
-				"tag": ""
-			},
-			"uid": 51,
-			"instanceVariables": {}
-		},
-		{
-			"type": "БинарныеДанные",
-			"properties": {
-				"endian": "big"
-			},
-			"uid": 54,
-			"instanceVariables": {}
 		}
 	],
 	"effectTypes": [],
