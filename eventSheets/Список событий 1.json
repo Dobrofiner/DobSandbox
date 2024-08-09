@@ -2728,6 +2728,240 @@
 					"eventType": "block",
 					"conditions": [
 						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 542621975476234,
+							"parameters": {
+								"object": "diamondblockspawn"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 715332305621789,
+							"parameters": {
+								"variable": "blockSelected",
+								"value": "14"
+							}
+						}
+					],
+					"sid": 410043351188813
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-in-touch",
+							"objectClass": "Touch",
+							"sid": 384623763863758
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Touch",
+							"sid": 224948802975848,
+							"parameters": {
+								"object": "spawn_blocks"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Touch",
+							"sid": 901211883832879,
+							"parameters": {
+								"object": "player"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Touch",
+							"sid": 284387408538532,
+							"parameters": {
+								"object": "blocks_1"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Touch",
+							"sid": 883495349007281,
+							"parameters": {
+								"object": "Blocks"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 475470033006954,
+							"parameters": {
+								"first-value": "blockSelected",
+								"comparison": 0,
+								"second-value": "14"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 920481006714752,
+							"parameters": {
+								"variable": "menuOpen",
+								"comparison": 0,
+								"value": "0"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 533385161363696,
+							"parameters": {
+								"variable": "deleteMode",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 534664778427566,
+							"parameters": {
+								"object-to-create": "diamondblock",
+								"layer": "0",
+								"x": "round(Touch.X / gridWidth) * gridWidth",
+								"y": "round(Touch.Y / gridHeight) * gridHeight",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						}
+					],
+					"sid": 824370026745639
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 928072996439911,
+							"parameters": {
+								"object": "goldblockspawn"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 789304395678007,
+							"parameters": {
+								"variable": "blockSelected",
+								"value": "15"
+							}
+						}
+					],
+					"sid": 556296463581567
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-in-touch",
+							"objectClass": "Touch",
+							"sid": 662380475913551
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Touch",
+							"sid": 790708887998771,
+							"parameters": {
+								"object": "spawn_blocks"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Touch",
+							"sid": 122560502866514,
+							"parameters": {
+								"object": "player"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Touch",
+							"sid": 397781562814331,
+							"parameters": {
+								"object": "blocks_1"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Touch",
+							"sid": 954444813149771,
+							"parameters": {
+								"object": "Blocks"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 815686169830313,
+							"parameters": {
+								"first-value": "blockSelected",
+								"comparison": 0,
+								"second-value": "15"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 661752155603569,
+							"parameters": {
+								"variable": "menuOpen",
+								"comparison": 0,
+								"value": "0"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 166164423769345,
+							"parameters": {
+								"variable": "deleteMode",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 145475908080568,
+							"parameters": {
+								"object-to-create": "goldblock",
+								"layer": "0",
+								"x": "round(Touch.X / gridWidth) * gridWidth",
+								"y": "round(Touch.Y / gridHeight) * gridHeight",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						}
+					],
+					"sid": 891038946946081
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
 							"id": "is-touching-object",
 							"objectClass": "Touch",
 							"sid": 714061407289789,
@@ -2956,10 +3190,10 @@
 				{
 					"id": "set-layer-scale",
 					"objectClass": "System",
-					"sid": 443673252703257,
+					"sid": 602043734482817,
 					"parameters": {
 						"layer": "0",
-						"scale": "0.4"
+						"scale": "0.7"
 					}
 				}
 			],
@@ -3006,375 +3240,424 @@
 			"title": "world_generation",
 			"description": "",
 			"isActiveOnStart": true,
-			"children": [],
-			"sid": 906188122280629
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-start-of-layout",
-					"objectClass": "System",
-					"sid": 969087788244547
-				}
-			],
-			"actions": [
-				{
-					"id": "set-position",
-					"objectClass": "LandBuilder",
-					"sid": 423864244899979,
-					"parameters": {
-						"x": "Player.X+800",
-						"y": "Player.Y"
-					}
-				},
-				{
-					"id": "pin-to-object",
-					"objectClass": "LandBuilder",
-					"sid": 694296200222170,
-					"behaviorType": "Pin",
-					"parameters": {
-						"pin-to": "player",
-						"mode": "position-angle"
-					}
-				}
-			],
-			"sid": 396489304762598
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "compare-instance-variable",
-					"objectClass": "Package_Mark",
-					"sid": 476047182866033,
-					"parameters": {
-						"instance-variable": "Name",
-						"comparison": 0,
-						"value": "Package_Mark_Manager.Package"
-					}
-				}
-			],
-			"actions": [],
-			"sid": 745053832481390,
 			"children": [
 				{
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "compare-instance-variable",
-							"objectClass": "Package_Mark_Manager",
-							"sid": 913808689793827,
-							"parameters": {
-								"instance-variable": "Number",
-								"comparison": 3,
-								"value": "0"
-							}
-						},
-						{
-							"id": "compare-instance-variable",
-							"objectClass": "Packages_Mark",
-							"sid": 244309735824595,
-							"parameters": {
-								"instance-variable": "Name",
-								"comparison": 0,
-								"value": "Package_Mark_Manager.Package"
-							},
-							"isInverted": true
-						},
-						{
-							"id": "compare-instance-variable",
-							"objectClass": "HParameters",
-							"sid": 654852739992602,
-							"parameters": {
-								"instance-variable": "Job",
-								"comparison": 0,
-								"value": "\"top\""
-							}
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 609756093998245
 						}
 					],
 					"actions": [
 						{
-							"id": "set-instvar-value",
-							"objectClass": "Package_Mark_Manager",
-							"sid": 868184669090027,
+							"id": "set-position",
+							"objectClass": "LandBuilder",
+							"sid": 186637295605001,
 							"parameters": {
-								"instance-variable": "Number",
-								"value": "int(random(10,15))"
+								"x": "Player.X+1500",
+								"y": "Player.Y"
+							}
+						},
+						{
+							"id": "pin-to-object",
+							"objectClass": "LandBuilder",
+							"sid": 731298569310332,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "player",
+								"mode": "position-angle"
 							}
 						}
 					],
-					"sid": 232930313233946,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-y",
-									"objectClass": "BlockBuilder",
-									"sid": 799660001838980,
-									"parameters": {
-										"comparison": 5,
-										"y-co-ordinate": "HParameters.Y"
-									}
-								},
-								{
-									"id": "compare-instance-variable",
-									"objectClass": "Packages_Mark",
-									"sid": 883644261550828,
-									"parameters": {
-										"instance-variable": "Type",
-										"comparison": 0,
-										"value": "\"down\""
-									},
-									"isInverted": true
-								},
-								{
-									"id": "pick-random-instance",
-									"objectClass": "System",
-									"sid": 720106183450840,
-									"parameters": {
-										"object": "Packages_Mark"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-instvar-value",
-									"objectClass": "Package_Mark_Manager",
-									"sid": 956983647009032,
-									"parameters": {
-										"instance-variable": "Package",
-										"value": "Packages_Mark.Name"
-									}
-								}
-							],
-							"sid": 577989339161408
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-y",
-									"objectClass": "BlockBuilder",
-									"sid": 541713018043461,
-									"parameters": {
-										"comparison": 3,
-										"y-co-ordinate": "HParameters.Y"
-									}
-								},
-								{
-									"id": "compare-instance-variable",
-									"objectClass": "Packages_Mark",
-									"sid": 369628858888899,
-									"parameters": {
-										"instance-variable": "Type",
-										"comparison": 0,
-										"value": "\"up\""
-									},
-									"isInverted": true
-								},
-								{
-									"id": "pick-random-instance",
-									"objectClass": "System",
-									"sid": 109447975018879,
-									"parameters": {
-										"object": "Packages_Mark"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-instvar-value",
-									"objectClass": "Package_Mark_Manager",
-									"sid": 515744245808788,
-									"parameters": {
-										"instance-variable": "Package",
-										"value": "Packages_Mark.Name"
-									}
-								}
-							],
-							"sid": 794826929154768
-						}
-					]
-				}
-			]
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "compare-x",
-					"objectClass": "LandBuilder",
-					"sid": 229020440087485,
-					"parameters": {
-						"comparison": 4,
-						"x-co-ordinate": "BlockBuilder.X"
-					}
-				}
-			],
-			"actions": [],
-			"sid": 329372293704544,
-			"children": [
+					"sid": 737810382784986
+				},
 				{
 					"eventType": "block",
 					"conditions": [
 						{
 							"id": "compare-instance-variable",
 							"objectClass": "Package_Mark",
-							"sid": 718587939075818,
+							"sid": 611728368251995,
 							"parameters": {
 								"instance-variable": "Name",
 								"comparison": 0,
 								"value": "Package_Mark_Manager.Package"
 							}
-						},
-						{
-							"id": "compare-instance-variable",
-							"objectClass": "Package_Bio",
-							"sid": 968243126812864,
-							"parameters": {
-								"instance-variable": "NAME",
-								"comparison": 0,
-								"value": "Package_Bio_Manager.Package"
-							}
-						},
-						{
-							"id": "compare-instance-variable",
-							"objectClass": "Package_Type",
-							"sid": 430166995325637,
-							"parameters": {
-								"instance-variable": "NAME",
-								"comparison": 0,
-								"value": "Package_Bio_Manager.Package"
-							}
 						}
 					],
 					"actions": [],
-					"sid": 106547347277887,
+					"sid": 152030126070350,
 					"children": [
 						{
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "repeat",
-									"objectClass": "System",
-									"sid": 380331736474437,
+									"id": "compare-instance-variable",
+									"objectClass": "Package_Mark_Manager",
+									"sid": 538019486107113,
 									"parameters": {
-										"count": "Package_Mark.X_"
+										"instance-variable": "Number",
+										"comparison": 3,
+										"value": "0"
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Packages_Mark",
+									"sid": 509446537317977,
+									"parameters": {
+										"instance-variable": "Name",
+										"comparison": 0,
+										"value": "Package_Mark_Manager.Package"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "HParameters",
+									"sid": 369347110029143,
+									"parameters": {
+										"instance-variable": "Job",
+										"comparison": 0,
+										"value": "\"top\""
 									}
 								}
 							],
 							"actions": [
 								{
-									"id": "spawn-another-object",
-									"objectClass": "BlockBuilder",
-									"sid": 655263434970288,
-									"parameters": {
-										"object": "Block",
-										"layer": "0",
-										"image-point": "0",
-										"create-hierarchy": false,
-										"template-name": "\"\""
-									}
-								},
-								{
-									"id": "set-position",
-									"objectClass": "Block",
-									"sid": 481166446453200,
-									"parameters": {
-										"x": "BlockBuilder.X+40*loopindex",
-										"y": "BlockBuilder.Y"
-									}
-								},
-								{
-									"id": "subtract-from-instvar",
+									"id": "set-instvar-value",
 									"objectClass": "Package_Mark_Manager",
-									"sid": 438517104722287,
+									"sid": 592107324829697,
 									"parameters": {
 										"instance-variable": "Number",
-										"value": "1"
-									}
-								},
-								{
-									"id": "subtract-from-instvar",
-									"objectClass": "Package_Bio_Manager",
-									"sid": 265774302242453,
-									"parameters": {
-										"instance-variable": "Number",
-										"value": "1"
+										"value": "int(random(10,15))"
 									}
 								}
 							],
-							"sid": 834009246241501,
+							"sid": 896577982275409,
 							"children": [
 								{
 									"eventType": "block",
 									"conditions": [
 										{
-											"id": "compare-instance-variable",
-											"objectClass": "Package_Type",
-											"sid": 158021655132593,
+											"id": "compare-y",
+											"objectClass": "BlockBuilder",
+											"sid": 820687186449724,
 											"parameters": {
-												"instance-variable": "ChanceToFind_1",
-												"comparison": 3,
-												"value": "Package_Bio.ChanceToFind"
+												"comparison": 5,
+												"y-co-ordinate": "HParameters.Y"
 											}
 										},
 										{
 											"id": "compare-instance-variable",
-											"objectClass": "Package_Type",
-											"sid": 702421106443056,
+											"objectClass": "Packages_Mark",
+											"sid": 347590749340399,
 											"parameters": {
-												"instance-variable": "ChanceToFind_2",
-												"comparison": 5,
-												"value": "Package_Bio.ChanceToFind"
+												"instance-variable": "Type",
+												"comparison": 0,
+												"value": "\"down\""
+											},
+											"isInverted": true
+										},
+										{
+											"id": "pick-random-instance",
+											"objectClass": "System",
+											"sid": 404249940186789,
+											"parameters": {
+												"object": "Packages_Mark"
 											}
 										}
 									],
 									"actions": [
 										{
-											"id": "set-animation",
-											"objectClass": "Block",
-											"sid": 312526259942535,
+											"id": "set-instvar-value",
+											"objectClass": "Package_Mark_Manager",
+											"sid": 710243485470280,
 											"parameters": {
-												"animation": "Package_Type.TopBlock",
-												"from": "beginning"
+												"instance-variable": "Package",
+												"value": "Packages_Mark.Name"
 											}
 										}
 									],
-									"sid": 545651571658053
+									"sid": 228226489304746
 								},
 								{
 									"eventType": "block",
 									"conditions": [
 										{
-											"id": "is-animation-playing",
-											"objectClass": "Block",
-											"sid": 419547738280544,
+											"id": "compare-y",
+											"objectClass": "BlockBuilder",
+											"sid": 642477795686964,
 											"parameters": {
-												"animation": "\"dirt\""
+												"comparison": 3,
+												"y-co-ordinate": "HParameters.Y"
 											}
 										},
 										{
-											"id": "is-animation-playing",
-											"objectClass": "Block",
-											"sid": 309779756104542,
+											"id": "compare-instance-variable",
+											"objectClass": "Packages_Mark",
+											"sid": 520261428864785,
 											"parameters": {
-												"animation": "\"grass\""
+												"instance-variable": "Type",
+												"comparison": 0,
+												"value": "\"up\""
+											},
+											"isInverted": true
+										},
+										{
+											"id": "pick-random-instance",
+											"objectClass": "System",
+											"sid": 584473048260370,
+											"parameters": {
+												"object": "Packages_Mark"
 											}
 										}
 									],
-									"actions": [],
-									"sid": 714893110432779,
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Package_Mark_Manager",
+											"sid": 871603408890343,
+											"parameters": {
+												"instance-variable": "Package",
+												"value": "Packages_Mark.Name"
+											}
+										}
+									],
+									"sid": 825896697853824
+								}
+							]
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-x",
+							"objectClass": "LandBuilder",
+							"sid": 112374299037109,
+							"parameters": {
+								"comparison": 4,
+								"x-co-ordinate": "BlockBuilder.X"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 432747840018769,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Package_Mark",
+									"sid": 240614026014038,
+									"parameters": {
+										"instance-variable": "Name",
+										"comparison": 0,
+										"value": "Package_Mark_Manager.Package"
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Package_Bio",
+									"sid": 143863746469777,
+									"parameters": {
+										"instance-variable": "NAME",
+										"comparison": 0,
+										"value": "Package_Bio_Manager.Package"
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Package_Type",
+									"sid": 176304761566669,
+									"parameters": {
+										"instance-variable": "NAME",
+										"comparison": 0,
+										"value": "Package_Bio_Manager.Package"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 749814778451968,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "repeat",
+											"objectClass": "System",
+											"sid": 956015390120873,
+											"parameters": {
+												"count": "Package_Mark.X_"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "spawn-another-object",
+											"objectClass": "BlockBuilder",
+											"sid": 370095006571165,
+											"parameters": {
+												"object": "Block",
+												"layer": "0",
+												"image-point": "0",
+												"create-hierarchy": false,
+												"template-name": "\"\""
+											}
+										},
+										{
+											"id": "set-position",
+											"objectClass": "Block",
+											"sid": 787611309660652,
+											"parameters": {
+												"x": "BlockBuilder.X+40*loopindex",
+												"y": "BlockBuilder.Y"
+											}
+										},
+										{
+											"id": "subtract-from-instvar",
+											"objectClass": "Package_Mark_Manager",
+											"sid": 164060668935305,
+											"parameters": {
+												"instance-variable": "Number",
+												"value": "1"
+											}
+										},
+										{
+											"id": "subtract-from-instvar",
+											"objectClass": "Package_Bio_Manager",
+											"sid": 825666713393633,
+											"parameters": {
+												"instance-variable": "Number",
+												"value": "1"
+											}
+										}
+									],
+									"sid": 339052299973066,
 									"children": [
 										{
 											"eventType": "block",
 											"conditions": [
 												{
+													"id": "compare-instance-variable",
+													"objectClass": "Package_Type",
+													"sid": 956108960244571,
+													"parameters": {
+														"instance-variable": "ChanceToFind_1",
+														"comparison": 3,
+														"value": "Package_Bio.ChanceToFind"
+													}
+												},
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Package_Type",
+													"sid": 816007608047836,
+													"parameters": {
+														"instance-variable": "ChanceToFind_2",
+														"comparison": 5,
+														"value": "Package_Bio.ChanceToFind"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-animation",
+													"objectClass": "Block",
+													"sid": 469998671651022,
+													"parameters": {
+														"animation": "Package_Type.TopBlock",
+														"from": "beginning"
+													}
+												}
+											],
+											"sid": 531147129343035
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "is-animation-playing",
+													"objectClass": "Block",
+													"sid": 372431441848635,
+													"parameters": {
+														"animation": "\"dirt\""
+													}
+												},
+												{
+													"id": "is-animation-playing",
+													"objectClass": "Block",
+													"sid": 143851324234065,
+													"parameters": {
+														"animation": "\"grass\""
+													}
+												}
+											],
+											"actions": [],
+											"sid": 492045475460053,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-two-values",
+															"objectClass": "System",
+															"sid": 405502504130989,
+															"parameters": {
+																"first-value": "choose(0,1)",
+																"comparison": 0,
+																"second-value": "0"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "create-object",
+															"objectClass": "System",
+															"sid": 937948869012482,
+															"parameters": {
+																"object-to-create": "Blocks",
+																"layer": "0",
+																"x": "Block.X",
+																"y": "Block.Y-40",
+																"create-hierarchy": false,
+																"template-name": "\"\""
+															}
+														},
+														{
+															"id": "set-animation",
+															"objectClass": "Blocks",
+															"sid": 804131851340549,
+															"parameters": {
+																"animation": "choose(\"redflower\",\"yellowflower\",\"plant\")",
+																"from": "beginning"
+															}
+														}
+													],
+													"sid": 565026733179541
+												}
+											],
+											"isOrBlock": true
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "is-animation-playing",
+													"objectClass": "Block",
+													"sid": 798966224679920,
+													"parameters": {
+														"animation": "\"sand\""
+													}
+												},
+												{
 													"id": "compare-two-values",
 													"objectClass": "System",
-													"sid": 568735892603184,
+													"sid": 921970317339709,
 													"parameters": {
 														"first-value": "choose(0,1)",
 														"comparison": 0,
@@ -3386,7 +3669,7 @@
 												{
 													"id": "create-object",
 													"objectClass": "System",
-													"sid": 365574334243997,
+													"sid": 642977845796631,
 													"parameters": {
 														"object-to-create": "Blocks",
 														"layer": "0",
@@ -3399,254 +3682,206 @@
 												{
 													"id": "set-animation",
 													"objectClass": "Blocks",
-													"sid": 334150860778901,
+													"sid": 257833367947740,
 													"parameters": {
-														"animation": "choose(\"redflower\",\"yellowflower\",\"plant\")",
+														"animation": "\"deadtree\"",
 														"from": "beginning"
 													}
 												}
 											],
-											"sid": 446674129022845
-										}
-									],
-									"isOrBlock": true
-								},
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "is-animation-playing",
-											"objectClass": "Block",
-											"sid": 829441460393290,
-											"parameters": {
-												"animation": "\"sand\""
-											}
+											"sid": 821471801250488
 										},
-										{
-											"id": "compare-two-values",
-											"objectClass": "System",
-											"sid": 869917754143151,
-											"parameters": {
-												"first-value": "choose(0,1)",
-												"comparison": 0,
-												"second-value": "0"
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "create-object",
-											"objectClass": "System",
-											"sid": 844767604883621,
-											"parameters": {
-												"object-to-create": "Blocks",
-												"layer": "0",
-												"x": "Block.X",
-												"y": "Block.Y-40",
-												"create-hierarchy": false,
-												"template-name": "\"\""
-											}
-										},
-										{
-											"id": "set-animation",
-											"objectClass": "Blocks",
-											"sid": 945735533813942,
-											"parameters": {
-												"animation": "\"deadtree\"",
-												"from": "beginning"
-											}
-										}
-									],
-									"sid": 488166716618550
-								},
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "compare-instance-variable",
-											"objectClass": "HParameters",
-											"sid": 535670750510476,
-											"parameters": {
-												"instance-variable": "Job",
-												"comparison": 0,
-												"value": "\"bottom\""
-											}
-										},
-										{
-											"id": "repeat",
-											"objectClass": "System",
-											"sid": 947920454382916,
-											"parameters": {
-												"count": "(HParameters.Y-BlockBuilder.Y)/40"
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "spawn-another-object",
-											"objectClass": "Block",
-											"sid": 996390532783366,
-											"parameters": {
-												"object": "Blocks",
-												"layer": "0",
-												"image-point": "0",
-												"create-hierarchy": false,
-												"template-name": "\"\""
-											}
-										},
-										{
-											"id": "set-position",
-											"objectClass": "Blocks",
-											"sid": 566428383820596,
-											"parameters": {
-												"x": "Block.X",
-												"y": "Block.Y+(loopindex+1)*40"
-											}
-										}
-									],
-									"sid": 936197993894831,
-									"children": [
 										{
 											"eventType": "block",
-											"conditions": [],
-											"actions": [
+											"conditions": [
 												{
-													"id": "set-instvar-value",
-													"objectClass": "Package_Bio",
-													"sid": 346037244872685,
+													"id": "compare-instance-variable",
+													"objectClass": "HParameters",
+													"sid": 298155500091985,
 													"parameters": {
-														"instance-variable": "ChanceToFind",
-														"value": "int(random(100))"
+														"instance-variable": "Job",
+														"comparison": 0,
+														"value": "\"bottom\""
+													}
+												},
+												{
+													"id": "repeat",
+													"objectClass": "System",
+													"sid": 740419774817660,
+													"parameters": {
+														"count": "(HParameters.Y-BlockBuilder.Y)/40"
 													}
 												}
 											],
-											"sid": 211257118450111,
+											"actions": [
+												{
+													"id": "spawn-another-object",
+													"objectClass": "Block",
+													"sid": 453752362011595,
+													"parameters": {
+														"object": "Blocks",
+														"layer": "0",
+														"image-point": "0",
+														"create-hierarchy": false,
+														"template-name": "\"\""
+													}
+												},
+												{
+													"id": "set-position",
+													"objectClass": "Blocks",
+													"sid": 533304995432662,
+													"parameters": {
+														"x": "Block.X",
+														"y": "Block.Y+(loopindex+1)*40"
+													}
+												}
+											],
+											"sid": 178121196663859,
 											"children": [
 												{
 													"eventType": "block",
-													"conditions": [
-														{
-															"id": "compare-instance-variable",
-															"objectClass": "Package_Type",
-															"sid": 342276008836594,
-															"parameters": {
-																"instance-variable": "ChanceToFind_1",
-																"comparison": 3,
-																"value": "Package_Bio.ChanceToFind"
-															}
-														},
-														{
-															"id": "compare-instance-variable",
-															"objectClass": "Package_Type",
-															"sid": 812520770982401,
-															"parameters": {
-																"instance-variable": "ChanceToFind_2",
-																"comparison": 5,
-																"value": "Package_Bio.ChanceToFind"
-															}
-														}
-													],
+													"conditions": [],
 													"actions": [
 														{
-															"id": "set-animation",
-															"objectClass": "Blocks",
-															"sid": 916802678173432,
+															"id": "set-instvar-value",
+															"objectClass": "Package_Bio",
+															"sid": 441181271665070,
 															"parameters": {
-																"animation": "Package_Type.Block",
-																"from": "beginning"
+																"instance-variable": "ChanceToFind",
+																"value": "int(random(100))"
 															}
 														}
 													],
-													"sid": 540076306785331
+													"sid": 263619813024253,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "compare-instance-variable",
+																	"objectClass": "Package_Type",
+																	"sid": 577145302734866,
+																	"parameters": {
+																		"instance-variable": "ChanceToFind_1",
+																		"comparison": 3,
+																		"value": "Package_Bio.ChanceToFind"
+																	}
+																},
+																{
+																	"id": "compare-instance-variable",
+																	"objectClass": "Package_Type",
+																	"sid": 766669146611583,
+																	"parameters": {
+																		"instance-variable": "ChanceToFind_2",
+																		"comparison": 5,
+																		"value": "Package_Bio.ChanceToFind"
+																	}
+																}
+															],
+															"actions": [
+																{
+																	"id": "set-animation",
+																	"objectClass": "Blocks",
+																	"sid": 648964453149768,
+																	"parameters": {
+																		"animation": "Package_Type.Block",
+																		"from": "beginning"
+																	}
+																}
+															],
+															"sid": 626192925105001
+														}
+													]
 												}
 											]
 										}
 									]
-								}
-							]
-						},
-						{
-							"eventType": "block",
-							"conditions": [],
-							"actions": [
-								{
-									"id": "set-x",
-									"objectClass": "BlockBuilder",
-									"sid": 723625591661921,
-									"parameters": {
-										"x": "Self.X+40*Package_Mark.X_"
-									}
 								},
 								{
-									"id": "set-y",
-									"objectClass": "BlockBuilder",
-									"sid": 973562800619754,
-									"parameters": {
-										"y": "Self.Y+40*Package_Mark.Y_"
-									}
+									"eventType": "block",
+									"conditions": [],
+									"actions": [
+										{
+											"id": "set-x",
+											"objectClass": "BlockBuilder",
+											"sid": 203436371375047,
+											"parameters": {
+												"x": "Self.X+40*Package_Mark.X_"
+											}
+										},
+										{
+											"id": "set-y",
+											"objectClass": "BlockBuilder",
+											"sid": 167865256379492,
+											"parameters": {
+												"y": "Self.Y+40*Package_Mark.Y_"
+											}
+										}
+									],
+									"sid": 965453290048260
 								}
-							],
-							"sid": 250933967402745
+							]
 						}
 					]
-				}
-			]
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "compare-instance-variable",
-					"objectClass": "Package_Bio_Manager",
-					"sid": 404122994936244,
-					"parameters": {
-						"instance-variable": "Number",
-						"comparison": 3,
-						"value": "0"
-					}
 				},
 				{
-					"id": "compare-instance-variable",
-					"objectClass": "Package_Bio",
-					"sid": 252003492224949,
-					"parameters": {
-						"instance-variable": "NAME",
-						"comparison": 0,
-						"value": "Package_Bio_Manager.Package"
-					}
-				},
-				{
-					"id": "compare-instance-variable",
-					"objectClass": "Package_Type",
-					"sid": 878939499638288,
-					"parameters": {
-						"instance-variable": "NAME",
-						"comparison": 0,
-						"value": "Package_Bio_Manager.Package"
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Package_Bio_Manager",
+							"sid": 841211736765540,
+							"parameters": {
+								"instance-variable": "Number",
+								"comparison": 3,
+								"value": "0"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Package_Bio",
+							"sid": 444581556998871,
+							"parameters": {
+								"instance-variable": "NAME",
+								"comparison": 0,
+								"value": "Package_Bio_Manager.Package"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Package_Type",
+							"sid": 664405436500081,
+							"parameters": {
+								"instance-variable": "NAME",
+								"comparison": 0,
+								"value": "Package_Bio_Manager.Package"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Package_Bio_Manager",
+							"sid": 204641394726116,
+							"parameters": {
+								"instance-variable": "Number",
+								"value": "int(random(10,15))"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Package_Bio_Manager",
+							"sid": 753344687583208,
+							"parameters": {
+								"instance-variable": "Package",
+								"value": "tokenat(Package_Bio.ChangeTo,int(random(tokencount(Package_Bio.ChangeTo,\",\"))),\",\")"
+							}
+						}
+					],
+					"sid": 550867474807961
 				}
 			],
-			"actions": [
-				{
-					"id": "set-instvar-value",
-					"objectClass": "Package_Bio_Manager",
-					"sid": 698699172498731,
-					"parameters": {
-						"instance-variable": "Number",
-						"value": "int(random(10,15))"
-					}
-				},
-				{
-					"id": "set-instvar-value",
-					"objectClass": "Package_Bio_Manager",
-					"sid": 152660647481459,
-					"parameters": {
-						"instance-variable": "Package",
-						"value": "tokenat(Package_Bio.ChangeTo,int(random(tokencount(Package_Bio.ChangeTo,\",\"))),\",\")"
-					}
-				}
-			],
-			"sid": 222211548422044
+			"sid": 906188122280629
 		},
 		{
 			"eventType": "block",

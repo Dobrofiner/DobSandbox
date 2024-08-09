@@ -78,6 +78,13 @@
 		},
 		{
 			"type": "plugin",
+			"id": "TextBox",
+			"name": "Ввод текста",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Touch",
 			"name": "Тач",
 			"author": "Scirra",
@@ -246,7 +253,13 @@
 			"hlajik",
 			"haljik2",
 			"Дата",
-			"screenshate"
+			"screenshate",
+			"version",
+			"version_text",
+			"diamondblockspawn",
+			"diamondblock",
+			"goldblockspawn",
+			"goldblock"
 		],
 		"subfolders": []
 	},
@@ -419,7 +432,7 @@
 	},
 	"properties": {
 		"description": "DobSandbox is new sandbox game,where you can build world,create your own maps and share it(the game in the beta stage)  Key features:  new build system save into dsbx file to share your save(or five local slots) Two maps:procedural-generated and empty(for build your maps) Not classic block delete system 11 blocks on the current version and more on future(e.g skin system)",
-		"version": "0.2",
+		"version": "0.3.0",
 		"author": "",
 		"authorEmail": "smit.1t@yandex.ru",
 		"authorWebsite": "https://dobrofiner.netlify.app",
@@ -470,7 +483,7 @@
 		"exportFileStructure": "folders",
 		"uidAllocationMode": "increment"
 	},
-	"viewportWidth": 640,
-	"viewportHeight": 480,
+	"viewportWidth": 1280,
+	"viewportHeight": 720,
 	"firstLayout": "menu"
 }

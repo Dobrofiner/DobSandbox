@@ -150,6 +150,14 @@
 					"parameters": {
 						"key": 114
 					}
+				},
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 564789716172100,
+					"parameters": {
+						"object": "music"
+					}
 				}
 			],
 			"actions": [],
@@ -218,6 +226,109 @@
 						}
 					],
 					"sid": 984909017143336
+				}
+			],
+			"isOrBlock": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 620669314394724
+				}
+			],
+			"actions": [
+				{
+					"id": "request-url",
+					"objectClass": "AJAX",
+					"sid": 841939875274570,
+					"parameters": {
+						"tag": "\"version\"",
+						"url": "\"https://raw.githubusercontent.com/Dobrofiner/DobSandbox/main/version.txt\""
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "version_text",
+					"sid": 845245887957623,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				}
+			],
+			"sid": 242686888138438
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-completed",
+					"objectClass": "AJAX",
+					"sid": 121807734490003,
+					"parameters": {
+						"tag": "\"version\""
+					}
+				}
+			],
+			"actions": [],
+			"sid": 627329888892212,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 578650053284790,
+							"parameters": {
+								"first-value": "AJAX.LastData",
+								"comparison": 1,
+								"second-value": "projectversion"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "version",
+							"sid": 527020562527705,
+							"parameters": {
+								"text": "\"Вышла новая версия (\" & AJAX.LastData & \")! Пожалуйста, обновите игру.Скачать новую версюю можно в:\""
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "version_text",
+							"sid": 513771339770233,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 961966678451275
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 510850010097846
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "version",
+							"sid": 816858322617173,
+							"parameters": {
+								"text": "\"Вы используете последнюю версию. Обновлений нет.\""
+							}
+						}
+					],
+					"sid": 347920699707201
 				}
 			]
 		}

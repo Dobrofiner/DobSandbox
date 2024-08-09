@@ -558,8 +558,8 @@
 						}
 					},
 					"world": {
-						"x": 1023,
-						"y": 1618,
+						"x": 1290,
+						"y": 1616,
 						"width": 10,
 						"height": 720,
 						"originX": 0.5,
@@ -1793,9 +1793,9 @@
 						}
 					},
 					"world": {
-						"x": 518,
+						"x": 649.5,
 						"y": 1688,
-						"width": 1000,
+						"width": 1263,
 						"height": 10,
 						"originX": 0.5,
 						"originY": 0.5,
@@ -4806,9 +4806,9 @@
 					},
 					"behaviors": {},
 					"world": {
-						"x": 210,
+						"x": 273.4267062710534,
 						"y": 49,
-						"width": 416,
+						"width": 542.8534125421068,
 						"height": 96,
 						"originX": 0.5,
 						"originY": 0.5,
@@ -5228,10 +5228,10 @@
 					},
 					"behaviors": {},
 					"world": {
-						"x": 465.9242716115084,
-						"y": 25.301317705778615,
-						"width": 94,
-						"height": 31,
+						"x": 905,
+						"y": 32,
+						"width": 197.99999999999997,
+						"height": 58,
 						"originX": 0.5,
 						"originY": 0.5161290322580645,
 						"color": [
@@ -5259,10 +5259,10 @@
 					},
 					"behaviors": {},
 					"world": {
-						"x": 465.64785468862163,
-						"y": 58.96632497059946,
-						"width": 96,
-						"height": 33,
+						"x": 901,
+						"y": 95,
+						"width": 198,
+						"height": 58,
 						"originX": 0.5,
 						"originY": 0.48484848484848486,
 						"color": [
@@ -5290,10 +5290,10 @@
 					},
 					"behaviors": {},
 					"world": {
-						"x": 536.6354193391238,
-						"y": 29.369742539033737,
-						"width": 43.323430895161096,
-						"height": 40.02209722087311,
+						"x": 1054,
+						"y": 33,
+						"width": 70.3234308951611,
+						"height": 53.02209722087311,
 						"originX": 0.5135135135135135,
 						"originY": 0.5151515151515151,
 						"color": [
@@ -5321,10 +5321,10 @@
 					},
 					"behaviors": {},
 					"world": {
-						"x": 536.0746151806769,
-						"y": 72.41019067044753,
-						"width": 47.94827470577843,
-						"height": 43.556349768727586,
+						"x": 1057,
+						"y": 97,
+						"width": 83,
+						"height": 81,
 						"originX": 0.5128205128205128,
 						"originY": 0.5,
 						"color": [
@@ -5352,10 +5352,10 @@
 					},
 					"behaviors": {},
 					"world": {
-						"x": 587.3996171288769,
-						"y": 27.18592639428795,
-						"width": 44.535292656324145,
-						"height": 45.06624628111156,
+						"x": 1156,
+						"y": 47,
+						"width": 83,
+						"height": 81,
 						"originX": 0.5509803921568628,
 						"originY": 0.5333333333333333,
 						"color": [
@@ -5381,10 +5381,10 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 624.865079208478,
-						"y": 16.773757053962292,
-						"width": 31.8692944730517,
-						"height": 31.840918594958765,
+						"x": 1254.0967741935483,
+						"y": 34.484848484848484,
+						"width": 68.8692944730517,
+						"height": 63.840918594958765,
 						"originX": 0.5161290322580645,
 						"originY": 0.5151515151515151,
 						"color": [
@@ -5416,10 +5416,10 @@
 						}
 					},
 					"world": {
-						"x": 86.18705221341563,
-						"y": 395.33782057378266,
-						"width": 165.56255690229617,
-						"height": 167.0039601305906,
+						"x": 104.5,
+						"y": 614,
+						"width": 215.56255690229614,
+						"height": 217.0039601305906,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -5454,10 +5454,10 @@
 						}
 					},
 					"world": {
-						"x": 86.16582982215161,
-						"y": 390.7851189206679,
-						"width": -35.96658043633175,
-						"height": -36.590546864198814,
+						"x": 110.0511,
+						"y": 609.0438,
+						"width": 58.03341956366825,
+						"height": 56.409453135801186,
 						"originX": 0.50365,
 						"originY": 0.50365,
 						"color": [
@@ -5485,8 +5485,8 @@
 					},
 					"behaviors": {},
 					"world": {
-						"x": 144.37267552047504,
-						"y": 16.403627320604414,
+						"x": 433,
+						"y": 49,
 						"width": 32,
 						"height": 32,
 						"originX": 0.5,
@@ -5516,8 +5516,8 @@
 					},
 					"behaviors": {},
 					"world": {
-						"x": 112.14380414184178,
-						"y": 16.433566564668524,
+						"x": 465,
+						"y": 49,
 						"width": 32,
 						"height": 32,
 						"originX": 0.5,
@@ -5647,12 +5647,99 @@
 					},
 					"behaviors": {},
 					"world": {
-						"x": 588.3686079314483,
-						"y": 83.2856920027927,
-						"width": 47.35202845095091,
-						"height": 49.57297412591765,
+						"x": 1156,
+						"y": 129,
+						"width": 83,
+						"height": 81,
 						"originX": 0.568753953194181,
 						"originY": 0.5517241379310345,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "diamondblockspawn",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 228,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 498,
+						"y": 48,
+						"width": 32,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "goldblockspawn",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Default",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 229,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 528.3264770507812,
+						"y": 48.32176208496094,
+						"width": 32,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "goldblock",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Default",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 230,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 517.8877563476562,
+						"y": -63.13739013671875,
+						"width": 32,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
 						"color": [
 							1,
 							1,
@@ -5715,10 +5802,10 @@
 						}
 					},
 					"world": {
-						"x": 318.5,
-						"y": 253.5,
-						"width": 639,
-						"height": 523,
+						"x": 645,
+						"y": 359,
+						"width": 1284,
+						"height": 720,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -5748,10 +5835,10 @@
 						}
 					},
 					"world": {
-						"x": 224,
-						"y": 64,
-						"width": 384,
-						"height": 64,
+						"x": 500,
+						"y": 68,
+						"width": 414,
+						"height": 80,
 						"originX": 0.250996015936255,
 						"originY": 0.42857142857142855,
 						"color": [
@@ -5781,10 +5868,10 @@
 						}
 					},
 					"world": {
-						"x": 288,
-						"y": 192,
-						"width": 128,
-						"height": 64,
+						"x": 540,
+						"y": 173,
+						"width": 229,
+						"height": 121.00000000000001,
 						"originX": 0.252,
 						"originY": 0.4056603773584906,
 						"color": [
@@ -5814,10 +5901,10 @@
 						}
 					},
 					"world": {
-						"x": 128,
+						"x": 196,
 						"y": 160,
-						"width": 224,
-						"height": 64,
+						"width": 334,
+						"height": 96,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -5847,10 +5934,10 @@
 						}
 					},
 					"world": {
-						"x": 128,
-						"y": 224,
-						"width": 224,
-						"height": 64,
+						"x": 196,
+						"y": 253,
+						"width": 334,
+						"height": 96,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -5880,10 +5967,10 @@
 						}
 					},
 					"world": {
-						"x": 128,
-						"y": 352,
-						"width": 224,
-						"height": 64,
+						"x": 197,
+						"y": 449,
+						"width": 334,
+						"height": 96,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -5913,10 +6000,10 @@
 						}
 					},
 					"world": {
-						"x": 128,
-						"y": 416,
-						"width": 224,
-						"height": 64,
+						"x": 197,
+						"y": 547,
+						"width": 334,
+						"height": 96,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -5946,10 +6033,10 @@
 						}
 					},
 					"world": {
-						"x": 128,
-						"y": 288,
-						"width": 224,
-						"height": 64,
+						"x": 197,
+						"y": 351,
+						"width": 334,
+						"height": 96,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -5979,10 +6066,10 @@
 						}
 					},
 					"world": {
-						"x": 512,
-						"y": 224,
-						"width": 224,
-						"height": 64,
+						"x": 1031,
+						"y": 269,
+						"width": 334,
+						"height": 96,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -6012,10 +6099,10 @@
 						}
 					},
 					"world": {
-						"x": 512,
-						"y": 288,
-						"width": 224,
-						"height": 64,
+						"x": 1030,
+						"y": 365,
+						"width": 334,
+						"height": 96,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -6045,10 +6132,10 @@
 						}
 					},
 					"world": {
-						"x": 512,
-						"y": 352,
-						"width": 224,
-						"height": 64,
+						"x": 1031,
+						"y": 459,
+						"width": 334,
+						"height": 96,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -6078,10 +6165,10 @@
 						}
 					},
 					"world": {
-						"x": 512,
-						"y": 416,
-						"width": 224,
-						"height": 64,
+						"x": 1031,
+						"y": 555,
+						"width": 334,
+						"height": 96,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -6111,10 +6198,10 @@
 						}
 					},
 					"world": {
-						"x": 512,
-						"y": 160,
-						"width": 224,
-						"height": 64,
+						"x": 1031,
+						"y": 180,
+						"width": 334,
+						"height": 96,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -6144,10 +6231,10 @@
 						}
 					},
 					"world": {
-						"x": 320,
-						"y": 416,
-						"width": 128,
-						"height": 64,
+						"x": 607.5,
+						"y": 417.4659685863874,
+						"width": 309,
+						"height": 125,
 						"originX": 0.5,
 						"originY": 0.523560209424084,
 						"color": [
@@ -6164,23 +6251,23 @@
 					"type": "Кнопка2",
 					"properties": {
 						"type": "button",
-						"text": "загрузить сохранение",
+						"text": "загрузить сохранение/load save",
 						"tooltip": "",
 						"initially-visible": true,
 						"enabled": true,
 						"auto-font-size": true,
 						"checked": false,
 						"id": "",
-						"class": ""
+						"class": "load-buttton"
 					},
 					"uid": 32,
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 192,
-						"y": 448,
-						"width": 224,
-						"height": 32,
+						"x": 466,
+						"y": 552,
+						"width": 283,
+						"height": 83,
 						"originX": 0,
 						"originY": 0,
 						"color": [
@@ -6224,62 +6311,12 @@
 						}
 					},
 					"world": {
-						"x": 256,
-						"y": 288,
-						"width": 160,
-						"height": 64,
+						"x": 463,
+						"y": 254,
+						"width": 251,
+						"height": 83,
 						"originX": 0,
 						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "Block",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "grass",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 195,
-					"instanceVariables": {},
-					"behaviors": {
-						"Solid": {
-							"properties": {
-								"enabled": true,
-								"tags": ""
-							}
-						},
-						"Физика": {
-							"properties": {
-								"immovable": false,
-								"collision-mask": "use-collision-polygon",
-								"prevent-rotation": false,
-								"density": 1,
-								"friction": 0.5,
-								"elasticity": 0.2,
-								"linear-damping": 0,
-								"angular-damping": 0.01,
-								"bullet": false,
-								"enabled": true
-							}
-						}
-					},
-					"world": {
-						"x": 328,
-						"y": 678,
-						"width": 40,
-						"height": 40,
-						"originX": 0.5,
-						"originY": 0.5,
 						"color": [
 							1,
 							1,
@@ -6331,7 +6368,7 @@
 						"text": "Текст",
 						"enable-bbcode": true,
 						"font": "PublicPixel",
-						"size": 12,
+						"size": 14,
 						"line-height": 0,
 						"bold": false,
 						"italic": false,
@@ -6354,10 +6391,10 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 0,
-						"y": 0,
-						"width": 256,
-						"height": 257.30966730368414,
+						"x": -2,
+						"y": 2,
+						"width": 263,
+						"height": 391.30966730368414,
 						"originX": 0,
 						"originY": 0,
 						"color": [
