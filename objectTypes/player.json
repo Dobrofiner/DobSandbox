@@ -46,12 +46,50 @@
 						"exportQuality": 0.8,
 						"imageSpriteId": 4755541,
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Точка спрайта 1",
+								"x": 0.5,
+								"y": 0.1328125
+							}
+						],
 						"duration": 1,
 						"tag": ""
 					}
 				],
 				"sid": 688875780465564,
 				"name": "Default",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 124,
+						"height": 128,
+						"originX": 0.5294117647058824,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8789900,
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Точка спрайта 1",
+								"x": 0.33064516129032256,
+								"y": 0.0859375
+							}
+						],
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 410514753521534,
+				"name": "OLDSKIN",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,

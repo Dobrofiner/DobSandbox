@@ -15,6 +15,13 @@
 		},
 		{
 			"type": "plugin",
+			"id": "Arr",
+			"name": "Массив",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Audio",
 			"name": "Аудио",
 			"author": "Scirra",
@@ -57,6 +64,13 @@
 		},
 		{
 			"type": "plugin",
+			"id": "LocalStorage",
+			"name": "Локальное хранилище",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Mouse",
 			"name": "Мышь",
 			"author": "Scirra",
@@ -94,6 +108,13 @@
 			"type": "plugin",
 			"id": "filechooser",
 			"name": "Выбор файла",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Bullet",
+			"name": "Пуля",
 			"author": "Scirra",
 			"bundled": false
 		},
@@ -259,7 +280,31 @@
 			"diamondblockspawn",
 			"diamondblock",
 			"goldblockspawn",
-			"goldblock"
+			"goldblock",
+			"debug_text",
+			"LocalStorage",
+			"array",
+			"promocodetype",
+			"вводпромо",
+			"promocheck",
+			"promorest",
+			"ltfughjv",
+			"birthdayhat",
+			"quet3",
+			"PROMSO",
+			"MOON",
+			"blockpl",
+			"tree",
+			"bench",
+			"sgar1",
+			"sgar2",
+			"фонар",
+			"tort",
+			"setupfdiewwork",
+			"setupfdiewwork2",
+			"firework",
+			"NOTHING",
+			"map_3"
 		],
 		"subfolders": []
 	},
@@ -276,7 +321,8 @@
 			"Blocks",
 			"Packagees_Type",
 			"Packages_Bio",
-			"Packages_Mark"
+			"Packages_Mark",
+			"biurth"
 		],
 		"subfolders": []
 	},
@@ -285,8 +331,9 @@
 			"menu",
 			"мир",
 			"credits",
+			"chooose_map",
 			"empty",
-			"chooose_map"
+			"birthday_map"
 		],
 		"subfolders": []
 	},
@@ -295,8 +342,9 @@
 			"Список событий 1",
 			"MEN",
 			"credits",
+			"choose_map",
 			"empty",
-			"choose_map"
+			"birthdaymap"
 		],
 		"subfolders": []
 	},
@@ -340,6 +388,14 @@
 					"name": "Floating Isles-1.webm",
 					"type": "audio/webm; codecs=opus",
 					"sid": 452686679860668,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "ochered-fejerverkov.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 418805279388559,
 					"file-info": {
 						"purpose": "none"
 					}
@@ -432,7 +488,7 @@
 	},
 	"properties": {
 		"description": "DobSandbox is new sandbox game,where you can build world,create your own maps and share it(the game in the beta stage)  Key features:  new build system save into dsbx file to share your save(or five local slots) Two maps:procedural-generated and empty(for build your maps) Not classic block delete system 11 blocks on the current version and more on future(e.g skin system)",
-		"version": "0.3.0",
+		"version": "0.4.0",
 		"author": "",
 		"authorEmail": "smit.1t@yandex.ru",
 		"authorWebsite": "https://dobrofiner.netlify.app",

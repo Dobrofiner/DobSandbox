@@ -11,7 +11,13 @@
 			"sid": 505686701736048
 		}
 	],
-	"behaviorTypes": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "NoSave",
+			"name": "НеСохранять",
+			"sid": 436560020977458
+		}
+	],
 	"effectTypes": [],
 	"members": [
 		"block1spawn",

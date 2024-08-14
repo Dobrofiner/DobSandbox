@@ -1,0 +1,17 @@
+{
+	"name": "biurth",
+	"plugin-id": "Sprite",
+	"sid": 994322841188504,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"MOON",
+		"sgar1",
+		"sgar2",
+		"tree",
+		"фонар",
+		"blockpl",
+		"bench"
+	]
+}

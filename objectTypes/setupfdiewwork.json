@@ -1,0 +1,51 @@
+{
+	"name": "setupfdiewwork",
+	"plugin-id": "Sprite",
+	"sid": 773566719212999,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Твёрдый",
+			"sid": 567272224500527
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 128,
+						"height": 95,
+						"originX": 0.5,
+						"originY": 0.3263157894736842,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9521934,
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Точка спрайта 1",
+								"x": 0.4765625,
+								"y": 0.18947368421052632
+							}
+						],
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 258107594416168,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

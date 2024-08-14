@@ -1,0 +1,50 @@
+{
+	"name": "sgar2",
+	"plugin-id": "Sprite",
+	"sid": 392227445644324,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 28,
+						"height": 58,
+						"originX": 0.5384615384615384,
+						"originY": 0.5018341892883346,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 3119039,
+						"collisionPoly": {
+							"points": [
+								0.03846153846153847,
+								0.02090975788701394,
+								1,
+								0.02090975788701394,
+								1,
+								0.9618488628026411,
+								0.03846153846153847,
+								0.9618488628026411
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 403735168881320,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

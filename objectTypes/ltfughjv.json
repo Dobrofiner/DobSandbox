@@ -1,0 +1,15 @@
+{
+	"name": "ltfughjv",
+	"plugin-id": "Text",
+	"sid": 857913933016310,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "NoSave",
+			"name": "НеСохранять",
+			"sid": 696018470548923
+		}
+	],
+	"effectTypes": []
+}

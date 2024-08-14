@@ -1,0 +1,14 @@
+{
+	"name": "promorest",
+	"plugin-id": "Button",
+	"sid": 820053782421832,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "NoSave",
+			"name": "НеСохранять",
+			"sid": 628348029081111
+		}
+	]
+}

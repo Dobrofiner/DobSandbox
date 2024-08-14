@@ -266,14 +266,31 @@
 				{
 					"id": "on-completed",
 					"objectClass": "AJAX",
-					"sid": 121807734490003,
+					"sid": 921453582733018,
 					"parameters": {
 						"tag": "\"version\""
 					}
 				}
 			],
-			"actions": [],
-			"sid": 627329888892212,
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "debug_text",
+					"sid": 453597252448830,
+					"parameters": {
+						"text": "\"AJAX запрос завершен. Последние данные: \" & AJAX.LastData"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "debug_text",
+					"sid": 678645601769906,
+					"parameters": {
+						"text": "\"Текущая версия проекта: \" & projectversion"
+					}
+				}
+			],
+			"sid": 186455190095097,
 			"children": [
 				{
 					"eventType": "block",
@@ -281,33 +298,41 @@
 						{
 							"id": "compare-two-values",
 							"objectClass": "System",
-							"sid": 578650053284790,
+							"sid": 135943696720972,
 							"parameters": {
-								"first-value": "AJAX.LastData",
-								"comparison": 1,
-								"second-value": "projectversion"
+								"first-value": "projectversion",
+								"comparison": 2,
+								"second-value": "AJAX.LastData"
 							}
 						}
 					],
 					"actions": [
 						{
 							"id": "set-text",
-							"objectClass": "version",
-							"sid": 527020562527705,
+							"objectClass": "debug_text",
+							"sid": 883155112453570,
 							"parameters": {
-								"text": "\"Вышла новая версия (\" & AJAX.LastData & \")! Пожалуйста, обновите игру.Скачать новую версюю можно в:\""
+								"text": "\"Версия проекта меньше, чем последняя версия.\""
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "version",
+							"sid": 440569883281660,
+							"parameters": {
+								"text": "\"Вышла новая версия (\" & AJAX.LastData & \")! Пожалуйста, обновите игру. Скачать новую версию можно в:\""
 							}
 						},
 						{
 							"id": "set-visible",
 							"objectClass": "version_text",
-							"sid": 513771339770233,
+							"sid": 411625473249642,
 							"parameters": {
 								"visibility": "visible"
 							}
 						}
 					],
-					"sid": 961966678451275
+					"sid": 112496456416007
 				},
 				{
 					"eventType": "block",
@@ -315,22 +340,120 @@
 						{
 							"id": "else",
 							"objectClass": "System",
-							"sid": 510850010097846
+							"sid": 843026821483932
 						}
 					],
 					"actions": [
 						{
 							"id": "set-text",
+							"objectClass": "debug_text",
+							"sid": 582901681930531,
+							"parameters": {
+								"text": "\"Версия проекта совпадает с последней версией.\""
+							}
+						},
+						{
+							"id": "set-text",
 							"objectClass": "version",
-							"sid": 816858322617173,
+							"sid": 743871037852312,
 							"parameters": {
 								"text": "\"Вы используете последнюю версию. Обновлений нет.\""
 							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "version_text",
+							"sid": 277784739557547,
+							"parameters": {
+								"visibility": "invisible"
+							}
 						}
 					],
-					"sid": 347920699707201
+					"sid": 976297997792740
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 556184281630440,
+							"parameters": {
+								"first-value": "projectversion",
+								"comparison": 4,
+								"second-value": "AJAX.LastData"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "debug_text",
+							"sid": 692403343606267,
+							"parameters": {
+								"text": "\"Версия проекта больше, чем последняя версия.\""
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "version",
+							"sid": 840321024898414,
+							"parameters": {
+								"text": "\"Странно, но вы используете версию, которая не вышла или же она является тестовой версией\""
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "version_text",
+							"sid": 226162834350647,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 908610774322519
 				}
 			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-error",
+					"objectClass": "AJAX",
+					"sid": 515511556364583,
+					"parameters": {
+						"tag": "\"version\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "debug_text",
+					"sid": 144411753879321,
+					"parameters": {
+						"text": "\"Произошла ошибка.Нет интернета,нельзя проверить новую версию\""
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "version",
+					"sid": 827945333975463,
+					"parameters": {
+						"text": "\"Ошибка:Нет интернета.нельзя проверить есть ли новая версия или нет.\""
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "version_text",
+					"sid": 462544288070970,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				}
+			],
+			"sid": 641253942330187
 		}
 	],
 	"sid": 400093937679217

@@ -817,6 +817,14 @@
 									"parameters": {
 										"object": "pause"
 									}
+								},
+								{
+									"id": "on-tap-object",
+									"objectClass": "Touch",
+									"sid": 633251994927651,
+									"parameters": {
+										"object": "продолжить"
+									}
 								}
 							],
 							"actions": [],
@@ -920,13 +928,11 @@
 									}
 								},
 								{
-									"id": "compare-eventvar",
+									"id": "layer-is-visible",
 									"objectClass": "System",
-									"sid": 278312721494792,
+									"sid": 938812931167533,
 									"parameters": {
-										"variable": "menuOpen",
-										"comparison": 0,
-										"value": "1"
+										"layer": "2"
 									}
 								}
 							],
@@ -941,83 +947,11 @@
 									}
 								},
 								{
-									"id": "set-eventvar-value",
+									"id": "reset-global-variables",
 									"objectClass": "System",
-									"sid": 123599624474814,
+									"sid": 247930046449025,
 									"parameters": {
-										"variable": "blockSelected",
-										"value": "0"
-									}
-								},
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 260445817697358,
-									"parameters": {
-										"variable": "debugMode",
-										"value": "0"
-									}
-								},
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 135667572507135,
-									"parameters": {
-										"variable": "deleteMode",
-										"value": "0"
-									}
-								},
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 754809366767954,
-									"parameters": {
-										"variable": "onSaveCompletedN",
-										"value": "0"
-									}
-								},
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 444228308090439,
-									"parameters": {
-										"variable": "SaveState",
-										"value": "\"\""
-									}
-								},
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 588087515281413,
-									"parameters": {
-										"variable": "gridHeight",
-										"value": "32"
-									}
-								},
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 713058054341704,
-									"parameters": {
-										"variable": "gridWidth",
-										"value": "32"
-									}
-								},
-								{
-									"id": "set-time-scale",
-									"objectClass": "System",
-									"sid": 996706959225839,
-									"parameters": {
-										"time-scale": "1.0"
-									}
-								},
-								{
-									"id": "set-boolean-eventvar",
-									"objectClass": "System",
-									"sid": 562450262243013,
-									"parameters": {
-										"variable": "music_play",
-										"value": "false"
+										"reset-static": false
 									}
 								},
 								{
@@ -1051,74 +985,49 @@
 								{
 									"id": "on-tap-object",
 									"objectClass": "Touch",
-									"sid": 826997076829795,
+									"sid": 756560928463991,
 									"parameters": {
-										"object": "продолжить"
+										"object": "PROMSO"
+									}
+								},
+								{
+									"id": "layer-is-visible",
+									"objectClass": "System",
+									"sid": 459111207585694,
+									"parameters": {
+										"layer": "2"
 									}
 								}
 							],
-							"actions": [],
-							"sid": 140768990887762,
-							"children": [
+							"actions": [
 								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "compare-eventvar",
-											"objectClass": "System",
-											"sid": 762796024426028,
-											"parameters": {
-												"variable": "menuOpen",
-												"comparison": 0,
-												"value": "1"
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "set-layer-visible",
-											"objectClass": "System",
-											"sid": 934725055904810,
-											"parameters": {
-												"layer": "2",
-												"visibility": "invisible"
-											}
-										},
-										{
-											"id": "set-time-scale",
-											"objectClass": "System",
-											"sid": 346206410498230,
-											"parameters": {
-												"time-scale": "1.0"
-											}
-										},
-										{
-											"id": "set-eventvar-value",
-											"objectClass": "System",
-											"sid": 688697657129342,
-											"parameters": {
-												"variable": "menuOpen",
-												"value": "0"
-											}
-										},
-										{
-											"id": "set-boolean-eventvar",
-											"objectClass": "System",
-											"sid": 191925884046800,
-											"parameters": {
-												"variable": "music_play",
-												"value": "false"
-											}
-										},
-										{
-											"id": "stop-all",
-											"objectClass": "Аудио",
-											"sid": 408438618425252
-										}
-									],
-									"sid": 547958642949699
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 750119512230794,
+									"parameters": {
+										"variable": "menuOpen",
+										"value": "2"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Кнопка2",
+									"sid": 681672182265638,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 456053502523557,
+									"parameters": {
+										"layer": "3",
+										"visibility": "visible"
+									}
 								}
-							]
+							],
+							"sid": 731225997536807
 						}
 					],
 					"sid": 708848721074207
@@ -1213,6 +1122,16 @@
 							"parameters": {
 								"object": "block1spawn"
 							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 826995081896816,
+							"parameters": {
+								"first-value": "menuOpen",
+								"comparison": 0,
+								"second-value": "0"
+							}
 						}
 					],
 					"actions": [
@@ -1269,6 +1188,24 @@
 							"sid": 859724044713617,
 							"parameters": {
 								"object": "Blocks"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Touch",
+							"sid": 842960348905760,
+							"parameters": {
+								"object": "biurth"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Touch",
+							"sid": 781494955971144,
+							"parameters": {
+								"object": "setupfdiewwork"
 							},
 							"isInverted": true
 						},
@@ -1330,6 +1267,16 @@
 							"parameters": {
 								"object": "abobas_spawn"
 							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 471153072834301,
+							"parameters": {
+								"first-value": "menuOpen",
+								"comparison": 0,
+								"second-value": "0"
+							}
 						}
 					],
 					"actions": [
@@ -1365,6 +1312,15 @@
 						{
 							"id": "is-touching-object",
 							"objectClass": "Touch",
+							"sid": 330499514197878,
+							"parameters": {
+								"object": "biurth"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Touch",
 							"sid": 187850335718259,
 							"parameters": {
 								"object": "player"
@@ -1386,6 +1342,15 @@
 							"sid": 136351549226586,
 							"parameters": {
 								"object": "Blocks"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Touch",
+							"sid": 510285349571201,
+							"parameters": {
+								"object": "setupfdiewwork"
 							},
 							"isInverted": true
 						},
@@ -1447,6 +1412,16 @@
 							"parameters": {
 								"object": "bed__spawn"
 							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 885977240518771,
+							"parameters": {
+								"first-value": "menuOpen",
+								"comparison": 0,
+								"second-value": "0"
+							}
 						}
 					],
 					"actions": [
@@ -1482,6 +1457,15 @@
 						{
 							"id": "is-touching-object",
 							"objectClass": "Touch",
+							"sid": 125427131030382,
+							"parameters": {
+								"object": "biurth"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Touch",
 							"sid": 137842913019974,
 							"parameters": {
 								"object": "player"
@@ -1503,6 +1487,15 @@
 							"sid": 962734538456886,
 							"parameters": {
 								"object": "Blocks"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Touch",
+							"sid": 405381142784122,
+							"parameters": {
+								"object": "setupfdiewwork"
 							},
 							"isInverted": true
 						},
@@ -1564,6 +1557,16 @@
 							"parameters": {
 								"object": "chest_spawn"
 							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 704274537709940,
+							"parameters": {
+								"first-value": "menuOpen",
+								"comparison": 0,
+								"second-value": "0"
+							}
 						}
 					],
 					"actions": [
@@ -1599,6 +1602,15 @@
 						{
 							"id": "is-touching-object",
 							"objectClass": "Touch",
+							"sid": 215041566828970,
+							"parameters": {
+								"object": "biurth"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Touch",
 							"sid": 454456413496090,
 							"parameters": {
 								"object": "player"
@@ -1620,6 +1632,15 @@
 							"sid": 485003838458287,
 							"parameters": {
 								"object": "Blocks"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Touch",
+							"sid": 978905256328206,
+							"parameters": {
+								"object": "setupfdiewwork"
 							},
 							"isInverted": true
 						},
@@ -1681,6 +1702,16 @@
 							"parameters": {
 								"object": "pechka_spawn"
 							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 828678415061434,
+							"parameters": {
+								"first-value": "menuOpen",
+								"comparison": 0,
+								"second-value": "0"
+							}
 						}
 					],
 					"actions": [
@@ -1716,6 +1747,15 @@
 						{
 							"id": "is-touching-object",
 							"objectClass": "Touch",
+							"sid": 590971479419722,
+							"parameters": {
+								"object": "biurth"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Touch",
 							"sid": 389851883757913,
 							"parameters": {
 								"object": "player"
@@ -1737,6 +1777,15 @@
 							"sid": 352285614422169,
 							"parameters": {
 								"object": "Blocks"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Touch",
+							"sid": 461175082660491,
+							"parameters": {
+								"object": "setupfdiewwork"
 							},
 							"isInverted": true
 						},
@@ -1798,6 +1847,16 @@
 							"parameters": {
 								"object": "stone_spawn"
 							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 406879301382008,
+							"parameters": {
+								"first-value": "menuOpen",
+								"comparison": 0,
+								"second-value": "0"
+							}
 						}
 					],
 					"actions": [
@@ -1833,6 +1892,15 @@
 						{
 							"id": "is-touching-object",
 							"objectClass": "Touch",
+							"sid": 367017141934875,
+							"parameters": {
+								"object": "biurth"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Touch",
 							"sid": 682037732270418,
 							"parameters": {
 								"object": "player"
@@ -1854,6 +1922,15 @@
 							"sid": 781982898097106,
 							"parameters": {
 								"object": "Blocks"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Touch",
+							"sid": 627637468296222,
+							"parameters": {
+								"object": "setupfdiewwork"
 							},
 							"isInverted": true
 						},
@@ -1915,6 +1992,16 @@
 							"parameters": {
 								"object": "workbench_spawn"
 							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 525639445498278,
+							"parameters": {
+								"first-value": "menuOpen",
+								"comparison": 0,
+								"second-value": "0"
+							}
 						}
 					],
 					"actions": [
@@ -1937,6 +2024,15 @@
 							"id": "is-in-touch",
 							"objectClass": "Touch",
 							"sid": 480977594033852
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Touch",
+							"sid": 930380823829427,
+							"parameters": {
+								"object": "biurth"
+							},
+							"isInverted": true
 						},
 						{
 							"id": "is-touching-object",
@@ -1971,6 +2067,15 @@
 							"sid": 427482216982148,
 							"parameters": {
 								"object": "Blocks"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Touch",
+							"sid": 947126377499675,
+							"parameters": {
+								"object": "setupfdiewwork"
 							},
 							"isInverted": true
 						},
@@ -2032,6 +2137,16 @@
 							"parameters": {
 								"object": "youtop2_spawn"
 							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 243134527945738,
+							"parameters": {
+								"first-value": "menuOpen",
+								"comparison": 0,
+								"second-value": "0"
+							}
 						}
 					],
 					"actions": [
@@ -2067,6 +2182,15 @@
 						{
 							"id": "is-touching-object",
 							"objectClass": "Touch",
+							"sid": 235173715529128,
+							"parameters": {
+								"object": "biurth"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Touch",
 							"sid": 624995446307723,
 							"parameters": {
 								"object": "player"
@@ -2088,6 +2212,15 @@
 							"sid": 980530510800463,
 							"parameters": {
 								"object": "Blocks"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Touch",
+							"sid": 122773606383871,
+							"parameters": {
+								"object": "setupfdiewwork"
 							},
 							"isInverted": true
 						},
@@ -2149,6 +2282,16 @@
 							"parameters": {
 								"object": "youtop_spawn"
 							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 557515876098066,
+							"parameters": {
+								"first-value": "menuOpen",
+								"comparison": 0,
+								"second-value": "0"
+							}
 						}
 					],
 					"actions": [
@@ -2184,9 +2327,9 @@
 						{
 							"id": "is-touching-object",
 							"objectClass": "Touch",
-							"sid": 146450874901836,
+							"sid": 507493586793904,
 							"parameters": {
-								"object": "spawn_blocks"
+								"object": "biurth"
 							},
 							"isInverted": true
 						},
@@ -2205,6 +2348,15 @@
 							"sid": 311090911232616,
 							"parameters": {
 								"object": "Blocks"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Touch",
+							"sid": 627189905688629,
+							"parameters": {
+								"object": "setupfdiewwork"
 							},
 							"isInverted": true
 						},
@@ -2266,6 +2418,16 @@
 							"parameters": {
 								"object": "mwgavlock_spawn"
 							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 337605803229410,
+							"parameters": {
+								"first-value": "menuOpen",
+								"comparison": 0,
+								"second-value": "0"
+							}
 						}
 					],
 					"actions": [
@@ -2301,15 +2463,6 @@
 						{
 							"id": "is-touching-object",
 							"objectClass": "Touch",
-							"sid": 974288704982398,
-							"parameters": {
-								"object": "spawn_blocks"
-							},
-							"isInverted": true
-						},
-						{
-							"id": "is-touching-object",
-							"objectClass": "Touch",
 							"sid": 892020158802739,
 							"parameters": {
 								"object": "blocks_1"
@@ -2319,9 +2472,27 @@
 						{
 							"id": "is-touching-object",
 							"objectClass": "Touch",
+							"sid": 446428717864696,
+							"parameters": {
+								"object": "biurth"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Touch",
 							"sid": 726679112462207,
 							"parameters": {
 								"object": "Blocks"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Touch",
+							"sid": 700198647571903,
+							"parameters": {
+								"object": "setupfdiewwork"
 							},
 							"isInverted": true
 						},
@@ -2383,6 +2554,16 @@
 							"parameters": {
 								"object": "доски_spawn"
 							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 746928694727105,
+							"parameters": {
+								"first-value": "menuOpen",
+								"comparison": 0,
+								"second-value": "0"
+							}
 						}
 					],
 					"actions": [
@@ -2418,9 +2599,27 @@
 						{
 							"id": "is-touching-object",
 							"objectClass": "Touch",
+							"sid": 521452381106936,
+							"parameters": {
+								"object": "setupfdiewwork"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Touch",
 							"sid": 115552150656017,
 							"parameters": {
 								"object": "player"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Touch",
+							"sid": 794597966259389,
+							"parameters": {
+								"object": "biurth"
 							},
 							"isInverted": true
 						},
@@ -2500,6 +2699,16 @@
 							"parameters": {
 								"object": "hlajik_spawn"
 							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 938663281380738,
+							"parameters": {
+								"first-value": "menuOpen",
+								"comparison": 0,
+								"second-value": "0"
+							}
 						}
 					],
 					"actions": [
@@ -2526,6 +2735,15 @@
 						{
 							"id": "is-touching-object",
 							"objectClass": "Touch",
+							"sid": 892229515963534,
+							"parameters": {
+								"object": "setupfdiewwork"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Touch",
 							"sid": 432288328877799,
 							"parameters": {
 								"object": "spawn_blocks"
@@ -2547,6 +2765,15 @@
 							"sid": 306149210377375,
 							"parameters": {
 								"object": "blocks_1"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Touch",
+							"sid": 488495164732889,
+							"parameters": {
+								"object": "biurth"
 							},
 							"isInverted": true
 						},
@@ -2617,6 +2844,16 @@
 							"parameters": {
 								"object": "haljik2_spawn"
 							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 235999451292357,
+							"parameters": {
+								"first-value": "menuOpen",
+								"comparison": 0,
+								"second-value": "0"
+							}
 						}
 					],
 					"actions": [
@@ -2661,6 +2898,15 @@
 						{
 							"id": "is-touching-object",
 							"objectClass": "Touch",
+							"sid": 590546933310525,
+							"parameters": {
+								"object": "biurth"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Touch",
 							"sid": 168402701890656,
 							"parameters": {
 								"object": "blocks_1"
@@ -2673,6 +2919,15 @@
 							"sid": 371444346480281,
 							"parameters": {
 								"object": "Blocks"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Touch",
+							"sid": 575366726464094,
+							"parameters": {
+								"object": "setupfdiewwork"
 							},
 							"isInverted": true
 						},
@@ -2734,6 +2989,16 @@
 							"parameters": {
 								"object": "diamondblockspawn"
 							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 326810168866989,
+							"parameters": {
+								"first-value": "menuOpen",
+								"comparison": 0,
+								"second-value": "0"
+							}
 						}
 					],
 					"actions": [
@@ -2778,6 +3043,15 @@
 						{
 							"id": "is-touching-object",
 							"objectClass": "Touch",
+							"sid": 276733974499632,
+							"parameters": {
+								"object": "biurth"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Touch",
 							"sid": 284387408538532,
 							"parameters": {
 								"object": "blocks_1"
@@ -2790,6 +3064,15 @@
 							"sid": 883495349007281,
 							"parameters": {
 								"object": "Blocks"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Touch",
+							"sid": 754876714614596,
+							"parameters": {
+								"object": "setupfdiewwork"
 							},
 							"isInverted": true
 						},
@@ -2851,6 +3134,16 @@
 							"parameters": {
 								"object": "goldblockspawn"
 							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 370451486770893,
+							"parameters": {
+								"first-value": "menuOpen",
+								"comparison": 0,
+								"second-value": "0"
+							}
 						}
 					],
 					"actions": [
@@ -2898,6 +3191,24 @@
 							"sid": 397781562814331,
 							"parameters": {
 								"object": "blocks_1"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Touch",
+							"sid": 792667296102198,
+							"parameters": {
+								"object": "biurth"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Touch",
+							"sid": 604536654285045,
+							"parameters": {
+								"object": "setupfdiewwork"
 							},
 							"isInverted": true
 						},
@@ -2957,6 +3268,186 @@
 						}
 					],
 					"sid": 891038946946081
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 700266295722425,
+							"parameters": {
+								"object": "setupfdiewwork2"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 681781232194803,
+							"parameters": {
+								"first-value": "menuOpen",
+								"comparison": 0,
+								"second-value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 104030995599265,
+							"parameters": {
+								"variable": "blockSelected",
+								"value": "16"
+							}
+						}
+					],
+					"sid": 582814783591261
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-in-touch",
+							"objectClass": "Touch",
+							"sid": 880634537659224
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Touch",
+							"sid": 296693256254449,
+							"parameters": {
+								"object": "spawn_blocks"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Touch",
+							"sid": 450038674497450,
+							"parameters": {
+								"object": "player"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Touch",
+							"sid": 605102435779655,
+							"parameters": {
+								"object": "blocks_1"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Touch",
+							"sid": 643524091969251,
+							"parameters": {
+								"object": "biurth"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Touch",
+							"sid": 991555123099071,
+							"parameters": {
+								"object": "setupfdiewwork2"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Touch",
+							"sid": 392437790464864,
+							"parameters": {
+								"object": "Blocks"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 613552728193688,
+							"parameters": {
+								"first-value": "blockSelected",
+								"comparison": 0,
+								"second-value": "16"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 474015290949122,
+							"parameters": {
+								"variable": "menuOpen",
+								"comparison": 0,
+								"value": "0"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 661655448350364,
+							"parameters": {
+								"variable": "deleteMode",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 177442158414047,
+							"parameters": {
+								"object-to-create": "setupfdiewwork",
+								"layer": "0",
+								"x": "round(Touch.X / gridWidth) * gridWidth",
+								"y": "round(Touch.Y / gridHeight) * gridHeight",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						}
+					],
+					"sid": 903224825135500
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 571055415276248,
+							"parameters": {
+								"object": "NOTHING"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 290884329373330,
+							"parameters": {
+								"first-value": "menuOpen",
+								"comparison": 0,
+								"second-value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 349227843766929,
+							"parameters": {
+								"variable": "blockSelected",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 176151321087253
 				},
 				{
 					"eventType": "block",
@@ -3024,19 +3515,42 @@
 					"eventType": "block",
 					"conditions": [
 						{
+							"id": "is-touching-object",
+							"objectClass": "Touch",
+							"sid": 476811850034809,
+							"parameters": {
+								"object": "setupfdiewwork"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 544045281392689,
+							"parameters": {
+								"variable": "deleteMode",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "setupfdiewwork",
+							"sid": 366922577604626
+						}
+					],
+					"sid": 802685935722916
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
 							"id": "on-key-pressed",
 							"objectClass": "Keyboard",
 							"sid": 755628221381132,
 							"parameters": {
 								"key": 68
-							}
-						},
-						{
-							"id": "on-tap-object",
-							"objectClass": "Touch",
-							"sid": 505871046591906,
-							"parameters": {
-								"object": "delmode"
 							}
 						}
 					],
@@ -3053,6 +3567,41 @@
 					],
 					"sid": 804140001250800,
 					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 332395363835130,
+							"parameters": {
+								"object": "delmode"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 814226772415999,
+							"parameters": {
+								"variable": "menuOpen",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 504632638128666,
+							"parameters": {
+								"variable": "deleteMode",
+								"value": "(deleteMode = 0) ? 1 : 0 "
+							}
+						}
+					],
+					"sid": 247623555380633
 				}
 			],
 			"sid": 413198372103578
@@ -3176,14 +3725,6 @@
 					"parameters": {
 						"key": 80
 					}
-				},
-				{
-					"id": "on-tap-object",
-					"objectClass": "Touch",
-					"sid": 951165983328511,
-					"parameters": {
-						"object": "morevisiblety"
-					}
 				}
 			],
 			"actions": [
@@ -3204,6 +3745,39 @@
 			"eventType": "block",
 			"conditions": [
 				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 790371120039718,
+					"parameters": {
+						"object": "morevisiblety"
+					}
+				},
+				{
+					"id": "layer-is-visible",
+					"objectClass": "System",
+					"sid": 535545322725971,
+					"parameters": {
+						"layer": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-layer-scale",
+					"objectClass": "System",
+					"sid": 382059768881210,
+					"parameters": {
+						"layer": "0",
+						"scale": "0.7"
+					}
+				}
+			],
+			"sid": 240300093404055
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
 					"id": "on-key-pressed",
 					"objectClass": "Keyboard",
 					"sid": 779749553306971,
@@ -3212,11 +3786,11 @@
 					}
 				},
 				{
-					"id": "on-tap-object",
-					"objectClass": "Touch",
-					"sid": 582474617535344,
+					"id": "layer-is-visible",
+					"objectClass": "System",
+					"sid": 807490221924402,
 					"parameters": {
-						"object": "lessvisiblety"
+						"layer": "0"
 					}
 				}
 			],
@@ -3231,7 +3805,32 @@
 					}
 				}
 			],
-			"sid": 380838609590098,
+			"sid": 380838609590098
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 613497513011698,
+					"parameters": {
+						"object": "lessvisiblety"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-layer-scale",
+					"objectClass": "System",
+					"sid": 800255876576972,
+					"parameters": {
+						"layer": "0",
+						"scale": "1.0"
+					}
+				}
+			],
+			"sid": 388653292054414,
 			"isOrBlock": true
 		},
 		{
@@ -3513,9 +4112,9 @@
 										{
 											"id": "set-position",
 											"objectClass": "Block",
-											"sid": 787611309660652,
+											"sid": 558846717452362,
 											"parameters": {
-												"x": "BlockBuilder.X+40*loopindex",
+												"x": "BlockBuilder.X+32*loopindex",
 												"y": "BlockBuilder.Y"
 											}
 										},
@@ -3618,12 +4217,12 @@
 														{
 															"id": "create-object",
 															"objectClass": "System",
-															"sid": 937948869012482,
+															"sid": 211997354298039,
 															"parameters": {
 																"object-to-create": "Blocks",
 																"layer": "0",
 																"x": "Block.X",
-																"y": "Block.Y-40",
+																"y": "Block.Y-32",
 																"create-hierarchy": false,
 																"template-name": "\"\""
 															}
@@ -3635,6 +4234,15 @@
 															"parameters": {
 																"animation": "choose(\"redflower\",\"yellowflower\",\"plant\")",
 																"from": "beginning"
+															}
+														},
+														{
+															"id": "set-enabled",
+															"objectClass": "Blocks",
+															"sid": 815085321865039,
+															"behaviorType": "Solid",
+															"parameters": {
+																"state": "disabled"
 															}
 														}
 													],
@@ -3669,12 +4277,12 @@
 												{
 													"id": "create-object",
 													"objectClass": "System",
-													"sid": 642977845796631,
+													"sid": 635456907078350,
 													"parameters": {
 														"object-to-create": "Blocks",
 														"layer": "0",
 														"x": "Block.X",
-														"y": "Block.Y-40",
+														"y": "Block.Y-32",
 														"create-hierarchy": false,
 														"template-name": "\"\""
 													}
@@ -3686,6 +4294,15 @@
 													"parameters": {
 														"animation": "\"deadtree\"",
 														"from": "beginning"
+													}
+												},
+												{
+													"id": "set-enabled",
+													"objectClass": "Blocks",
+													"sid": 322584964627867,
+													"behaviorType": "Solid",
+													"parameters": {
+														"state": "disabled"
 													}
 												}
 											],
@@ -3707,9 +4324,9 @@
 												{
 													"id": "repeat",
 													"objectClass": "System",
-													"sid": 740419774817660,
+													"sid": 662248582851590,
 													"parameters": {
-														"count": "(HParameters.Y-BlockBuilder.Y)/40"
+														"count": "(HParameters.Y-BlockBuilder.Y)/32"
 													}
 												}
 											],
@@ -3729,10 +4346,10 @@
 												{
 													"id": "set-position",
 													"objectClass": "Blocks",
-													"sid": 533304995432662,
+													"sid": 229049985220871,
 													"parameters": {
 														"x": "Block.X",
-														"y": "Block.Y+(loopindex+1)*40"
+														"y": "Block.Y+(loopindex+1)*32"
 													}
 												}
 											],
@@ -3804,17 +4421,17 @@
 										{
 											"id": "set-x",
 											"objectClass": "BlockBuilder",
-											"sid": 203436371375047,
+											"sid": 968614298525530,
 											"parameters": {
-												"x": "Self.X+40*Package_Mark.X_"
+												"x": "Self.X+32*Package_Mark.X_"
 											}
 										},
 										{
 											"id": "set-y",
 											"objectClass": "BlockBuilder",
-											"sid": 167865256379492,
+											"sid": 795100575138828,
 											"parameters": {
-												"y": "Self.Y+40*Package_Mark.Y_"
+												"y": "Self.Y+32*Package_Mark.Y_"
 											}
 										}
 									],
@@ -3907,22 +4524,22 @@
 				{
 					"id": "is-overlapping-at-offset",
 					"objectClass": "player",
-					"sid": 517475508875602,
+					"sid": 168253684911501,
 					"parameters": {
 						"object": "Blocks",
 						"offset-x": "0",
-						"offset-y": "-10"
+						"offset-y": "-1"
 					},
 					"isInverted": true
 				},
 				{
 					"id": "is-overlapping-at-offset",
 					"objectClass": "player",
-					"sid": 802952575741091,
+					"sid": 915535664920221,
 					"parameters": {
 						"object": "blocks_1",
 						"offset-x": "0",
-						"offset-y": "-10"
+						"offset-y": "-1"
 					},
 					"isInverted": true
 				}
@@ -3964,22 +4581,22 @@
 				{
 					"id": "is-overlapping-at-offset",
 					"objectClass": "player",
-					"sid": 672118998932194,
+					"sid": 422888302091039,
 					"parameters": {
 						"object": "Blocks",
 						"offset-x": "0",
-						"offset-y": "10"
+						"offset-y": "1"
 					},
 					"isInverted": true
 				},
 				{
 					"id": "is-overlapping-at-offset",
 					"objectClass": "player",
-					"sid": 107394384243862,
+					"sid": 811992398925818,
 					"parameters": {
 						"object": "blocks_1",
 						"offset-x": "0",
-						"offset-y": "10"
+						"offset-y": "1"
 					},
 					"isInverted": true
 				}
@@ -4021,10 +4638,10 @@
 				{
 					"id": "is-overlapping-at-offset",
 					"objectClass": "player",
-					"sid": 723624666398660,
+					"sid": 299477315438030,
 					"parameters": {
 						"object": "Blocks",
-						"offset-x": "-10",
+						"offset-x": "-1",
 						"offset-y": "0"
 					},
 					"isInverted": true
@@ -4032,10 +4649,10 @@
 				{
 					"id": "is-overlapping-at-offset",
 					"objectClass": "player",
-					"sid": 433856656593417,
+					"sid": 605149275511686,
 					"parameters": {
 						"object": "blocks_1",
-						"offset-x": "-10",
+						"offset-x": "-1",
 						"offset-y": "0"
 					},
 					"isInverted": true
@@ -4049,6 +4666,14 @@
 					"parameters": {
 						"x": "player.X - speed",
 						"y": "player.Y"
+					}
+				},
+				{
+					"id": "set-mirrored",
+					"objectClass": "player",
+					"sid": 763773773754270,
+					"parameters": {
+						"state": "not-mirrored"
 					}
 				}
 			],
@@ -4078,10 +4703,10 @@
 				{
 					"id": "is-overlapping-at-offset",
 					"objectClass": "player",
-					"sid": 552200822684904,
+					"sid": 364261916857016,
 					"parameters": {
 						"object": "Blocks",
-						"offset-x": "10",
+						"offset-x": "1",
 						"offset-y": "0"
 					},
 					"isInverted": true
@@ -4089,10 +4714,10 @@
 				{
 					"id": "is-overlapping-at-offset",
 					"objectClass": "player",
-					"sid": 762195855619028,
+					"sid": 712531159413425,
 					"parameters": {
 						"object": "blocks_1",
-						"offset-x": "10",
+						"offset-x": "1",
 						"offset-y": "0"
 					},
 					"isInverted": true
@@ -4106,6 +4731,14 @@
 					"parameters": {
 						"x": "player.X + speed",
 						"y": "player.Y"
+					}
+				},
+				{
+					"id": "set-mirrored",
+					"objectClass": "player",
+					"sid": 319023331281179,
+					"parameters": {
+						"state": "mirrored"
 					}
 				}
 			],
@@ -4530,6 +5163,264 @@
 			],
 			"sid": 861226337264863,
 			"isOrBlock": true
+		},
+		{
+			"eventType": "comment",
+			"text": "действия ниже - секретны!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/\\\n| |\n__"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 990746802656017
+				}
+			],
+			"actions": [
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "birthdayhat",
+					"sid": 609183803279521,
+					"behaviorType": "Прикрепить",
+					"parameters": {
+						"pin-to": "player",
+						"x": true,
+						"y": true,
+						"angle": true,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 276993509494083,
+					"parameters": {
+						"layer": "3",
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "birthdayhat",
+					"sid": 895424991656611,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				}
+			],
+			"sid": 659164907817681
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "promocheck",
+					"sid": 552545617313115
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 729047411456653,
+					"parameters": {
+						"variable": "menuOpen",
+						"comparison": 0,
+						"value": "2"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 686026427257430,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 582781234267668,
+							"parameters": {
+								"first-value": "promocodetype.text",
+								"comparison": 0,
+								"second-value": "\"BIRTHDAYHAT\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "birthdayhat",
+							"sid": 840743433385623,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "ltfughjv",
+							"sid": 423783192390122,
+							"parameters": {
+								"text": "\"Активирован промокод:\" & promocodetype.TEXT"
+							}
+						}
+					],
+					"sid": 467582703157112
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 709542625335259,
+							"parameters": {
+								"first-value": "promocodetype.text",
+								"comparison": 0,
+								"second-value": "\"OLDSKIN\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "player",
+							"sid": 378534295201387,
+							"parameters": {
+								"animation": "\"OLDSKIN\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "ltfughjv",
+							"sid": 995656188053187,
+							"parameters": {
+								"text": "\"Активирован промокод:\" & promocodetype.TEXT"
+							}
+						}
+					],
+					"sid": 551568512660250
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "promorest",
+					"sid": 746718684884943
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 494185246232295,
+					"parameters": {
+						"variable": "menuOpen",
+						"comparison": 0,
+						"value": "2"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "birthdayhat",
+					"sid": 136051508869542,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "ltfughjv",
+					"sid": 767196528389710,
+					"parameters": {
+						"text": "\"\""
+					}
+				},
+				{
+					"id": "append-text",
+					"objectClass": "ltfughjv",
+					"sid": 916327170644922,
+					"parameters": {
+						"text": "newline &\"Деактивировано\""
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "player",
+					"sid": 350113132486509,
+					"parameters": {
+						"animation": "\"default\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "append-text",
+					"objectClass": "ltfughjv",
+					"sid": 474209882106360,
+					"parameters": {
+						"text": "newline & \"Деактивировано\""
+					}
+				}
+			],
+			"sid": 428695200414260
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 389597349022516,
+					"parameters": {
+						"object": "quet3"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 194617443580189,
+					"parameters": {
+						"variable": "menuOpen",
+						"comparison": 0,
+						"value": "2"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 120176359695508,
+					"parameters": {
+						"layer": "3",
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 766533346968434,
+					"parameters": {
+						"variable": "menuOpen",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Кнопка2",
+					"sid": 433810683465416,
+					"parameters": {
+						"visibility": "visible"
+					}
+				}
+			],
+			"sid": 445609559758432
 		}
 	],
 	"sid": 512678941480335

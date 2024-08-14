@@ -1,0 +1,14 @@
+{
+	"name": "promocheck",
+	"plugin-id": "Button",
+	"sid": 477861507826615,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "NoSave",
+			"name": "НеСохранять",
+			"sid": 122534084386794
+		}
+	]
+}

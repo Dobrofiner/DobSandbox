@@ -1,0 +1,14 @@
+{
+	"name": "promocodetype",
+	"plugin-id": "TextBox",
+	"sid": 108505983152730,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "NoSave",
+			"name": "НеСохранять",
+			"sid": 655090789719991
+		}
+	]
+}

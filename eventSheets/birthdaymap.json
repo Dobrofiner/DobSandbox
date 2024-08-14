@@ -1,0 +1,174 @@
+{
+	"name": "birthdaymap",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "Список событий 1"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 654593895585721
+				}
+			],
+			"actions": [
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "MOON",
+					"sid": 959837659966384,
+					"behaviorType": "Прикрепить",
+					"parameters": {
+						"pin-to": "player",
+						"x": true,
+						"y": true,
+						"angle": true,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "move-to-top",
+					"objectClass": "MOON",
+					"sid": 128039507807598
+				}
+			],
+			"sid": 282150170526099
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 954817499936937,
+					"parameters": {
+						"object": "setupfdiewwork"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "setupfdiewwork",
+					"sid": 946530013385499,
+					"parameters": {
+						"object": "firework",
+						"layer": "0",
+						"image-point": "1",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-angle-of-motion",
+					"objectClass": "firework",
+					"sid": 980777507683348,
+					"behaviorType": "Пуля",
+					"parameters": {
+						"angle": "270"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 505888117976919,
+					"parameters": {
+						"seconds": "0.6"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Аудио",
+					"sid": 324063415079226,
+					"parameters": {
+						"audio-file": "ochered-fejerverkov",
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"98\""
+					}
+				}
+			],
+			"sid": 432505634504504
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-on-screen",
+					"objectClass": "firework",
+					"sid": 523160420238511
+				}
+			],
+			"actions": [
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 223023991632769,
+					"parameters": {
+						"seconds": "0.8"
+					}
+				},
+				{
+					"id": "set-size",
+					"objectClass": "firework",
+					"sid": 596845976543961,
+					"parameters": {
+						"width": "88.378151",
+						"height": "87.58371"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "firework",
+					"sid": 877617000329878,
+					"parameters": {
+						"animation": "\"Анимация 1\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 261131360965961,
+					"parameters": {
+						"seconds": "0.5"
+					}
+				}
+			],
+			"sid": 460502615344957
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-on-screen",
+					"objectClass": "firework",
+					"sid": 968695626254846,
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 123745672418675,
+					"parameters": {
+						"seconds": "0.5"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "firework",
+					"sid": 729372215085084
+				}
+			],
+			"sid": 179852300410905
+		}
+	],
+	"sid": 187482004082742
+}

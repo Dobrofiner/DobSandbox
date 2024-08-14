@@ -4,5 +4,11 @@
 	"sid": 262867714537074,
 	"isGlobal": false,
 	"instanceVariables": [],
-	"behaviorTypes": []
+	"behaviorTypes": [
+		{
+			"behaviorId": "NoSave",
+			"name": "НеСохранять",
+			"sid": 786505004221440
+		}
+	]
 }

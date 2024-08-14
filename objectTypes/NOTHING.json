@@ -1,0 +1,45 @@
+{
+	"name": "NOTHING",
+	"plugin-id": "Sprite",
+	"sid": 536944086937570,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 128,
+						"height": 95,
+						"originX": 0.5,
+						"originY": 0.3263157894736842,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8247447,
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Точка спрайта 1",
+								"x": 0.4765625,
+								"y": 0.18947368421052632
+							}
+						],
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 337129279325256,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

@@ -1,0 +1,56 @@
+{
+	"name": "MOON",
+	"plugin-id": "Sprite",
+	"sid": 981451253610957,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Pin",
+			"name": "Прикрепить",
+			"sid": 918613929100982
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 197,
+						"height": 199,
+						"originX": 0.5736040609137056,
+						"originY": 0.6030150753768844,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 6172,
+						"collisionPoly": {
+							"points": [
+								0.005076142131979695,
+								0,
+								1,
+								0,
+								1,
+								1,
+								0.005076142131979695,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 873401549708436,
+				"name": "Default",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

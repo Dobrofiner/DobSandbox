@@ -1,0 +1,50 @@
+{
+	"name": "фонар",
+	"plugin-id": "Sprite",
+	"sid": 296649631665505,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 110,
+						"height": 214,
+						"originX": 0.509090909090909,
+						"originY": 0.48598130841121495,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4304793,
+						"collisionPoly": {
+							"points": [
+								0.00909090909090909,
+								0,
+								1,
+								0,
+								1,
+								1,
+								0.00909090909090909,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 957023597370099,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

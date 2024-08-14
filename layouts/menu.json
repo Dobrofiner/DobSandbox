@@ -271,7 +271,11 @@
 					"instanceVariables": {
 						"ObjectName": 0
 					},
-					"behaviors": {},
+					"behaviors": {
+						"НеСохранять": {
+							"properties": {}
+						}
+					},
 					"world": {
 						"x": 995.9411285435918,
 						"y": 54.14013173470173,
@@ -279,6 +283,51 @@
 						"height": 96,
 						"originX": 0.5135135135135135,
 						"originY": 0.5151515151515151,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "debug_text",
+					"properties": {
+						"text": "Текст",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 12,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 247,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 256,
+						"y": 0,
+						"width": 160,
+						"height": 512,
+						"originX": 0,
+						"originY": 0,
 						"color": [
 							1,
 							1,
@@ -360,6 +409,16 @@
 			"type": "JSON",
 			"properties": {},
 			"uid": 15,
+			"instanceVariables": {}
+		},
+		{
+			"type": "array",
+			"properties": {
+				"width": 10,
+				"height": 1,
+				"depth": 1
+			},
+			"uid": 249,
 			"instanceVariables": {}
 		}
 	],

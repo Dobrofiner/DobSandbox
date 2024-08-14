@@ -41,13 +41,37 @@
 				{
 					"id": "go-to-layout",
 					"objectClass": "System",
-					"sid": 865433673451532,
+					"sid": 393090511747385,
 					"parameters": {
 						"layout": "empty"
 					}
 				}
 			],
 			"sid": 725474807146129
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 822611304429234,
+					"parameters": {
+						"object": "map_3"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 667499195452485,
+					"parameters": {
+						"layout": "birthday_map"
+					}
+				}
+			],
+			"sid": 955665528440106
 		}
 	],
 	"sid": 840354913923549
